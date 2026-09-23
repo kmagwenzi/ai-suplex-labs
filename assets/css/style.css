@@ -819,6 +819,13 @@ button, input, select, textarea {
   }
 }
 
+/* Modifier: 2-column card grid for desktop */
+@media (min-width: 768px) {
+  .card__grid--2up {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .card {
   background-color: var(--bg);
   border: 1px solid var(--line);
