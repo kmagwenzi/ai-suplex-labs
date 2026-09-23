@@ -27,6 +27,10 @@
       content="We build AI agents that handle real customers, real money, and real edge cases — then we open the core and sell the harness. Harare, Zimbabwe."
     />
 
+    <!-- Brand Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg" />
+    <link rel="apple-touch-icon" href="assets/img/logo.svg" />
+
     <!-- Typography: Inter with font-display: swap for non-blocking render -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -46,7 +50,10 @@
     <header class="header">
       <div class="container">
         <nav class="nav" aria-label="Main Navigation">
-          <a href="/" class="nav__brand">AI-Suplex Labs</a>
+          <a href="/" class="nav__brand">
+            <img src="assets/img/logo.svg" alt="" class="nav__logo" width="28" height="28" aria-hidden="true" />
+            <span>AI-Suplex Labs</span>
+          </a>
 
           <!-- Accessible checkbox toggle for no-JS environments -->
           <input
@@ -119,6 +126,8 @@
           </div>
         </nav>
       </div>
+      <!-- Scroll Progress Bar -->
+      <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
     </header>
 
     <!-- Main Content Landmark -->
@@ -160,7 +169,7 @@
       </section>
 
       <!-- Proof Strip -->
-      <aside class="proof-strip" aria-label="Company proof points">
+      <aside class="proof-strip" aria-label="Company proof points" data-reveal>
         <div class="container">
           <p class="proof-strip__text">
             Paynow payment loop live · 5 open-source repositories · AI-Suplex 7-7-7 selected for Beta
@@ -172,13 +181,13 @@
       <!-- What We Build Section -->
       <section class="section" aria-labelledby="what-we-build-heading">
         <div class="container">
-          <header class="section-header">
+          <header class="section-header" data-reveal>
             <h2 id="what-we-build-heading" class="section-header__title">What we build</h2>
           </header>
 
-          <div class="card__grid">
+          <div class="card__grid" data-reveal-group>
             <!-- WQR Card -->
-            <article class="card">
+            <article class="card" data-reveal>
               <div class="card__header">
                 <div class="card__badge">
                   <span class="badge badge--ok">Commerce Agent</span>
@@ -200,7 +209,7 @@
             </article>
 
             <!-- AI-Suplex 777 Card -->
-            <article class="card">
+            <article class="card" data-reveal>
               <div class="card__header">
                 <div class="card__badge">
                   <span class="badge">Open Core</span>
@@ -222,7 +231,7 @@
             </article>
 
             <!-- AI-Suplex Ultra Card -->
-            <article class="card">
+            <article class="card" data-reveal>
               <div class="card__header">
                 <div class="card__badge">
                   <span class="badge">Enterprise Harness</span>
@@ -249,11 +258,11 @@
       <!-- Our Approach Section -->
       <section class="section section--surface" aria-labelledby="our-approach-heading">
         <div class="container">
-          <header class="section-header">
+          <header class="section-header" data-reveal>
             <h2 id="our-approach-heading" class="section-header__title">Our approach</h2>
           </header>
 
-          <div class="approach-block">
+          <div class="approach-block" data-reveal>
             <p class="approach-quote">"Open the chassis. Sell the harness."</p>
             <p class="approach-text">
               The framework is free because it is a commodity; the compounding instance and the
@@ -266,7 +275,7 @@
       <!-- CTA Band -->
       <section class="cta-band" aria-labelledby="cta-heading">
         <div class="container">
-          <div class="cta-band__inner">
+          <div class="cta-band__inner" data-reveal="scale">
             <h2 id="cta-heading" class="cta-band__title">Building with AI? Talk to us.</h2>
             <a href="/contact.html" class="btn btn--primary">Get started</a>
           </div>
@@ -277,15 +286,18 @@
     <!-- Shared Footer -->
     <footer class="footer">
       <div class="container">
-        <div class="footer__grid">
+        <div class="footer__grid" data-reveal-group>
           <!-- Column 1: Brand & Tagline -->
-          <div>
-            <div class="footer__brand">AI-Suplex Labs</div>
+          <div data-reveal>
+            <div class="footer__brand">
+              <img src="assets/img/logo.svg" alt="" class="footer__logo" width="24" height="24" aria-hidden="true" />
+              <span>AI-Suplex Labs</span>
+            </div>
             <p class="footer__tagline">AI systems that work in the real world.</p>
           </div>
 
           <!-- Column 2: Products -->
-          <div>
+          <div data-reveal>
             <div class="footer__heading">Products</div>
             <ul class="footer__list">
               <li><a href="/projects/wqr.html">WQR</a></li>
@@ -295,7 +307,7 @@
           </div>
 
           <!-- Column 3: Legal -->
-          <div>
+          <div data-reveal>
             <div class="footer__heading">Legal</div>
             <ul class="footer__list">
               <li><a href="/privacy.html">Privacy</a></li>
@@ -305,7 +317,7 @@
           </div>
 
           <!-- Column 4: Contact -->
-          <div>
+          <div data-reveal>
             <div class="footer__heading">Contact</div>
             <address class="footer__address">
               <ul class="footer__list">

@@ -62,18 +62,49 @@
   }
 
   /* --------------------------------------------------------------------------
-     2. Sticky Header Elevation Shadow on Scroll
+     2. Sticky Header Elevation Shadow & Scroll Progress Bar
      -------------------------------------------------------------------------- */
-  if (header) {
+  const scrollProgressBar = document.getElementById('scrollProgress');
+  const heroNavyGlow = document.querySelector('.hero__glow--navy');
+  const heroGoldGlow = document.querySelector('.hero__glow--gold');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (prefersReducedMotion) {
+    document.documentElement.classList.add('prefers-reduced-motion');
+  }
+
+  if (header || scrollProgressBar) {
     let ticking = false;
 
-    const updateHeaderShadow = function () {
-      const shouldHaveShadow = window.scrollY > 8;
-      if (shouldHaveShadow) {
-        header.classList.add('has-shadow');
-      } else {
-        header.classList.remove('has-shadow');
+    const onScrollFrame = function () {
+      const scrollY = window.scrollY;
+
+      // Header shadow
+      if (header) {
+        if (scrollY > 8) {
+          header.classList.add('has-shadow');
+        } else {
+          header.classList.remove('has-shadow');
+        }
       }
+
+      // Scroll Progress Indicator
+      if (scrollProgressBar && !prefersReducedMotion) {
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? Math.min(1, Math.max(0, scrollY / docHeight)) : 0;
+        scrollProgressBar.style.transform = `scaleX(${progress})`;
+      }
+
+      // Hero Ambient Parallax (compositor-only translateY, clamped to hero height)
+      if (!prefersReducedMotion && scrollY < window.innerHeight) {
+        if (heroNavyGlow) {
+          heroNavyGlow.style.transform = `translate3d(0, ${(scrollY * 0.18).toFixed(1)}px, 0)`;
+        }
+        if (heroGoldGlow) {
+          heroGoldGlow.style.transform = `translate3d(0, ${(scrollY * 0.1).toFixed(1)}px, 0)`;
+        }
+      }
+
       ticking = false;
     };
 
@@ -81,15 +112,50 @@
       'scroll',
       function () {
         if (!ticking) {
-          window.requestAnimationFrame(updateHeaderShadow);
+          window.requestAnimationFrame(onScrollFrame);
           ticking = true;
         }
       },
       { passive: true }
     );
 
-    // Initial check
-    updateHeaderShadow();
+    // Initial pass
+    onScrollFrame();
+  }
+
+  /* --------------------------------------------------------------------------
+     3. Scroll-Triggered Reveal Animations (IntersectionObserver)
+     -------------------------------------------------------------------------- */
+  function initScrollReveal() {
+    const revealElements = document.querySelectorAll('[data-reveal]');
+    if (!revealElements.length) return;
+
+    // If user prefers reduced motion, reveal everything immediately
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      revealElements.forEach(function (el) {
+        el.classList.add('is-revealed');
+      });
+      return;
+    }
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px 0px -48px 0px',
+      threshold: 0.12,
+    };
+
+    const revealObserver = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    revealElements.forEach(function (el) {
+      revealObserver.observe(el);
+    });
   }
 
   /* --------------------------------------------------------------------------
@@ -176,6 +242,7 @@
     setTimeout(revealNextChar, 180);
   }
 
-  // Initialize typing effect
+  // Initialize typing effect and scroll reveal
   initHeroTyping();
+  initScrollReveal();
 })();
