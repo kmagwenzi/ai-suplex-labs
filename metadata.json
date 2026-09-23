@@ -1,6 +1,0 @@
-{
-  "name": "AI-Suplex Labs",
-  "description": "AI systems that work in the real world. Harare, Zimbabwe.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
