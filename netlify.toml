@@ -1,0 +1,12 @@
+# AI-Suplex Labs — ai-suplex.co.zw
+#
+# This site is PLAIN STATIC HTML/CSS/JS served from the REPO ROOT.
+# The Vite / React / Tailwind files in this repo are unused AI Studio scaffolding
+# (src/App.tsx renders an empty div). Netlify would otherwise auto-detect Vite,
+# run a build, and publish an empty dist/ directory.
+#
+# So: publish the root as-is, and run NO build step.
+
+[build]
+  publish = "."
+  command = ""
