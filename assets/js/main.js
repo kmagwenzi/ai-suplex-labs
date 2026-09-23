@@ -91,4 +91,91 @@
     // Initial check
     updateHeaderShadow();
   }
+
+  /* --------------------------------------------------------------------------
+     3. Hero Terminal Typing Effect (Progressive Enhancement)
+     -------------------------------------------------------------------------- */
+  function initHeroTyping() {
+    const hero = document.querySelector('.hero');
+    const title = document.querySelector('.hero__title');
+    const titleText = document.querySelector('.hero__title-text');
+    const cursor = document.querySelector('.hero__cursor');
+
+    if (!hero || !title || !titleText || !cursor) return;
+
+    // Respect reduced motion preference
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return;
+    }
+
+    const fullText = titleText.textContent.trim();
+    if (!fullText) return;
+
+    // Enable animation state for CSS transitions
+    hero.classList.add('hero--animating');
+
+    // Split text into spans for each character to preserve exact word-wrap geometry (zero CLS)
+    titleText.textContent = '';
+    const chars = [];
+    const fragment = document.createDocumentFragment();
+
+    for (let i = 0; i < fullText.length; i++) {
+      const span = document.createElement('span');
+      span.className = 'hero__char';
+      span.textContent = fullText[i];
+      span.style.opacity = '0';
+      fragment.appendChild(span);
+      chars.push(span);
+    }
+    titleText.appendChild(fragment);
+
+    // Position cursor at start
+    cursor.style.display = 'inline-block';
+    cursor.classList.add('is-typing');
+    if (chars.length > 0) {
+      chars[0].before(cursor);
+    }
+
+    let currentIndex = 0;
+    const charDelay = 40; // ~35-45ms per character
+
+    function revealNextChar() {
+      if (currentIndex < chars.length) {
+        const charSpan = chars[currentIndex];
+        charSpan.style.opacity = '1';
+        charSpan.after(cursor);
+        currentIndex++;
+        setTimeout(revealNextChar, charDelay);
+      } else {
+        // Typing finished
+        cursor.classList.remove('is-typing');
+        cursor.classList.add('is-blinking');
+
+        // Reveal hero elements with staggered delays (~150ms apart)
+        setTimeout(function () {
+          hero.classList.add('hero--reveal-badge');
+        }, 50);
+
+        setTimeout(function () {
+          hero.classList.add('hero--reveal-lead');
+        }, 200);
+
+        setTimeout(function () {
+          hero.classList.add('hero--reveal-cta');
+        }, 350);
+
+        // Cursor blinks 3-4 times (~2 seconds) then fades out
+        setTimeout(function () {
+          cursor.classList.remove('is-blinking');
+          cursor.classList.add('is-faded');
+        }, 2200);
+      }
+    }
+
+    // Begin typing after a subtle initial pause
+    setTimeout(revealNextChar, 180);
+  }
+
+  // Initialize typing effect
+  initHeroTyping();
 })();

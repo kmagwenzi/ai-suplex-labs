@@ -487,12 +487,16 @@ button, input, select, textarea {
 }
 
 /* ==========================================================================
-   Hero Component
+   Hero Component (Antigravity-inspired Terminal Experience)
    ========================================================================== */
 .hero {
+  position: relative;
+  overflow: hidden;
   padding-top: var(--s-7);
   padding-bottom: var(--s-7);
-  background-color: var(--bg);
+  background-color: var(--navy-800);
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 @media (min-width: 900px) {
@@ -502,15 +506,133 @@ button, input, select, textarea {
   }
 }
 
+/* Background Layers (Google Antigravity-style slow ambient drift) */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero__glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(80px);
+  will-change: transform;
+}
+
+.hero__glow--navy {
+  bottom: -20%;
+  left: -15%;
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(29, 49, 87, 0.8) 0%, rgba(21, 34, 58, 0.4) 60%, transparent 80%);
+  animation: driftNavy 20s ease-in-out infinite alternate;
+}
+
+.hero__glow--gold {
+  top: -15%;
+  right: -10%;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(184, 134, 46, 0.18) 0%, rgba(184, 134, 46, 0.04) 50%, transparent 70%);
+  animation: driftGold 15s ease-in-out infinite alternate;
+}
+
+.hero__grid-mesh {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 40%, transparent 100%);
+  pointer-events: none;
+}
+
+.hero__scanlines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.02) 0px,
+    rgba(255, 255, 255, 0.02) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+  pointer-events: none;
+}
+
+@keyframes driftNavy {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(60px, -40px) scale(1.08);
+  }
+  100% {
+    transform: translate(20px, 30px) scale(1.02);
+  }
+}
+
+@keyframes driftGold {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-50px, 40px) scale(1.1);
+  }
+  100% {
+    transform: translate(-80px, -20px) scale(0.95);
+  }
+}
+
+.hero__container {
+  position: relative;
+  z-index: 2;
+}
+
 .hero__inner {
   max-width: 860px;
+}
+
+.hero__badge-wrap {
+  margin-bottom: var(--s-3);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.badge--terminal {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(184, 134, 46, 0.12);
+  border: 1px solid rgba(184, 134, 46, 0.35);
+  color: #f3d492;
+  font-family: var(--font);
+  font-size: var(--fs-1);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 4px 12px;
+  border-radius: 9999px;
+}
+
+.badge__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--gold);
+  box-shadow: 0 0 8px var(--gold);
+  display: inline-block;
 }
 
 .hero__title {
   font-size: var(--fs-6);
   line-height: var(--lh-tight);
   font-weight: 700;
-  color: var(--navy-800);
+  color: #ffffff;
   letter-spacing: -0.03em;
   margin-bottom: var(--s-4);
 }
@@ -521,12 +643,57 @@ button, input, select, textarea {
   }
 }
 
+.hero__title-text {
+  display: inline;
+}
+
+.hero__char {
+  display: inline;
+  transition: opacity 0.05s ease;
+}
+
+.hero__cursor {
+  display: none;
+  color: var(--gold);
+  font-weight: 700;
+  margin-left: 2px;
+  line-height: 1;
+  vertical-align: baseline;
+  user-select: none;
+  transition: opacity 0.4s ease;
+}
+
+.hero__cursor.is-typing {
+  display: inline-block;
+  opacity: 1;
+}
+
+.hero__cursor.is-blinking {
+  display: inline-block;
+  animation: cursorBlink 0.55s step-end infinite;
+}
+
+.hero__cursor.is-faded {
+  animation: none;
+  opacity: 0;
+}
+
+@keyframes cursorBlink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
 .hero__lead {
   font-size: var(--fs-3);
   line-height: var(--lh-body);
-  color: var(--muted);
+  color: #cbd5e1;
   margin-bottom: var(--s-5);
   max-width: 760px;
+  transition: opacity 0.45s ease, transform 0.45s ease;
 }
 
 @media (min-width: 640px) {
@@ -539,6 +706,68 @@ button, input, select, textarea {
   display: flex;
   flex-wrap: wrap;
   gap: var(--s-3);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.hero .btn--ghost {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.hero .btn--ghost:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+/* Progressive enhancement animation states (only active when JS sets .hero--animating) */
+.hero--animating .hero__badge-wrap,
+.hero--animating .hero__lead,
+.hero--animating .hero__cta-group {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.hero.hero--reveal-badge .hero__badge-wrap {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero.hero--reveal-lead .hero__lead {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero.hero--reveal-cta .hero__cta-group {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  .hero__glow--navy,
+  .hero__glow--gold {
+    animation: none;
+    transform: none;
+  }
+
+  .hero__cursor {
+    display: none !important;
+    animation: none !important;
+  }
+
+  .hero__badge-wrap,
+  .hero__lead,
+  .hero__cta-group {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .hero__char {
+    opacity: 1 !important;
+  }
 }
 
 /* ==========================================================================
