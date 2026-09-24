@@ -1,0 +1,11 @@
+# AI-Suplex Labs — domain redirects
+#
+# www.ai-suplex.co.zw is handled by Netlify's domain-level setting
+# ("Redirects automatically to primary domain"), so it is NOT repeated here.
+#
+# ai-suplexlabs.co.zw was added as a Netlify *domain alias*, which SERVES the same
+# content rather than redirecting. These rules force a 301 to the canonical primary
+# domain so there is exactly one host serving the site.
+
+https://ai-suplexlabs.co.zw/*      https://ai-suplex.co.zw/:splat   301!
+https://www.ai-suplexlabs.co.zw/*  https://ai-suplex.co.zw/:splat   301!
