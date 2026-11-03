@@ -211,7 +211,7 @@
                 <text x="52" y="194" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="12" font-weight="600">
                   asmc.js (operator loop) &bull; rituals.sh (crons) &bull; approvals.js (Hustler gate) &bull; Discord brief delivery
                 </text>
-                <text x="52" y="212" fill="#10B981" font-family="monospace" font-size="10">✓ 16s daily rhythm &bull; headless execution &bull; human-in-the-loop gate holds</text>
+                <text x="52" y="212" fill="#10B981" font-family="monospace" font-size="10">✓ 1.5s daily maintenance &bull; headless execution &bull; human-in-the-loop gate holds</text>
 
                 <!-- Connector Line -->
                 <path d="M 380 226 L 380 246" stroke="#B8862E" stroke-width="2.5" stroke-linecap="round" fill="none" />
@@ -240,7 +240,7 @@
                 <rect x="380" y="290" width="160" height="88" rx="6" fill="#1A2947" stroke="#334155" stroke-width="1" />
                 <text x="392" y="310" fill="#F472B6" font-family="system-ui, sans-serif" font-size="11" font-weight="700">🧠 INSIGHT</text>
                 <text x="392" y="328" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Opportunity Mapper</text>
-                <text x="392" y="344" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="9.5">Cross-sells &bull; load-shedding</text>
+                <text x="392" y="344" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="9.5">Cross-sells &bull; price bands</text>
                 <text x="392" y="358" fill="#64748B" font-family="monospace" font-size="9">Tools/opportunity.js</text>
 
                 <!-- 4: Output / Projection -->
@@ -259,7 +259,7 @@
       <aside class="proof-strip" aria-label="Ultra proof points" data-reveal>
         <div class="container">
           <p class="proof-strip__text">
-            4 faculties &bull; 5 surfaces &bull; 16s daily rhythm verified &bull; ~11s fresh install &bull; Stage 6 load-shedding resilient &bull; Selar launch
+            4 faculties &bull; 5 surfaces &bull; 1.5s daily maintenance (674 files) &bull; 654 assertions &bull; zero network at render &bull; Selar launch
           </p>
         </div>
       </aside>
@@ -402,8 +402,8 @@
                 </p>
                 <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--s-2); font-size: var(--fs-1); color: var(--muted);">
                   <li>&bull; Audits <code>Tools/outreach-board.js</code>, reusable artifacts, and price history to rank cross-sell opportunities.</li>
-                  <li>&bull; Computes suggested price bands ($500 &ndash; $2,000+) based on historical client demand and delivery speeds.</li>
-                  <li>&bull; <strong>Load-Shedding Brain:</strong> partitions tasks into offline-executable vs online-required batches so blackouts never halt work.</li>
+                  <li>&bull; Reports the price bands the vault actually records &mdash; it never invents one. Unpriced work shows as unpriced.</li>
+                  <li>&bull; Surfaces overdue follow-ups and per-channel reply rates from the outreach board, so nothing goes quiet by accident.</li>
                 </ul>
               </div>
               <div class="card__footer">
@@ -477,7 +477,7 @@
                 Hermes background agents run 5 specialized audit jobs: operator briefs, weekly reviews, outreach scans, and knowledge backups.
               </p>
               <div class="card__footer">
-                <span style="font-family: monospace; font-size: var(--fs-1); color: var(--gold);">$ bash Tools/cron/rituals.sh daily</span>
+                <span style="font-family: monospace; font-size: var(--fs-1); color: var(--gold);">$ bash Tools/rituals.sh daily</span>
               </div>
             </div>
 
@@ -528,27 +528,39 @@
           <div class="card" style="max-width: 860px;" data-reveal>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--s-4); margin-bottom: var(--s-5);">
               <div style="padding: var(--s-3); background-color: var(--surface); border-radius: var(--radius); border: 1px solid var(--line);">
-                <div style="font-size: var(--fs-6); font-weight: 700; color: var(--navy-800); line-height: 1;">16s</div>
-                <div style="font-size: var(--fs-1); font-weight: 600; color: var(--gold); margin-top: 4px;">Daily Rhythm Run</div>
-                <div style="font-size: 0.8125rem; color: var(--muted); margin-top: 4px;">Brief (1s) &bull; Load (8s) &bull; Maintenance (2s) &bull; Battle (1s) &bull; Gate (4s)</div>
-              </div>
-
-              <div style="padding: var(--s-3); background-color: var(--surface); border-radius: var(--radius); border: 1px solid var(--line);">
-                <div style="font-size: var(--fs-6); font-weight: 700; color: var(--navy-800); line-height: 1;">~9–11s</div>
+                <div style="font-size: var(--fs-6); font-weight: 700; color: var(--navy-800); line-height: 1;">1.6s</div>
                 <div style="font-size: var(--fs-1); font-weight: 600; color: var(--gold); margin-top: 4px;">Clean Install</div>
-                <div style="font-size: 0.8125rem; color: var(--muted); margin-top: 4px;">From bare machine clone to running context brief via bash install.sh</div>
+                <div style="font-size: 0.8125rem; color: var(--muted); margin-top: 4px;"><code>git clone</code> + <code>bash install.sh</code> &rarr; a working vault with its index built &mdash; timed 2026-11-03</div>
               </div>
 
               <div style="padding: var(--s-3); background-color: var(--surface); border-radius: var(--radius); border: 1px solid var(--line);">
-                <div style="font-size: var(--fs-6); font-weight: 700; color: var(--navy-800); line-height: 1;">100%</div>
-                <div style="font-size: var(--fs-1); font-weight: 600; color: var(--gold); margin-top: 4px;">Offline-First</div>
-                <div style="font-size: 0.8125rem; color: var(--muted); margin-top: 4px;">Runs without internet or cloud APIs; resilient to Stage 6 load-shedding</div>
+                <div style="font-size: var(--fs-6); font-weight: 700; color: var(--navy-800); line-height: 1;">1.5s</div>
+                <div style="font-size: var(--fs-1); font-weight: 600; color: var(--gold); margin-top: 4px;">Daily Maintenance</div>
+                <div style="font-size: 0.8125rem; color: var(--muted); margin-top: 4px;">674 files re-indexed by <code>bash Tools/rituals.sh daily</code> &mdash; timed 2026-11-03</div>
+              </div>
+
+              <div style="padding: var(--s-3); background-color: var(--surface); border-radius: var(--radius); border: 1px solid var(--line);">
+                <div style="font-size: var(--fs-6); font-weight: 700; color: var(--navy-800); line-height: 1;">0.8s</div>
+                <div style="font-size: var(--fs-1); font-weight: 600; color: var(--gold); margin-top: 4px;">Canvas Projection</div>
+                <div style="font-size: 0.8125rem; color: var(--muted); margin-top: 4px;">1,642 entities &rarr; 3.1 MB self-contained HTML via <code>Tools/project.js</code> &mdash; timed 2026-11-03</div>
               </div>
 
               <div style="padding: var(--s-3); background-color: var(--surface); border-radius: var(--radius); border: 1px solid var(--line);">
                 <div style="font-size: var(--fs-6); font-weight: 700; color: var(--navy-800); line-height: 1;">654</div>
                 <div style="font-size: var(--fs-1); font-weight: 600; color: var(--gold); margin-top: 4px;">Test Assertions</div>
                 <div style="font-size: 0.8125rem; color: var(--muted); margin-top: 4px;">Across 30 test files &mdash; canvases, projections, threads, rituals, approvals, router</div>
+              </div>
+
+              <div style="padding: var(--s-3); background-color: var(--surface); border-radius: var(--radius); border: 1px solid var(--line);">
+                <div style="font-size: var(--fs-6); font-weight: 700; color: var(--navy-800); line-height: 1;">0</div>
+                <div style="font-size: var(--fs-1); font-weight: 600; color: var(--gold); margin-top: 4px;">Cloud Dependencies</div>
+                <div style="font-size: 0.8125rem; color: var(--muted); margin-top: 4px;">No Postgres, no vector DB, no daemon &mdash; Node 20+ and a local SQLite file</div>
+              </div>
+
+              <div style="padding: var(--s-3); background-color: var(--surface); border-radius: var(--radius); border: 1px solid var(--line);">
+                <div style="font-size: var(--fs-6); font-weight: 700; color: var(--navy-800); line-height: 1;">100%</div>
+                <div style="font-size: var(--fs-1); font-weight: 600; color: var(--gold); margin-top: 4px;">Offline-First</div>
+                <div style="font-size: 0.8125rem; color: var(--muted); margin-top: 4px;">No network at render time &mdash; every surface opens from <code>file://</code>, key or no key</div>
               </div>
             </div>
 
@@ -659,7 +671,7 @@
                 <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--s-2); font-size: var(--fs-1); color: var(--ink);">
                   <li>✓ <strong>Drive:</strong> Deep Ultra 🦸 Mode (Boss fights, 12 slugs, 3 voices)</li>
                   <li>✓ <strong>Memory:</strong> Living Wiki (offline deterministic auto-wiki)</li>
-                  <li>✓ <strong>Insight:</strong> Portfolio Opportunity Mapper &amp; Load-Shedding Brain</li>
+                  <li>✓ <strong>Insight:</strong> Portfolio Opportunity Mapper (cross-sells, price bands, overdue follow-ups)</li>
                   <li>✓ <strong>Output:</strong> The Projection Layer (Knowledge + Decision Canvases)</li>
                   <li>✓ <strong>The AS MC Loop:</strong> Headless operator + crons + Approvals Gate</li>
                   <li>✓ <strong>Delivery:</strong> Direct-to-Discord daily operator briefs</li>
@@ -698,12 +710,13 @@
             </p>
 
             <div style="background-color: #0b132b; border-radius: var(--radius); padding: var(--s-4); color: #f8fafc; font-family: monospace; font-size: var(--fs-1); overflow-x: auto; line-height: 1.8; border: 1px solid #1e293b;">
-              <span style="color: #64748b;"># 1. Install harness in ~10 seconds on any Linux, macOS, or WSL machine</span><br />
-              <span style="color: #38bdf8;">$</span> <span style="color: #f1f5f9;">bash install.sh</span><br /><br />
-              <span style="color: #64748b;"># 2. Open the headless operator loop and inspect mission status</span><br />
-              <span style="color: #38bdf8;">$</span> <span style="color: #f1f5f9;">node Tools/asmc.js open</span><br /><br />
+              <span style="color: #64748b;"># 1. Install the vault (Node 20+ · zero npm dependencies)</span><br />
+              <span style="color: #38bdf8;">$</span> <span style="color: #f1f5f9;">bash install.sh</span> <span style="color: #64748b;">→ ./ai-suplex-vault</span><br />
+              <span style="color: #38bdf8;">$</span> <span style="color: #f1f5f9;">cd ai-suplex-vault &amp;&amp; node Tools/3lm.js start --context</span><br /><br />
+              <span style="color: #64748b;"># 2. Inspect the operator loop state (read-only)</span><br />
+              <span style="color: #38bdf8;">$</span> <span style="color: #f1f5f9;">node Tools/asmc.js status --json</span><br /><br />
               <span style="color: #64748b;"># 3. Fire Deep Ultra Mode for gamified boss battle execution</span><br />
-              <span style="color: #38bdf8;">$</span> <span style="color: #f1f5f9;">node Tools/deep-ultra.js latest --voice operative</span><br /><br />
+              <span style="color: #38bdf8;">$</span> <span style="color: #f1f5f9;">node Tools/deep-ultra.js latest --operative</span><br /><br />
               <span style="color: #64748b;"># 4. Project your memory into an offline interactive Knowledge Canvas</span><br />
               <span style="color: #38bdf8;">$</span> <span style="color: #f1f5f9;">node Tools/project.js --mapping knowledge-canvas</span>
             </div>
