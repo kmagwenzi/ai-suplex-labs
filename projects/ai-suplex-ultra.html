@@ -318,6 +318,23 @@
             </p>
           </header>
 
+          <figure data-reveal style="margin: var(--s-5) 0 var(--s-6);">
+            <img
+              src="/assets/img/ultra/knowledge-canvas.webp"
+              alt="The Knowledge Canvas rendered from this vault's SQLite graph: 1,642 entities and 4,865 edges, of which 4,864 are relates_to and 1 is contains. No supports or contradicts edges exist."
+              width="1280"
+              height="1067"
+              loading="lazy"
+              decoding="async"
+              style="display: block; width: 100%; max-width: 980px; height: auto; margin-inline: auto; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--shadow);"
+            />
+            <figcaption style="font-size: var(--fs-1); color: var(--muted); margin-top: var(--s-2);">
+              Real output, not a mockup &mdash; the Knowledge Canvas projected from this vault on 2026-11-03:
+              <strong>1,642 entities</strong> and <strong>4,865 edges</strong>
+              (<code>relates_to</code> 4,864 &middot; <code>contains</code> 1).
+            </figcaption>
+          </figure>
+
           <div class="card__grid card__grid--2up" data-reveal-group>
             <!-- Faculty 1: Drive -->
             <article class="card" data-reveal>
@@ -409,7 +426,7 @@
                   <strong>The self-aware moat.</strong> Your vault projected into the forms you actually need. Two distinct, interactive canvases:
                 </p>
                 <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--s-2); font-size: var(--fs-1); color: var(--muted);">
-                  <li>&bull; <strong>Knowledge Canvas:</strong> Standalone HTML graph of 93+ entities and 567+ typed edges (<code>supports</code>, <code>contradicts</code>, <code>reusable_for</code>). Opens offline, zero CDN.</li>
+                  <li>&bull; <strong>Knowledge Canvas:</strong> Standalone HTML graph of <strong>1,642 entities and 4,865 edges</strong> (<code>relates_to</code> &middot; <code>contains</code>) &mdash; hubs, paths and orphans, labelled structural, never inferred semantics. Opens offline, zero CDN.</li>
                   <li>&bull; <strong>Decision Canvas:</strong> Visualizes requirement &rarr; decision &rarr; evidence paths. Distinctly segregates active vs deprecated/superseded stances without requiring an LLM.</li>
                   <li>&bull; Plug-in registry via <code>Mappings/manifest.json</code> and runner <code>Tools/project.js</code>.</li>
                 </ul>
@@ -529,9 +546,9 @@
               </div>
 
               <div style="padding: var(--s-3); background-color: var(--surface); border-radius: var(--radius); border: 1px solid var(--line);">
-                <div style="font-size: var(--fs-6); font-weight: 700; color: var(--navy-800); line-height: 1;">120+</div>
+                <div style="font-size: var(--fs-6); font-weight: 700; color: var(--navy-800); line-height: 1;">654</div>
                 <div style="font-size: var(--fs-1); font-weight: 600; color: var(--gold); margin-top: 4px;">Test Assertions</div>
-                <div style="font-size: 0.8125rem; color: var(--muted); margin-top: 4px;">Across 4 test suites: deep-ultra, asmc, cron-partition, and project runner</div>
+                <div style="font-size: 0.8125rem; color: var(--muted); margin-top: 4px;">Across 30 test files &mdash; canvases, projections, threads, rituals, approvals, router</div>
               </div>
             </div>
 
