@@ -159,7 +159,7 @@
             <p class="hero__lead">
               <a href="/projects/ai-suplex-777.html" style="color: inherit; text-decoration: underline;">777 gave your AI a desk and a filing cabinet.</a>
               Ultra gives it autonomy &mdash; turning compounding memory into your <strong>Second Me</strong> across 4 faculties and 6 surfaces:
-              Deep Ultra 🦸 Mode, Living Wiki, Portfolio Opportunity Mapper, and the Projection Layer.
+              Deep Ultra 🦸 Mode, Living Wiki, Portfolio Opportunity Mapper, Insight Resonance, and the Projection Layer.
             </p>
 
             <div class="hero__cta-group">
@@ -555,7 +555,7 @@
               <div style="padding: var(--s-3); background-color: var(--surface); border-radius: var(--radius); border: 1px solid var(--line);">
                 <div style="font-size: var(--fs-6); font-weight: 700; color: var(--navy-800); line-height: 1;">0</div>
                 <div style="font-size: var(--fs-1); font-weight: 600; color: var(--gold); margin-top: 4px;">Cloud Dependencies</div>
-                <div style="font-size: 0.8125rem; color: var(--muted); margin-top: 4px;">No Postgres, no vector DB, no daemon &mdash; Node 20+ and a local SQLite file</div>
+                <div style="font-size: 0.8125rem; color: var(--muted); margin-top: 4px;">No Postgres, no vector DB, no daemon &mdash; Node 22+ and a local SQLite file</div>
               </div>
 
               <div style="padding: var(--s-3); background-color: var(--surface); border-radius: var(--radius); border: 1px solid var(--line);">
@@ -690,7 +690,7 @@
             </p>
 
             <div style="background-color: #0b132b; border-radius: var(--radius); padding: var(--s-4); color: #f8fafc; font-family: monospace; font-size: var(--fs-1); overflow-x: auto; line-height: 1.8; border: 1px solid #1e293b;">
-              <span style="color: #64748b;"># 1. Install the vault (Node 20+ · zero npm dependencies)</span><br />
+              <span style="color: #64748b;"># 1. Install the vault (Node 22+ · zero npm dependencies)</span><br />
               <span style="color: #38bdf8;">$</span> <span style="color: #f1f5f9;">bash install.sh</span> <span style="color: #64748b;">→ ./ai-suplex-vault</span><br />
               <span style="color: #38bdf8;">$</span> <span style="color: #f1f5f9;">cd ai-suplex-vault &amp;&amp; node Tools/3lm.js start --context</span><br /><br />
               <span style="color: #64748b;"># 2. Inspect the operator loop state (read-only)</span><br />
@@ -725,6 +725,19 @@
               <span class="badge">Node.js 22+</span>
               <span class="badge">Zero Cloud Lock-in</span>
             </div>
+          </div>
+
+          <div class="card" style="max-width: 860px; margin-top: var(--s-4);" data-reveal>
+            <h3 class="card__title" style="font-size: var(--fs-3);">Where the model sits</h3>
+            <p style="color: var(--muted); font-size: var(--fs-2); margin-top: var(--s-2);">
+              Nowhere it can break a render. Every surface above is deterministic and key-free; a model is a
+              narrow, optional layer on top of it.
+            </p>
+            <ul style="list-style: none; padding: 0; margin: var(--s-3) 0 0; display: flex; flex-direction: column; gap: var(--s-2); font-size: var(--fs-1); color: var(--muted);">
+              <li>&bull; <strong>No key, no loss.</strong> Canvases, wiki, mapper, resonance and Deep Ultra all render offline. Remove the key and the structure is unchanged &mdash; only the depth goes.</li>
+              <li>&bull; <strong>A key adds depth, never structure</strong> &mdash; wiki prose, semantic resonance, richer decision links &mdash; and only when <code>AISUPLEX_MODEL_PROVIDER</code> and <code>AISUPLEX_MODEL_ID</code> are both set.</li>
+              <li>&bull; <strong>Never the engine.</strong> No chat surface, no streaming, no model call inside <code>Tools/*.js</code> or a canvas. The AI SDK is used for structured enrichment and the &#8984;K command bar &mdash; fields in, a deterministic composer out.</li>
+            </ul>
           </div>
         </div>
       </section>
