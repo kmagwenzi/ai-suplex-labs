@@ -1,0 +1,241 @@
+/* ==========================================================================
+   AI-Suplex Ultra — Labs Project Briefing (page-scoped stylesheet)
+   Authority: labs DESIGN.md, which applies the sales-page brand system
+   (Navy Ground & Warm Gold) to a project-briefing page.
+   Scope: body.ub — this page only. Loaded after assets/css/style.css.
+   Motion rule: only opacity and transform animate; never animate every property.
+   ========================================================================== */
+
+/* 1 · Token flip — re-skin the shared chrome (header, nav, footer, cards,
+       ledger, mobile drawer) by re-pointing the variables it consumes. */
+body.ub {
+  --bg: #080e1a;
+  --surface: #0d172a;
+  --line: rgba(255, 255, 255, 0.08);
+  --ink: #f1f5f9;
+  --muted: #94a3b8;
+  --navy: #f1f5f9;
+  --navy-800: #d4a94f;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-header: 0 4px 16px rgba(0, 0, 0, 0.4);
+
+  --ub-elev2: #121e35;
+  --ub-elev3: #1a2947;
+  --ub-gold: #b8862e;
+  --ub-gold-hi: #d4a94f;
+  --ub-cream: #e8d5a8;
+  --ub-ink-soft: #cbd5e1;
+  --ub-ink-sub: rgba(148, 163, 184, 0.85);
+  --ub-hairline: rgba(255, 255, 255, 0.08);
+  --ub-hairline-strong: rgba(255, 255, 255, 0.14);
+  --ub-serif: "IBM Plex Serif", Georgia, serif;
+  --ub-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  background-color: var(--bg);
+  color: var(--ink);
+  overflow-x: clip;
+}
+html:has(body.ub) { overflow-x: clip; }
+body.ub ::selection { background: rgba(184, 134, 46, 0.45); color: #f1f5f9; }
+
+/* Chrome overrides the variable flip cannot reach (hardcoded light values) */
+body.ub .header { background-color: rgba(8, 14, 26, 0.97); border-bottom: 1px solid var(--ub-hairline); }
+body.ub .skip-link { background-color: var(--ub-gold-hi); color: #080e1a; }
+body.ub .btn--primary { background-color: var(--ub-gold-hi); color: #080e1a; }
+body.ub .btn--primary:hover { background-color: var(--ub-gold-hi); color: #080e1a; filter: brightness(1.06); }
+body.ub .btn--ghost { background-color: rgba(18, 30, 53, 0.5); border: 1px solid rgba(255, 255, 255, 0.16); color: var(--ink); }
+body.ub .btn--ghost:hover { border-color: var(--ub-gold); color: var(--ub-gold-hi); background-color: rgba(18, 30, 53, 0.5); }
+body.ub .card { background-color: var(--ub-elev2); }
+body.ub .ledger code, body.ub .ub-prose code { font-family: var(--ub-mono); font-size: 0.85em; color: var(--ub-gold-hi); }
+
+/* 2 · Page voice — buttons */
+.ub-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  font: 600 0.9375rem/1 var(--font); padding: 0.8rem 1.4rem;
+  border-radius: 6px; border: 1px solid transparent; cursor: pointer;
+  text-decoration: none; white-space: nowrap;
+}
+.ub-btn--primary { background-color: var(--ub-gold-hi); color: #080e1a; }
+.ub-btn--primary:hover { filter: brightness(1.06); }
+.ub-btn--secondary { background-color: rgba(18, 30, 53, 0.5); border-color: rgba(255, 255, 255, 0.16); color: var(--ink); }
+.ub-btn--secondary:hover { border-color: var(--ub-gold); color: var(--ub-gold-hi); }
+.ub-ctas { display: flex; flex-wrap: wrap; gap: 0.875rem; }
+
+/* 3 · Type */
+.ub-name { font: 500 0.9375rem/1.4 var(--ub-mono); color: var(--ub-gold-hi); display: block; margin-bottom: 1.1rem; }
+.ub-display {
+  font-family: var(--ub-serif); font-weight: 600;
+  font-size: clamp(2.35rem, 5vw + 1rem, 3.9rem);
+  line-height: 1.08; letter-spacing: -0.02em; color: var(--ink); max-width: 16ch;
+}
+.ub-h2 {
+  font-family: var(--ub-serif); font-weight: 600;
+  font-size: clamp(1.55rem, 2.2vw + 1rem, 2.1rem);
+  line-height: 1.15; letter-spacing: -0.015em; color: var(--ink);
+}
+.ub-lead { font-size: clamp(1.05rem, 0.4vw + 0.95rem, 1.2rem); line-height: 1.65; color: var(--ub-ink-soft); }
+.ub-prose { max-width: 65ch; color: var(--muted); line-height: 1.7; }
+.ub-prose strong, .ub-lead strong { color: var(--ink); font-weight: 600; }
+.ub-note { font: 400 0.8125rem/1.6 var(--ub-mono); color: var(--ub-ink-sub); margin-top: 1rem; max-width: 62ch; }
+
+/* 4 · Section shell */
+.ub-section { padding-block: clamp(3.25rem, 7vw, 4.75rem); }
+.ub-section--band { background: var(--surface); border-block: 1px solid var(--ub-hairline); }
+.ub-container { max-width: 72rem; margin-inline: auto; padding-inline: clamp(1rem, 3vw, 1.25rem); }
+.ub-section-head { max-width: 760px; margin-bottom: clamp(1.75rem, 4vw, 2.75rem); }
+.ub-section-head .ub-h2 { margin-bottom: 0.9rem; }
+
+/* 5 · Hero */
+.ub-hero { position: relative; background: var(--bg); overflow: clip; padding-block: clamp(3.75rem, 9vw, 6.5rem) clamp(3.25rem, 7vw, 5rem); }
+.ub-hero__sky { position: absolute; top: 0; right: 0; height: 100%; width: min(58vw, 620px); opacity: 0.55; display: block; }
+.ub-hero__grid { position: relative; display: grid; gap: clamp(2.75rem, 5vw, 4rem); grid-template-columns: 1fr; }
+.ub-hero__lead { margin-top: 1.35rem; max-width: 54ch; }
+.ub-hero__type { font: 500 0.9rem/1.7 var(--ub-mono); color: var(--ub-gold-hi); margin-top: 1.4rem; min-height: 1.7em; }
+.ub-cursor { display: inline-block; width: 9px; height: 1.05em; background: var(--ub-gold-hi); margin-left: 3px; vertical-align: text-bottom; }
+.ub-hero .ub-ctas { margin-top: 1.8rem; }
+.ub-hero__trust { font: 400 0.8125rem/1.5 var(--ub-mono); color: var(--ub-ink-sub); margin-top: 1.2rem; }
+.ub-hero__side { display: flex; align-items: center; justify-content: center; }
+
+/* Constellation sky */
+.ub-sky .ub-edge { stroke: rgba(255, 255, 255, 0.13); stroke-width: 1; }
+.ub-sky .ub-node { fill: #7c8ea3; }
+.ub-sky .ub-edge--gold { stroke: rgba(212, 169, 79, 0.5); }
+.ub-sky .ub-node--gold { fill: #d4a94f; transform-box: fill-box; transform-origin: center; }
+.ub-sky .ub-halo { fill: none; stroke: rgba(212, 169, 79, 0.25); stroke-width: 1; }
+
+/* Hero entrance — CTAs are deliberately NOT animated: visible from first paint */
+@keyframes ub-rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@keyframes ub-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ub-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes ub-pop { from { opacity: 0; transform: scale(0.35); } to { opacity: 1; transform: scale(1); } }
+@keyframes ub-blink { 50% { opacity: 0; } }
+
+@media (prefers-reduced-motion: no-preference) {
+  .ub-hero__head { animation: ub-rise 0.45s cubic-bezier(0.22, 0.61, 0.36, 1) both; }
+  .ub-hero__lead { animation: ub-rise 0.45s 0.12s cubic-bezier(0.22, 0.61, 0.36, 1) both; }
+  .ub-hero__type { animation: ub-fade 0.4s 0.3s ease both; }
+  .ub-hero__trust { animation: ub-fade 0.4s 0.28s ease both; }
+  .ub-hero__card { animation: ub-rise 0.55s 1.7s cubic-bezier(0.22, 0.61, 0.36, 1) both; }
+  .ub-cursor { animation: ub-blink 1.1s steps(2, start) infinite; }
+  .ub-sky .ub-node { opacity: 0; animation: ub-fade 0.5s ease forwards; animation-delay: var(--d, 0.6s); }
+  .ub-sky .ub-edge { stroke-dasharray: 1; stroke-dashoffset: 1; animation: ub-draw 0.5s ease forwards; animation-delay: var(--d, 1s); }
+  .ub-sky .ub-node--gold { opacity: 0; animation: ub-pop 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) forwards; animation-delay: var(--d, 2.1s); }
+  .ub-sky .ub-halo { opacity: 0; animation: ub-fade 0.6s 2.25s ease forwards; }
+}
+
+/* 6 · Evidence card — the atom */
+.ub-card { background: var(--ub-elev2); border: 1px solid var(--ub-hairline); border-radius: 10px; padding: 1.35rem; max-width: 30rem; width: 100%; }
+.ub-card__label { display: flex; justify-content: space-between; align-items: center; gap: 1rem; font: 600 0.6875rem/1.4 var(--ub-mono); text-transform: uppercase; color: var(--ub-ink-sub); margin-bottom: 0.85rem; }
+.ub-card__title { font: 600 1.2rem/1.3 var(--font); color: var(--ink); }
+.ub-card__list { list-style: none; display: flex; flex-direction: column; gap: 0.45rem; margin-top: 0.9rem; font: 400 0.8125rem/1.55 var(--ub-mono); color: var(--muted); }
+.ub-card__list li::before { content: "—"; color: var(--ub-ink-sub); margin-right: 0.6rem; }
+.ub-card__action { margin-top: 0.95rem; font-size: 0.9rem; line-height: 1.6; color: var(--ub-ink-soft); }
+.ub-card__action strong { color: var(--ink); font-weight: 600; }
+.ub-card__view { margin-top: 1rem; padding-top: 0.95rem; border-top: 1px solid var(--ub-hairline); display: grid; gap: 0.45rem; }
+.ub-card__view dt { font: 400 0.75rem/1.4 var(--ub-mono); color: var(--ub-ink-sub); }
+.ub-card__view dd { font-size: 0.9rem; color: var(--ub-ink-soft); line-height: 1.55; }
+.ub-card__view .ub-confidence { color: var(--ub-gold-hi); }
+.ub-card__foot { margin-top: 1.05rem; padding-top: 0.95rem; border-top: 1px solid var(--ub-hairline); display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.ub-confidence { font: 600 0.8125rem/1.4 var(--ub-mono); color: var(--ub-gold-hi); }
+.ub-approve { font: 600 0.8125rem/1 var(--ub-mono); color: var(--ink); background: transparent; border: 1px solid var(--ub-hairline-strong); border-radius: 6px; padding: 0.55rem 0.85rem; cursor: pointer; }
+.ub-approve:hover { border-color: var(--ub-gold); }
+.ub-approve.is-approved { border-color: var(--ub-gold); color: var(--ub-gold-hi); cursor: default; }
+
+/* Status chips */
+.ub-chip { font: 500 0.75rem/1 var(--ub-mono); padding: 0.35rem 0.65rem; border-radius: 999px; white-space: nowrap; }
+.ub-chip--ship { color: var(--ub-gold-hi); background: rgba(184, 134, 46, 0.12); border: 1px solid rgba(184, 134, 46, 0.35); }
+.ub-chip--dev { color: var(--muted); background: transparent; border: 1px solid var(--ub-hairline-strong); }
+
+/* 7 · Lined list (problems, mapper sees) */
+.ub-linedlist { list-style: none; max-width: 640px; border-top: 1px solid var(--ub-hairline); }
+.ub-linedlist li { display: flex; gap: 0.75rem; padding: 0.8rem 0; border-bottom: 1px solid var(--ub-hairline); color: var(--ub-ink-soft); font-size: 0.9375rem; line-height: 1.6; }
+.ub-linedlist li::before { content: "—"; color: var(--ub-gold); flex-shrink: 0; }
+
+/* 8 · Layer table (what Ultra is) */
+.ub-table { width: 100%; max-width: 640px; border-collapse: collapse; }
+.ub-table th { text-align: left; font-weight: 500; color: var(--ub-ink-sub); font-size: 0.875rem; padding: 0.85rem 1rem 0.85rem 0; border-bottom: 1px solid var(--ub-hairline); white-space: nowrap; width: 42%; }
+.ub-table td { padding: 0.85rem 0; border-bottom: 1px solid var(--ub-hairline); color: var(--ink); font-size: 0.9375rem; }
+.ub-table tr:last-child th, .ub-table tr:last-child td { border-bottom: 0; }
+
+/* 9 · Steps (numbered — the sequence carries the meaning) */
+.ub-steps { display: grid; gap: 1.5rem; }
+.ub-step { border-top: 1px solid var(--ub-hairline-strong); padding-top: 1rem; }
+.ub-step__no { font: 600 0.8125rem/1 var(--ub-mono); color: var(--ub-gold-hi); display: block; margin-bottom: 0.65rem; }
+.ub-step__name { font: 600 1.05rem/1.3 var(--font); color: var(--ink); display: block; margin-bottom: 0.45rem; }
+.ub-step p { font-size: 0.875rem; color: var(--muted); line-height: 1.6; }
+@media (min-width: 900px) { .ub-steps { grid-template-columns: repeat(4, 1fr); } }
+
+/* 10 · Figure (real product output) */
+.ub-figure { max-width: 980px; margin: 0; }
+.ub-figure img { display: block; width: 100%; border-radius: 10px; border: 1px solid var(--ub-hairline); }
+.ub-figure figcaption { font: 400 0.8125rem/1.65 var(--ub-mono); color: var(--ub-ink-sub); margin-top: 0.85rem; max-width: 72ch; }
+.ub-figure figcaption strong { color: var(--ub-ink-soft); font-weight: 600; }
+
+/* 11 · Outputs (Living Wiki) */
+.ub-outputs { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); max-width: 900px; }
+.ub-output { background: var(--ub-elev2); border: 1px solid var(--ub-hairline); border-radius: 10px; padding: 1.15rem 1.25rem; }
+.ub-output__k { font: 600 0.875rem/1.4 var(--ub-mono); color: var(--ub-gold-hi); display: block; margin-bottom: 0.45rem; }
+.ub-output p { font-size: 0.875rem; color: var(--muted); line-height: 1.6; }
+
+/* 12 · Terminal (Deep Ultra + AS MC only) */
+.ub-terminal { background: #0b132b; border: 1px solid var(--ub-hairline); border-radius: 10px; padding: 1.2rem 1.4rem; font: 400 0.8125rem/1.8 var(--ub-mono); color: var(--ub-ink-soft); overflow-x: auto; max-width: 720px; }
+.ub-terminal .p { color: var(--ub-gold-hi); }
+.ub-terminal .cmd { color: var(--ink); }
+.ub-terminal .ok { color: var(--ub-gold-hi); }
+.ub-terminal .cm { color: var(--ub-ink-sub); }
+
+/* 13 · Boundary (AS MC) */
+.ub-boundary { max-width: 720px; border: 1px solid var(--ub-hairline); border-radius: 10px; }
+.ub-boundary__row { display: grid; grid-template-columns: 190px 1fr; gap: 1rem; padding: 1.05rem 1.25rem; }
+.ub-boundary__row + .ub-boundary__row { border-top: 1px solid var(--ub-hairline); }
+.ub-boundary__k { font: 600 0.8125rem/1.6 var(--ub-mono); color: var(--ub-gold-hi); }
+.ub-boundary__v { font-size: 0.9375rem; color: var(--ub-ink-soft); line-height: 1.6; }
+@media (max-width: 639px) { .ub-boundary__row { grid-template-columns: 1fr; gap: 0.3rem; } }
+
+/* 14 · Demo prompts */
+.ub-prompts { display: flex; flex-direction: column; gap: 0.65rem; max-width: 680px; }
+.ub-prompt { display: flex; align-items: baseline; gap: 0.8rem; font: 400 0.875rem/1.6 var(--ub-mono); color: var(--ub-ink-soft); background: var(--ub-elev2); border: 1px solid var(--ub-hairline); border-radius: 8px; padding: 0.85rem 1rem; text-decoration: none; }
+.ub-prompt:hover { border-color: var(--ub-gold); color: var(--ink); }
+.ub-prompt::before { content: "›"; color: var(--ub-gold-hi); font-weight: 600; }
+
+/* 15 · Build status */
+.ub-status { display: grid; gap: 2.5rem; }
+.ub-status__t { font: 600 1rem/1.3 var(--font); color: var(--ink); margin-bottom: 0.35rem; }
+.ub-status__d { font-size: 0.8125rem; color: var(--ub-ink-sub); margin-bottom: 0.85rem; line-height: 1.6; }
+.ub-status ul { list-style: none; border-top: 1px solid var(--ub-hairline); margin: 0; padding: 0; }
+.ub-status li { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.7rem 0; border-bottom: 1px solid var(--ub-hairline); color: var(--ub-ink-soft); font-size: 0.9375rem; }
+@media (min-width: 900px) { .ub-status { grid-template-columns: 1fr 1fr; gap: 3rem; } }
+
+/* 16 · Who it is for */
+.ub-who { list-style: none; margin: 0; padding: 0; max-width: 900px; display: grid; gap: 0 3rem; }
+.ub-who li { padding: 0.85rem 0; border-bottom: 1px solid var(--ub-hairline); color: var(--ub-ink-soft); font-size: 0.9375rem; line-height: 1.6; }
+@media (min-width: 768px) { .ub-who { grid-template-columns: 1fr 1fr; } }
+
+/* 17 · FAQ */
+.ub-faq { max-width: 760px; border-top: 1px solid var(--ub-hairline); }
+.ub-faq details { border-bottom: 1px solid var(--ub-hairline); }
+.ub-faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.05rem 0; font-weight: 600; color: var(--ink); font-size: 1rem; }
+.ub-faq summary::-webkit-details-marker { display: none; }
+.ub-faq summary::after { content: "+"; font: 600 1.1rem/1 var(--ub-mono); color: var(--ub-gold-hi); }
+.ub-faq details[open] summary::after { content: "–"; }
+.ub-faq details p { padding: 0 0 1.15rem; color: var(--muted); line-height: 1.7; max-width: 62ch; }
+
+/* 18 · Final CTA */
+.ub-final { position: relative; background: var(--surface); border-block: 1px solid var(--ub-hairline); padding-block: clamp(3.5rem, 8vw, 5.5rem); overflow: clip; }
+.ub-final__sky { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.22; display: block; }
+.ub-final__inner { position: relative; max-width: 46rem; margin-inline: auto; text-align: center; padding-inline: clamp(1rem, 3vw, 1.25rem); }
+.ub-final__inner h2 { font-family: var(--ub-serif); font-weight: 600; font-size: clamp(1.8rem, 3.4vw + 1rem, 2.7rem); line-height: 1.15; letter-spacing: -0.015em; color: var(--ink); }
+.ub-final__inner p { margin-top: 0.9rem; color: var(--ub-ink-soft); line-height: 1.7; }
+.ub-final .ub-ctas { justify-content: center; margin-top: 1.7rem; }
+
+/* 19 · Responsive */
+@media (min-width: 1024px) {
+  .ub-hero__grid { grid-template-columns: 1.08fr 0.92fr; align-items: center; }
+}
+@media (max-width: 1023px) {
+  .ub-hero__sky { width: 100%; opacity: 0.28; }
+}
+/* 20 - Voices (Deep Ultra) */
+.ub-voices { display: flex; flex-wrap: wrap; gap: 1rem 2.25rem; margin-top: 1.4rem; max-width: 720px; border-top: 1px solid var(--ub-hairline); padding-top: 1.1rem; }
+.ub-voice { font-size: 0.9rem; color: var(--ub-ink-soft); line-height: 1.6; }
+.ub-voice strong { color: var(--ink); font-weight: 600; }
