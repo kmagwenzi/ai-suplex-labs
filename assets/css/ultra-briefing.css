@@ -166,8 +166,8 @@ body.ub .ledger code, body.ub .ub-prose code { font-family: var(--ub-mono); font
 @media (min-width: 900px) { .ub-steps { grid-template-columns: repeat(4, 1fr); } }
 
 /* 10 · Figure (real product output) */
-.ub-figure { max-width: 980px; margin: 0; }
-.ub-figure img { display: block; width: 100%; border-radius: 10px; border: 1px solid var(--ub-hairline); }
+.ub-figure { max-width: 980px; margin: 0; background: var(--ub-elev2); border: 1px solid var(--ub-hairline); border-radius: 10px; padding: 0.6rem; }
+.ub-figure img { display: block; width: 100%; border-radius: 6px; }
 .ub-figure figcaption { font: 400 0.8125rem/1.65 var(--ub-mono); color: var(--ub-ink-sub); margin-top: 0.85rem; max-width: 72ch; }
 .ub-figure figcaption strong { color: var(--ub-ink-soft); font-weight: 600; }
 
