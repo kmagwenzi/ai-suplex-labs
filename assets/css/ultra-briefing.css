@@ -239,3 +239,5 @@ body.ub .ledger code, body.ub .ub-prose code { font-family: var(--ub-mono); font
 .ub-voices { display: flex; flex-wrap: wrap; gap: 1rem 2.25rem; margin-top: 1.4rem; max-width: 720px; border-top: 1px solid var(--ub-hairline); padding-top: 1.1rem; }
 .ub-voice { font-size: 0.9rem; color: var(--ub-ink-soft); line-height: 1.6; }
 .ub-voice strong { color: var(--ink); font-weight: 600; }
+/* 10b - portrait figure variant (sample output) */
+.ub-figure--portrait { max-width: 640px; margin-inline: auto; }
