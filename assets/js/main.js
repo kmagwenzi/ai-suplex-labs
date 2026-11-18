@@ -242,7 +242,70 @@
     setTimeout(revealNextChar, 180);
   }
 
-  // Initialize typing effect and scroll reveal
+  /* --------------------------------------------------------------------------
+     4. Progressive Phrase Rotator ([data-rotate-phrases])
+     -------------------------------------------------------------------------- */
+  function initPhraseRotator() {
+    const rotators = document.querySelectorAll('[data-rotate-phrases]');
+    if (!rotators.length) return;
+
+    if (prefersReducedMotion) return;
+
+    rotators.forEach(function (el) {
+      const raw = el.getAttribute('data-rotate-phrases');
+      if (!raw) return;
+
+      const phrases = raw
+        .split('|')
+        .map(function (s) {
+          return s.trim();
+        })
+        .filter(Boolean);
+
+      if (phrases.length < 2) return;
+
+      let phraseIndex = 0;
+      let charIndex = phrases[0].length;
+      let isDeleting = false;
+
+      el.textContent = phrases[0];
+
+      function tick() {
+        const current = phrases[phraseIndex];
+
+        if (isDeleting) {
+          charIndex--;
+          el.textContent = current.slice(0, Math.max(0, charIndex));
+
+          if (charIndex <= 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            setTimeout(tick, 280);
+            return;
+          }
+          setTimeout(tick, 22);
+        } else {
+          charIndex++;
+          el.textContent = current.slice(0, charIndex);
+
+          if (charIndex >= current.length) {
+            isDeleting = true;
+            setTimeout(tick, 2600);
+            return;
+          }
+          setTimeout(tick, 38);
+        }
+      }
+
+      setTimeout(function () {
+        isDeleting = true;
+        tick();
+      }, 2600);
+    });
+  }
+
+  // Initialize typing effect, phrase rotator, and scroll reveal
   initHeroTyping();
+  initPhraseRotator();
   initScrollReveal();
 })();
