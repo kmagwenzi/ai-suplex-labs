@@ -3,28 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI-Suplex 777 — Open-Source Agent Memory | AI-Suplex Labs</title>
+    <title>AI-Suplex 777 — Give your AI agents a memory that survives the chat | AI-Suplex Labs</title>
     <meta
       name="description"
-      content="A file-first, agent-agnostic memory layer for AI agents: three-layer memory plus a CLI, in Markdown and SQLite. Free and open source (MIT)."
+      content="AI-Suplex 777 is a free, portable workspace for AI agents: file-first memory, lessons and workflows in plain Markdown. v2.10.0, MIT licensed, works with the agent you already trust."
     />
     <link rel="canonical" href="https://ai-suplex.co.zw/projects/ai-suplex-777.html" />
 
     <!-- Open Graph / Social Cards -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="AI-Suplex 777 — Open-Source Agent Memory | AI-Suplex Labs" />
+    <meta property="og:title" content="AI-Suplex 777 — Give your AI agents a memory that survives the chat | AI-Suplex Labs" />
     <meta
       property="og:description"
-      content="A file-first, agent-agnostic memory layer for AI agents: three-layer memory plus a CLI, in Markdown and SQLite. Free and open source (MIT)."
+      content="A free, portable workspace for AI agents: file-first memory, lessons and workflows in plain Markdown. v2.10.0, MIT licensed, bring your own agent."
     />
     <meta property="og:url" content="https://ai-suplex.co.zw/projects/ai-suplex-777.html" />
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="AI-Suplex 777 — Open-Source Agent Memory | AI-Suplex Labs" />
+    <meta name="twitter:title" content="AI-Suplex 777 — Give your AI agents a memory that survives the chat | AI-Suplex Labs" />
     <meta
       name="twitter:description"
-      content="A file-first, agent-agnostic memory layer for AI agents: three-layer memory plus a CLI, in Markdown and SQLite. Free and open source (MIT)."
+      content="A free, portable workspace for AI agents: file-first memory, lessons and workflows in plain Markdown. v2.10.0, MIT licensed, bring your own agent."
     />
 
     <!-- Brand Favicon -->
@@ -144,86 +144,42 @@
         <div class="container hero__container">
           <div class="hero__inner">
             <div class="hero__badge-wrap">
-              <span class="badge">Free and open source</span>
+              <span class="badge">v2.10.0 &middot; Free &amp; open source</span>
             </div>
 
             <h1 id="hero-heading" class="hero__title">
-              A memory that outlives your tools.
+              Give your AI agents a memory that survives the chat.
             </h1>
 
             <p class="hero__lead">
-              AI-Suplex 777 is a file-first, agent-agnostic memory layer. Plain Markdown and SQLite on
-              your machine &mdash; so Claude today, DeepSeek tomorrow, and a local model next week all share
-              the same memory.
+              AI-Suplex 777 is a portable, file-first workspace for AI agents. Create a workspace, run it
+              with the agent you already trust, capture what happened &mdash; and start the next session with
+              the context, lessons and next actions already in place.
             </p>
 
             <div class="hero__cta-group">
               <a
-                href="https://github.com/kmagwenzi/ai-suplex"
+                href="https://github.com/kmagwenzi/ai-suplex/releases/tag/v2.10.0"
                 class="btn btn--primary"
                 target="_blank"
                 rel="noopener"
               >
-                Clone the repo
+                Start with 777
               </a>
-              <a href="#story" class="btn btn--ghost">Read the story</a>
+              <a href="#remember" class="btn btn--ghost">See it remember</a>
             </div>
 
-            <!-- Architecture Diagram Placeholder -->
-            <div class="mockup-wrap" style="margin-top: var(--s-6);" data-reveal>
-              <!-- REPLACE with /assets/img/777/memory-stack.svg (alt text already set) -->
-              <svg
-                viewBox="0 0 760 360"
-                width="100%"
-                height="auto"
-                role="img"
-                aria-label="AI-Suplex 777 architecture diagram showing the three-layer memory stack (Episodic, Semantic, Procedural), 3lm CLI scoring engine, and SQLite knowledge graph"
-                style="display: block; border-radius: var(--radius); border: 1px solid var(--line); background-color: var(--surface); box-shadow: var(--shadow);"
-              >
-                <!-- Terminal Frame -->
-                <rect width="760" height="360" rx="10" fill="#15223A" />
-                <rect y="0" width="760" height="42" fill="#1A2947" rx="10" />
-                <circle cx="24" cy="21" r="5" fill="#EF4444" opacity="0.8" />
-                <circle cx="40" cy="21" r="5" fill="#F59E0B" opacity="0.8" />
-                <circle cx="56" cy="21" r="5" fill="#10B981" opacity="0.8" />
-                <text x="76" y="26" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">ai-suplex-777 &bull; 3lm CLI &bull; File-First Agent Memory Stack</text>
+            <p style="margin: var(--s-4) 0 0; font-size: var(--fs-1); color: var(--ink); opacity: 0.85;">
+              Open source &middot; Local-first &middot; Bring your own agent &middot; MIT licensed
+            </p>
 
-                <!-- Layer 1: Episodic -->
-                <rect x="40" y="65" width="200" height="110" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1" />
-                <text x="56" y="92" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="13" font-weight="700">1. Episodic Memory</text>
-                <text x="56" y="112" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Session transcripts</text>
-                <text x="56" y="128" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Tool executions &amp; logs</text>
-                <text x="56" y="152" fill="#B8862E" font-family="monospace" font-size="11">sessions/*.md</text>
-
-                <!-- Layer 2: Semantic -->
-                <rect x="280" y="65" width="200" height="110" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1" />
-                <text x="296" y="92" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="13" font-weight="700">2. Semantic Memory</text>
-                <text x="296" y="112" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Durable project facts</text>
-                <text x="296" y="128" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Domain ontology</text>
-                <text x="296" y="152" fill="#B8862E" font-family="monospace" font-size="11">knowledge/*.md</text>
-
-                <!-- Layer 3: Procedural -->
-                <rect x="520" y="65" width="200" height="110" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1" />
-                <text x="536" y="92" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="13" font-weight="700">3. Procedural Memory</text>
-                <text x="536" y="112" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Validated playbooks</text>
-                <text x="536" y="128" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Repeatable skills</text>
-                <text x="536" y="152" fill="#B8862E" font-family="monospace" font-size="11">workflows/*.md</text>
-
-                <!-- Connecting Arrows -->
-                <path d="M 140 180 L 140 220 L 380 220" stroke="#475569" stroke-width="2" stroke-dasharray="4" fill="none" />
-                <path d="M 380 180 L 380 220" stroke="#475569" stroke-width="2" stroke-dasharray="4" fill="none" />
-                <path d="M 620 180 L 620 220 L 380 220" stroke="#475569" stroke-width="2" stroke-dasharray="4" fill="none" />
-
-                <!-- Center Promotion Engine & Knowledge Graph -->
-                <rect x="40" y="240" width="680" height="90" rx="8" fill="#0F172A" stroke="#B8862E" stroke-width="1" />
-                <text x="60" y="268" fill="#10B981" font-family="monospace" font-size="12" font-weight="700">$ 3lm promote --score &gt;= 0.85 &bull; SQLite Indexer</text>
-                <text x="60" y="292" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="13">
-                  Score &rarr; Promote &rarr; Index &bull; Knowledge Graph connects entities into durable memory
-                </text>
-                <text x="60" y="312" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">
-                  Compatible with Claude Code, DeepSeek, Cursor, Aider, and local LLMs via plain Markdown + SQLite
-                </text>
-              </svg>
+            <!-- The loop, in one strip -->
+            <div style="display: flex; flex-wrap: wrap; gap: var(--s-2); margin-top: var(--s-5);" data-reveal>
+              <span class="badge">Create a workspace</span>
+              <span class="badge">Kickstart it</span>
+              <span class="badge">Capture the outcome</span>
+              <span class="badge">Learn</span>
+              <span class="badge">Return smarter</span>
             </div>
           </div>
         </div>
@@ -233,110 +189,429 @@
       <section class="section" aria-labelledby="problem-heading">
         <div class="container">
           <header class="section-header" data-reveal>
-            <h2 id="problem-heading" class="section-header__title">The problem</h2>
+            <h2 id="problem-heading" class="section-header__title">Your agent forgets. Your work should not.</h2>
           </header>
 
           <div class="card" style="max-width: 860px;" data-reveal>
             <p class="approach-text" style="color: var(--ink); line-height: 1.75;">
-              Your AI changes; your memory shouldn't. But memory today is vendor-specific: switch tools and
-              you start from zero, re-explaining the architecture, the conventions, the context you pasted
-              last week. The tools got smarter; your memory got more fragmented.
+              Every chat session starts from zero. You re-explain the project, repeat decisions, rediscover
+              blockers, and lose the lessons from completed work. AI-Suplex 777 gives your agents a durable,
+              portable memory &mdash; without locking you into one AI provider.
+            </p>
+          </div>
+
+          <div class="card__grid card__grid--2up" style="margin-top: var(--s-5);" data-reveal-group>
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <h3 class="card__title" style="font-size: var(--fs-3);">Same context, every session</h3>
+              </div>
+              <div class="card__body">
+                <p>You paste the same brief into the chat again and again, hoping nothing important drops.</p>
+              </div>
+            </article>
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <h3 class="card__title" style="font-size: var(--fs-3);">Lessons disappear with the chat</h3>
+              </div>
+              <div class="card__body">
+                <p>Decisions and hard-won lessons live in a scrollback you will never read again.</p>
+              </div>
+            </article>
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <h3 class="card__title" style="font-size: var(--fs-3);">Agent work is hard to continue</h3>
+              </div>
+              <div class="card__body">
+                <p>What was done, what was decided, what is next &mdash; nobody can say, so nobody resumes cleanly.</p>
+              </div>
+            </article>
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <h3 class="card__title" style="font-size: var(--fs-3);">Memory trapped in one tool</h3>
+              </div>
+              <div class="card__body">
+                <p>Switch agents and you start from zero, because your memory belongs to the vendor, not to you.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- What 777 Is Section -->
+      <section class="section section--surface" aria-labelledby="what-heading">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <h2 id="what-heading" class="section-header__title">A portable workspace for AI agents.</h2>
+          </header>
+
+          <div class="card" style="max-width: 860px;" data-reveal>
+            <p class="approach-text" style="color: var(--ink); line-height: 1.75;">
+              AI-Suplex 777 is a file-first execution framework. It turns your work into workspaces, captures
+              what happened, extracts lessons, and makes the next session start smarter. It works alongside the
+              agents you already use &mdash; it does not replace them.
+            </p>
+          </div>
+
+          <div class="card__grid card__grid--3up" style="margin-top: var(--s-5);" data-reveal-group>
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <div class="card__badge"><span class="badge">01</span></div>
+                <h3 class="card__title" style="font-size: var(--fs-3);">Workspace</h3>
+              </div>
+              <div class="card__body">
+                <p>Defines the mission, the tasks, the context and the outcome &mdash; one lane of work, in files you own.</p>
+              </div>
+            </article>
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <div class="card__badge"><span class="badge">02</span></div>
+                <h3 class="card__title" style="font-size: var(--fs-3);">Memory</h3>
+              </div>
+              <div class="card__body">
+                <p>Captures episodes, lessons, decisions and reusable knowledge in plain Markdown you can read.</p>
+              </div>
+            </article>
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <div class="card__badge"><span class="badge">03</span></div>
+                <h3 class="card__title" style="font-size: var(--fs-3);">Workflow</h3>
+              </div>
+              <div class="card__body">
+                <p>Starts, executes, captures, promotes and maintains the work &mdash; so every session begins with context.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- See It Remember Section (the proof) -->
+      <section class="section" id="remember" aria-labelledby="remember-heading">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <h2 id="remember-heading" class="section-header__title">See it remember.</h2>
+          </header>
+
+          <div class="card" style="max-width: 860px;" data-reveal>
+            <p style="margin: 0 0 var(--s-4); font-size: var(--fs-2); color: var(--ink); line-height: 1.7;">
+              This is real output from a live vault &mdash; not a mockup. Every lesson below was learned in an
+              earlier session and returned by one command.
+            </p>
+
+            <div style="border-radius: var(--radius); border: 1px solid var(--line); background-color: #15223A; box-shadow: var(--shadow); overflow: hidden;">
+              <div style="display: flex; align-items: center; gap: 8px; padding: 10px 16px; background-color: #1A2947;">
+                <span style="width: 10px; height: 10px; border-radius: 50%; background-color: #EF4444; opacity: 0.8; display: inline-block;"></span>
+                <span style="width: 10px; height: 10px; border-radius: 50%; background-color: #F59E0B; opacity: 0.8; display: inline-block;"></span>
+                <span style="width: 10px; height: 10px; border-radius: 50%; background-color: #10B981; opacity: 0.8; display: inline-block;"></span>
+                <span style="margin-left: 8px; color: #94A3B8; font-family: ui-monospace, monospace; font-size: 12px; font-weight: 600;">my-vault &bull; 3lm CLI</span>
+              </div>
+              <pre style="margin: 0; padding: 18px 20px; color: #E2E8F0; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; line-height: 1.7; overflow-x: auto;"><span style="color: #10B981;">$ 3lm start --context</span>
+<span style="color: #10B981;">&#10003; Context fresh.</span>
+
+<span style="color: #B8862E;">LESSONS</span>
+&middot; The walk is a test class of its own &mdash; a person clicking found
+  two lies that 140 tests could not.
+&middot; A lane with a dispatcher ships.
+&middot; Work with no dispatcher waits for a day that never shortens.
+
+<span style="color: #B8862E;">RECENT EPISODES</span>
+&middot; 2026-11-17-week-5-day-1-the-zesa-recovery (score 4/5)
+
+<span style="color: #B8862E;">ACTIVE TASKLISTS</span>
+&middot; 2026-11-18-cycle-3-week-5-day-2-money-first-tasklist.md</pre>
+            </div>
+
+            <p style="margin: var(--s-4) 0 0; font-size: var(--fs-2); color: var(--ink);">
+              One command. The context, the lessons, the next actions &mdash; already there.
+              <strong>That is the core value of 777.</strong>
             </p>
           </div>
         </div>
       </section>
 
-      <!-- What It Does Section -->
-      <section class="section section--surface" id="story" aria-labelledby="story-heading">
+      <!-- Core Capabilities Section -->
+      <section class="section section--surface" aria-labelledby="capabilities-heading">
         <div class="container">
           <header class="section-header" data-reveal>
-            <h2 id="story-heading" class="section-header__title">What it does</h2>
+            <h2 id="capabilities-heading" class="section-header__title">What you get</h2>
           </header>
 
           <div class="card__grid card__grid--2up" data-reveal-group>
-            <!-- Item 1 -->
             <article class="card" data-reveal>
               <div class="card__header">
-                <div class="card__badge">
-                  <span class="badge">01</span>
-                </div>
-                <h3 class="card__title" style="font-size: var(--fs-3);">Episodic memory</h3>
+                <h3 class="card__title" style="font-size: var(--fs-3);">A portable workspace vault</h3>
               </div>
               <div class="card__body">
-                <p>what happened in each session</p>
+                <p>A normal folder of Markdown, tasklists and artifacts. Move it, back it up, sync it, open it in Obsidian.</p>
               </div>
             </article>
-
-            <!-- Item 2 -->
             <article class="card" data-reveal>
               <div class="card__header">
-                <div class="card__badge">
-                  <span class="badge">02</span>
-                </div>
-                <h3 class="card__title" style="font-size: var(--fs-3);">Semantic memory</h3>
+                <h3 class="card__title" style="font-size: var(--fs-3);">Agent-agnostic execution</h3>
               </div>
               <div class="card__body">
-                <p>durable facts about the project</p>
+                <p>Point any file-capable agent at <code>AGENTS.md</code>. 777 provides the workflow, memory and guardrails; the agent does the work.</p>
               </div>
             </article>
-
-            <!-- Item 3 -->
             <article class="card" data-reveal>
               <div class="card__header">
-                <div class="card__badge">
-                  <span class="badge">03</span>
-                </div>
-                <h3 class="card__title" style="font-size: var(--fs-3);">Procedural memory</h3>
+                <h3 class="card__title" style="font-size: var(--fs-3);">Human-approved memory</h3>
               </div>
               <div class="card__body">
-                <p>workflows that keep working</p>
+                <p>777 captures what happened and proposes lessons &mdash; and promotes only what you approve. You stay in control of what becomes memory.</p>
               </div>
             </article>
-
-            <!-- Item 4 -->
             <article class="card" data-reveal>
               <div class="card__header">
-                <div class="card__badge">
-                  <span class="badge">04</span>
-                </div>
-                <h3 class="card__title" style="font-size: var(--fs-3);">3lm CLI</h3>
+                <h3 class="card__title" style="font-size: var(--fs-3);">Structured task continuity</h3>
               </div>
               <div class="card__body">
-                <p>promotes lessons into durable knowledge (score &rarr; promote &rarr; index)</p>
+                <p>Workspaces, tasklists, episodes and next actions &mdash; so unfinished work resumes instead of restarting.</p>
               </div>
             </article>
-
-            <!-- Item 5 -->
             <article class="card" data-reveal>
               <div class="card__header">
-                <div class="card__badge">
-                  <span class="badge">05</span>
-                </div>
-                <h3 class="card__title" style="font-size: var(--fs-3);">Knowledge graph</h3>
+                <h3 class="card__title" style="font-size: var(--fs-3);">Local-first maintenance</h3>
               </div>
               <div class="card__body">
-                <p>connects entities so the system surfaces connections you forgot</p>
+                <p>Validate the vault, refresh the index, back up, export. Everything runs on your machine.</p>
               </div>
             </article>
-
-            <!-- Item 6 -->
             <article class="card" data-reveal>
               <div class="card__header">
-                <div class="card__badge">
-                  <span class="badge">06</span>
-                </div>
-                <h3 class="card__title" style="font-size: var(--fs-3);">Command centre + skills + prompt patterns</h3>
+                <h3 class="card__title" style="font-size: var(--fs-3);">Optional knowledge graph</h3>
               </div>
               <div class="card__body">
-                <p>the operating system around the memory</p>
+                <p>A lightweight way to explore what relates to what. <strong>Optional</strong> &mdash; the core value is continuity, and the graph is a later unlock.</p>
               </div>
             </article>
           </div>
+        </div>
+      </section>
 
-          <!-- Ultra Harness Link Callout -->
-          <div class="card" style="max-width: 860px; margin-top: var(--s-5); border-left: 3px solid var(--gold);" data-reveal>
-            <p style="margin: 0; font-size: var(--fs-2); color: var(--navy-800);">
-              Need the harness on top of this? See
+      <!-- Who It Is For + Agents Section -->
+      <section class="section" aria-labelledby="who-heading">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <h2 id="who-heading" class="section-header__title">Bring your own agent.</h2>
+          </header>
+
+          <div class="card" style="max-width: 860px;" data-reveal>
+            <p style="margin: 0 0 var(--s-4); font-size: var(--fs-2); color: var(--ink); line-height: 1.7;">
+              777 does not choose your AI. Point any file-capable agent at the vault and start &mdash; your
+              vault is plain Markdown, so it opens in Obsidian, moves across machines, and outlives any tool.
+              Tested with:
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: var(--s-2); margin-bottom: var(--s-4);">
+              <span class="badge">Zed</span>
+              <span class="badge">Claude Code</span>
+              <span class="badge">Codex</span>
+              <span class="badge">Cursor</span>
+              <span class="badge">OpenCode</span>
+              <span class="badge">Hermes</span>
+              <span class="badge">Oh-My-Pi</span>
+            </div>
+            <p style="margin: 0 0 var(--s-2); font-size: var(--fs-2); color: var(--ink);">
+              <strong>Built for:</strong> solo AI builders &middot; freelancers turning work into repeatable
+              processes &middot; small agencies &middot; technical founders &middot; AI-native teams that need
+              shared context without cloud lock-in.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- What Is Inside Section -->
+      <section class="section section--surface" aria-labelledby="inside-heading">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <h2 id="inside-heading" class="section-header__title">What is inside</h2>
+          </header>
+
+          <div class="card" style="max-width: 860px;" data-reveal>
+            <div style="display: flex; flex-wrap: wrap; gap: var(--s-2);">
+              <span class="badge">AGENTS.md</span>
+              <span class="badge">Workspaces</span>
+              <span class="badge">Memory (the 3lm CLI)</span>
+              <span class="badge">Skills</span>
+              <span class="badge">Prompt Patterns</span>
+              <span class="badge">Tools (3lm, vault index, graph, maintenance)</span>
+              <span class="badge">Guides</span>
+              <span class="badge">Templates</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Proof Section -->
+      <section class="section" aria-labelledby="proof-heading">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <h2 id="proof-heading" class="section-header__title">Built in production, not just demonstrated.</h2>
+          </header>
+
+          <div class="card" style="max-width: 860px;" data-reveal>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--s-3); padding: 0; margin: 0;">
+              <li style="display: flex; align-items: flex-start; gap: var(--s-3);">
+                <span class="badge badge--ok" style="margin-top: 2px;">Live product</span>
+                <span style="font-size: var(--fs-2); color: var(--ink);">
+                  <a href="https://wqr.co.zw" target="_blank" rel="noopener" style="color: var(--gold); text-decoration: underline;">wqr.co.zw</a>
+                  &mdash; a WhatsApp commerce agent taking real orders and payments, run on this stack.
+                </span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: var(--s-3);">
+                <span class="badge badge--ok" style="margin-top: 2px;">Daily use</span>
+                <span style="font-size: var(--fs-2); color: var(--ink);">This site, WQR and the Ultra harness are run from an AI-Suplex vault every day.</span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: var(--s-3);">
+                <span class="badge badge--ok" style="margin-top: 2px;">Source</span>
+                <span style="font-size: var(--fs-2); color: var(--ink);">
+                  The actual framework:
+                  <a href="https://github.com/kmagwenzi/ai-suplex" target="_blank" rel="noopener" style="color: var(--gold); text-decoration: underline;">
+                    github.com/kmagwenzi/ai-suplex
+                  </a>
+                </span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: var(--s-3);">
+                <span class="badge badge--ok" style="margin-top: 2px;">Install</span>
+                <span style="font-size: var(--fs-2); color: var(--ink);">One command. The v2.10.0 release installed clean, end to end, in under two seconds (measured).</span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: var(--s-3);">
+                <span class="badge badge--ok" style="margin-top: 2px;">License</span>
+                <span style="font-size: var(--fs-2); color: var(--ink);">Open source: MIT (code) &middot; CC BY 4.0 (content)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Get Started Section -->
+      <section class="section section--surface" aria-labelledby="start-heading">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <h2 id="start-heading" class="section-header__title">Start in under ten minutes.</h2>
+          </header>
+
+          <div class="card__grid card__grid--2up" data-reveal-group>
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <h3 class="card__title" style="font-size: var(--fs-3);">Download the release</h3>
+              </div>
+              <div class="card__body">
+                <p style="margin-bottom: var(--s-3);">
+                  <a
+                    href="https://github.com/kmagwenzi/ai-suplex/releases/download/v2.10.0/ai-suplex-777-v2.10.0.zip"
+                    target="_blank"
+                    rel="noopener"
+                    style="color: var(--gold); text-decoration: underline; font-weight: 600;"
+                  >ai-suplex-777-v2.10.0.zip</a>
+                  (1.2 MB) &mdash; or read the
+                  <a
+                    href="https://github.com/kmagwenzi/ai-suplex/releases/tag/v2.10.0"
+                    target="_blank"
+                    rel="noopener"
+                    style="color: var(--gold); text-decoration: underline;"
+                  >release notes</a>.
+                </p>
+                <div style="border-radius: var(--radius); border: 1px solid var(--line); background-color: #15223A; overflow: hidden;">
+                  <pre style="margin: 0; padding: 14px 16px; color: #E2E8F0; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; line-height: 1.7; overflow-x: auto;"><span style="color: #10B981;">$</span> bash install.sh /path/to/my-vault
+<span style="color: #10B981;">$</span> cd /path/to/my-vault
+<span style="color: #10B981;">$</span> node Tools/3lm.js start --context
+<span style="color: #94A3B8;">&#10003; Context fresh.</span></pre>
+                </div>
+                <p style="margin: var(--s-3) 0 0; font-size: var(--fs-1); color: var(--ink); opacity: 0.8;">
+                  Unzip the release, then run the installer against a clean target folder.
+                </p>
+              </div>
+            </article>
+
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <h3 class="card__title" style="font-size: var(--fs-3);">Clone the repo</h3>
+              </div>
+              <div class="card__body">
+                <div style="border-radius: var(--radius); border: 1px solid var(--line); background-color: #15223A; overflow: hidden; margin-bottom: var(--s-3);">
+                  <pre style="margin: 0; padding: 14px 16px; color: #E2E8F0; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; line-height: 1.7; overflow-x: auto;"><span style="color: #10B981;">$</span> git clone https://github.com/kmagwenzi/ai-suplex.git
+<span style="color: #10B981;">$</span> cd ai-suplex &amp;&amp; bash install.sh /path/to/my-vault</pre>
+                </div>
+                <p style="margin-bottom: var(--s-3);">
+                  Install and usage instructions live in the
+                  <a
+                    href="https://github.com/kmagwenzi/ai-suplex#readme"
+                    target="_blank"
+                    rel="noopener"
+                    style="color: var(--gold); text-decoration: underline;"
+                  >README</a>.
+                </p>
+                <p style="margin: 0; font-size: var(--fs-2); color: var(--ink);">
+                  Prefer point-and-click? Request access to the
+                  <a href="/contact.html" style="color: var(--gold); text-decoration: underline; font-weight: 600;">Workflow Console</a>.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 777 vs Ultra Section -->
+      <section class="section" aria-labelledby="vs-heading">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <h2 id="vs-heading" class="section-header__title">777 captures the work. Ultra understands it.</h2>
+          </header>
+
+          <div class="card" style="max-width: 860px; overflow-x: auto;" data-reveal>
+            <table style="width: 100%; border-collapse: collapse; font-size: var(--fs-2); color: var(--ink);">
+              <thead>
+                <tr style="border-bottom: 2px solid var(--line); text-align: left;">
+                  <th style="padding: 10px 12px; font-weight: 700;">Capability</th>
+                  <th style="padding: 10px 12px; font-weight: 700;">777</th>
+                  <th style="padding: 10px 12px; font-weight: 700;">Ultra</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 1px solid var(--line);">
+                  <td style="padding: 10px 12px;">Create and run workspaces</td>
+                  <td style="padding: 10px 12px;">Yes</td>
+                  <td style="padding: 10px 12px;">Yes</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--line);">
+                  <td style="padding: 10px 12px;">Capture sessions and lessons</td>
+                  <td style="padding: 10px 12px;">Yes</td>
+                  <td style="padding: 10px 12px;">Yes</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--line);">
+                  <td style="padding: 10px 12px;">Maintain a portable vault</td>
+                  <td style="padding: 10px 12px;">Yes</td>
+                  <td style="padding: 10px 12px;">Yes</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--line);">
+                  <td style="padding: 10px 12px;">Cross-workspace opportunity mapping</td>
+                  <td style="padding: 10px 12px;">&mdash;</td>
+                  <td style="padding: 10px 12px;">Yes</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--line);">
+                  <td style="padding: 10px 12px;">Weekly operating review</td>
+                  <td style="padding: 10px 12px;">&mdash;</td>
+                  <td style="padding: 10px 12px;">Yes</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--line);">
+                  <td style="padding: 10px 12px;">Knowledge Canvas</td>
+                  <td style="padding: 10px 12px;">&mdash;</td>
+                  <td style="padding: 10px 12px;">Yes</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--line);">
+                  <td style="padding: 10px 12px;">Scheduled mission control</td>
+                  <td style="padding: 10px 12px;">Basic</td>
+                  <td style="padding: 10px 12px;">Full</td>
+                </tr>
+                <tr>
+                  <td style="padding: 10px 12px;">Skill evolution</td>
+                  <td style="padding: 10px 12px;">Manual</td>
+                  <td style="padding: 10px 12px;">Assisted / gated</td>
+                </tr>
+              </tbody>
+            </table>
+            <p style="margin: var(--s-4) 0 0; font-size: var(--fs-2); color: var(--ink);">
+              Start free with 777. When you want the intelligence layer on top, see
               <a href="/projects/ai-suplex-ultra.html" class="card__link" style="font-weight: 700;">
                 AI-Suplex Ultra
                 <span aria-hidden="true">&rarr;</span>
@@ -346,79 +621,62 @@
         </div>
       </section>
 
-      <!-- Proof Section -->
-      <section class="section" aria-labelledby="proof-heading">
+      <!-- FAQ Section -->
+      <section class="section section--surface" aria-labelledby="faq-heading">
         <div class="container">
           <header class="section-header" data-reveal>
-            <h2 id="proof-heading" class="section-header__title">Proof</h2>
+            <h2 id="faq-heading" class="section-header__title">Questions, answered</h2>
           </header>
 
-          <div class="card" style="max-width: 860px;" data-reveal>
-            <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--s-3); padding: 0; margin: 0;">
-              <li style="display: flex; align-items: flex-start; gap: var(--s-3);">
-                <span class="badge badge--ok" style="margin-top: 2px;">License</span>
-                <span style="font-size: var(--fs-2); color: var(--ink);">Open source: MIT (code) &middot; CC BY 4.0 (content)</span>
-              </li>
-              <li style="display: flex; align-items: flex-start; gap: var(--s-3);">
-                <span class="badge badge--ok" style="margin-top: 2px;">Source</span>
-                <span style="font-size: var(--fs-2); color: var(--ink);">
-                  Public repo:
-                  <a href="https://github.com/kmagwenzi/ai-suplex" target="_blank" rel="noopener" style="color: var(--gold); text-decoration: underline;">
-                    github.com/kmagwenzi/ai-suplex
-                  </a>
-                </span>
-              </li>
-              <li style="display: flex; align-items: flex-start; gap: var(--s-3);">
-                <span class="badge badge--ok" style="margin-top: 2px;">Production</span>
-                <span style="font-size: var(--fs-2); color: var(--ink);">Used daily to run a real software business (this site, WQR, and the Ultra harness)</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Tech Section -->
-      <section class="section section--surface" aria-labelledby="tech-heading">
-        <div class="container">
-          <header class="section-header" data-reveal>
-            <h2 id="tech-heading" class="section-header__title">Tech</h2>
-          </header>
-
-          <div class="card" style="max-width: 860px;" data-reveal>
-            <div style="display: flex; flex-wrap: wrap; gap: var(--s-2);">
-              <span class="badge">Markdown</span>
-              <span class="badge">SQLite</span>
-              <span class="badge">Node.js (the 3lm CLI)</span>
-              <span class="badge">Obsidian (vault)</span>
-              <span class="badge">agent-agnostic by design</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- More from AI-Suplex Labs Strip -->
-      <section class="section" aria-labelledby="more-heading" style="padding-top: var(--s-5); padding-bottom: var(--s-5);">
-        <div class="container">
-          <header class="section-header" style="margin-bottom: var(--s-4);" data-reveal>
-            <h2 id="more-heading" class="section-header__title" style="font-size: var(--fs-4);">More from AI-Suplex Labs</h2>
-          </header>
-
-          <div style="display: flex; flex-wrap: wrap; gap: var(--s-4);" data-reveal>
-            <a href="/projects/wqr.html" class="card" style="flex: 1 1 300px; text-decoration: none;">
-              <h3 class="card__title" style="font-size: var(--fs-3); color: var(--navy-800);">WQR</h3>
-              <p class="card__body" style="margin-top: var(--s-2); margin-bottom: 0;">WhatsApp commerce agent handling orders, quotes, Paynow payments and PDF invoices.</p>
-              <div class="card__footer" style="margin-top: var(--s-3);">
-                <span class="card__link">View project specifications <span aria-hidden="true">&rarr;</span></span>
+          <div class="card__grid card__grid--2up" data-reveal-group>
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <h3 class="card__title" style="font-size: var(--fs-3);">Do I need a specific AI agent?</h3>
               </div>
-            </a>
-
-            <a href="/projects/ai-suplex-ultra.html" class="card" style="flex: 1 1 300px; text-decoration: none;">
-              <h3 class="card__title" style="font-size: var(--fs-3); color: var(--navy-800);">AI-Suplex Ultra</h3>
-              <p class="card__body" style="margin-top: var(--s-2); margin-bottom: 0;">Autonomous execution harness &amp; Second Me: Deep Ultra 🦸 Mode, Living Wiki, Opportunity Mapper, and Projection Canvases.</p>
-              <div class="card__footer" style="margin-top: var(--s-3);">
-                <span class="card__link">View project specifications <span aria-hidden="true">&rarr;</span></span>
+              <div class="card__body">
+                <p>No. 777 is agent-agnostic &mdash; any agent that can read and write files can run a workspace.</p>
               </div>
-            </a>
+            </article>
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <h3 class="card__title" style="font-size: var(--fs-3);">Where does my data live?</h3>
+              </div>
+              <div class="card__body">
+                <p>In your vault: plain Markdown and local databases on your machine. Nothing is required in the cloud.</p>
+              </div>
+            </article>
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <h3 class="card__title" style="font-size: var(--fs-3);">Does it decide things for me?</h3>
+              </div>
+              <div class="card__body">
+                <p>No. 777 captures what happened, proposes lessons, and promotes only what you approve.</p>
+              </div>
+            </article>
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <h3 class="card__title" style="font-size: var(--fs-3);">What about the knowledge graph?</h3>
+              </div>
+              <div class="card__body">
+                <p>Optional. The core value is continuity &mdash; workspaces, capture, lessons, maintenance. The graph is a later unlock.</p>
+              </div>
+            </article>
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <h3 class="card__title" style="font-size: var(--fs-3);">How much does it cost?</h3>
+              </div>
+              <div class="card__body">
+                <p>Free. 777 is MIT-licensed open source &mdash; download it, own it. AI-Suplex Ultra is the paid intelligence layer.</p>
+              </div>
+            </article>
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <h3 class="card__title" style="font-size: var(--fs-3);">Can I move my vault?</h3>
+              </div>
+              <div class="card__body">
+                <p>Yes. It is a folder of files &mdash; copy it, sync it, back it up. It outlives any tool.</p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -427,15 +685,24 @@
       <section class="cta-band" aria-labelledby="cta-heading">
         <div class="container">
           <div class="cta-band__inner" data-reveal="scale">
-            <h2 id="cta-heading" class="cta-band__title">Start with the free core.</h2>
-            <a
-              href="https://github.com/kmagwenzi/ai-suplex"
-              class="btn btn--primary"
-              target="_blank"
-              rel="noopener"
-            >
-              Clone the repo
-            </a>
+            <h2 id="cta-heading" class="cta-band__title">Stop starting from zero.</h2>
+            <p style="margin: 0 0 var(--s-4); font-size: var(--fs-2); opacity: 0.9;">
+              Give your AI agents a portable memory, a clear workflow, and a system that gets smarter with
+              every session.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: var(--s-3); justify-content: center;">
+              <a
+                href="https://github.com/kmagwenzi/ai-suplex/releases/tag/v2.10.0"
+                class="btn btn--primary"
+                target="_blank"
+                rel="noopener"
+              >
+                Start with 777
+              </a>
+              <a href="/projects/ai-suplex-ultra.html" class="btn btn--ghost">
+                Explore AI-Suplex Ultra
+              </a>
+            </div>
           </div>
         </div>
       </section>
