@@ -2011,5 +2011,104 @@ html.js-enabled:not(.prefers-reduced-motion) [data-reveal-delay="300"] {
   font-size: var(--fs-2);
 }
 
+/* ==========================================================================
+   Workflow Console Explainer Page Components (.wc-*)
+   ========================================================================== */
+.wc-kicker {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: var(--fs-1);
+  font-weight: 600;
+  color: #f3d492;
+  margin-bottom: var(--s-3);
+  letter-spacing: 0.02em;
+}
+
+.wc-perm-table th:first-child,
+.wc-perm-table td:first-child {
+  white-space: nowrap;
+}
+
+.wc-perm {
+  display: inline-block;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.wc-perm--allow {
+  color: var(--ok);
+}
+
+.wc-perm--read {
+  color: var(--navy);
+}
+
+.wc-perm--deny {
+  color: #b91c1c;
+}
+
+.wc-philosophy {
+  margin-top: var(--s-5);
+  max-width: 860px;
+  padding: var(--s-4) var(--s-5);
+  background-color: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font-size: var(--fs-3);
+  font-weight: 600;
+  color: var(--navy-800);
+  line-height: var(--lh-tight);
+}
+
+.wc-crosslink {
+  margin-top: var(--s-5);
+  font-size: var(--fs-2);
+  color: var(--muted);
+  max-width: 72ch;
+}
+
+.wc-status-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-4);
+  max-width: 860px;
+  margin-bottom: var(--s-4);
+}
+
+@media (min-width: 640px) {
+  .wc-status-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .wc-status-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.wc-status-item {
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--s-4);
+}
+
+.wc-status-item__label {
+  font-size: var(--fs-1);
+  color: var(--muted);
+  margin-bottom: var(--s-1);
+}
+
+.wc-status-item__value {
+  font-size: var(--fs-3);
+  font-weight: 700;
+  color: var(--navy-800);
+  font-variant-numeric: tabular-nums;
+  line-height: var(--lh-tight);
+}
+
+
 
 
