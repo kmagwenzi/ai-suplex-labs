@@ -304,8 +304,138 @@
     });
   }
 
-  // Initialize typing effect, phrase rotator, and scroll reveal
+  /* --------------------------------------------------------------------------
+     5. Copy-to-Clipboard Buttons ([data-copy-target])
+     -------------------------------------------------------------------------- */
+  function initCopyButtons() {
+    const copyButtons = document.querySelectorAll('[data-copy-target]');
+    if (!copyButtons.length) return;
+
+    function fallbackCopy(text) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.setAttribute('readonly', '');
+      textarea.style.position = 'absolute';
+      textarea.style.left = '-9999px';
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand('copy');
+      } finally {
+        document.body.removeChild(textarea);
+      }
+    }
+
+    copyButtons.forEach(function (button) {
+      const defaultLabel = button.textContent.trim();
+
+      button.addEventListener('click', function () {
+        const targetId = button.getAttribute('data-copy-target');
+        const target = targetId ? document.getElementById(targetId) : null;
+        if (!target) return;
+
+        const text = target.textContent.trim();
+        if (!text) return;
+
+        const finish = function () {
+          button.textContent = 'Copied';
+          button.classList.add('is-copied');
+          setTimeout(function () {
+            button.textContent = defaultLabel;
+            button.classList.remove('is-copied');
+          }, 2000);
+        };
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(finish, function () {
+            fallbackCopy(text);
+            finish();
+          });
+        } else {
+          fallbackCopy(text);
+          finish();
+        }
+      });
+    });
+  }
+
+  /* --------------------------------------------------------------------------
+     6. Delivery Receipt Responsive Disclosure (<details data-desktop-open>)
+     -------------------------------------------------------------------------- */
+  function initReceiptDetails() {
+    const panels = document.querySelectorAll('[data-desktop-open]');
+    if (!panels.length) return;
+
+    if (window.matchMedia('(min-width: 640px)').matches) {
+      panels.forEach(function (panel) {
+        panel.setAttribute('open', '');
+      });
+    }
+  }
+
+  /* --------------------------------------------------------------------------
+     7. Workflow Console Early-Access Form ([data-receipt-form])
+     -------------------------------------------------------------------------- */
+  function initReceiptForm() {
+    const form = document.querySelector('[data-receipt-form]');
+    if (!form) return;
+
+    const emailInput = form.querySelector('input[type="email"]');
+    const statusEl = form.querySelector('[data-form-status]');
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      if (!emailInput || !statusEl) return;
+
+      const email = emailInput.value.trim();
+      if (!email || !emailInput.checkValidity()) {
+        statusEl.textContent = 'Enter a valid email address.';
+        statusEl.className = 'receipt__form-status is-error';
+        emailInput.focus();
+        return;
+      }
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+      }
+      statusEl.textContent = 'Sending request...';
+      statusEl.className = 'receipt__form-status';
+
+      const formData = new FormData(form);
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString(),
+      })
+        .then(function (response) {
+          if (response.ok) {
+            statusEl.textContent = 'Received. You are on the Workflow Console early-access list.';
+            statusEl.className = 'receipt__form-status is-success';
+            form.reset();
+            return;
+          }
+          throw new Error('HTTP ' + response.status);
+        })
+        .catch(function () {
+          statusEl.innerHTML =
+            'Direct form submission is active on the live site. Email <a href="mailto:kuda@ai-suplex.co.zw?subject=Workflow%20Console%20Early%20Access" class="p777-link">kuda@ai-suplex.co.zw</a> to request early access now.';
+          statusEl.className = 'receipt__form-status is-error';
+        })
+        .finally(function () {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+          }
+        });
+    });
+  }
+
+  // Initialize typing effect, phrase rotator, scroll reveal, and receipt helpers
   initHeroTyping();
   initPhraseRotator();
   initScrollReveal();
+  initCopyButtons();
+  initReceiptDetails();
+  initReceiptForm();
 })();

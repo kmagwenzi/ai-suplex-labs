@@ -1644,4 +1644,372 @@ html.js-enabled:not(.prefers-reduced-motion) [data-reveal-delay="300"] {
   }
 }
 
+/* ==========================================================================
+   Delivery Receipt Page Components (.receipt-*)
+   ========================================================================== */
+.receipt-section {
+  padding-top: var(--s-6);
+  padding-bottom: var(--s-7);
+}
+
+.receipt {
+  max-width: 740px;
+  margin-inline: auto;
+}
+
+.receipt__breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-2);
+  font-size: var(--fs-1);
+  color: var(--muted);
+  margin-bottom: var(--s-3);
+}
+
+.receipt__breadcrumb a {
+  color: var(--navy);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.receipt__breadcrumb a:hover {
+  color: #8f651b;
+}
+
+.receipt__header {
+  padding-bottom: var(--s-5);
+  border-bottom: 1px solid var(--line);
+}
+
+.receipt__status-line {
+  font-size: var(--fs-1);
+  font-weight: 600;
+  color: var(--ok);
+  margin-bottom: var(--s-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.receipt__title {
+  font-size: var(--fs-6);
+  line-height: var(--lh-tight);
+  font-weight: 700;
+  color: var(--navy-800);
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+  margin-bottom: var(--s-2);
+}
+
+@media (min-width: 640px) {
+  .receipt__title {
+    font-size: var(--fs-7);
+  }
+}
+
+.receipt__lead {
+  font-size: var(--fs-3);
+  line-height: var(--lh-body);
+  color: var(--muted);
+  max-width: 62ch;
+  margin-bottom: var(--s-3);
+}
+
+.receipt__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-1) var(--s-2);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: var(--fs-1);
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.receipt__block {
+  padding-top: var(--s-6);
+  padding-bottom: var(--s-6);
+  border-bottom: 1px solid var(--line);
+}
+
+.receipt__block--last {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.receipt__heading {
+  font-size: var(--fs-4);
+  font-weight: 700;
+  line-height: var(--lh-tight);
+  color: var(--navy-800);
+  margin-bottom: var(--s-3);
+}
+
+.receipt__copy {
+  font-size: var(--fs-2);
+  line-height: var(--lh-body);
+  color: var(--muted);
+  max-width: 66ch;
+  margin-bottom: var(--s-4);
+}
+
+.receipt__download-box {
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--s-5);
+}
+
+.receipt__download-btn {
+  width: 100%;
+  font-size: var(--fs-2);
+  padding: 14px 24px;
+  min-height: 48px;
+}
+
+@media (min-width: 540px) {
+  .receipt__download-btn {
+    width: auto;
+  }
+}
+
+.receipt__artifact-meta {
+  margin-top: var(--s-3);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: var(--fs-1);
+  color: var(--navy-800);
+  font-variant-numeric: tabular-nums;
+}
+
+.receipt__includes {
+  margin-top: var(--s-3);
+  font-size: var(--fs-1);
+  line-height: var(--lh-body);
+  color: var(--muted);
+}
+
+.receipt__links {
+  margin-top: var(--s-4);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2) var(--s-4);
+  font-size: var(--fs-1);
+}
+
+/* Copyable Terminal / Checksum Surfaces */
+.receipt__codebox {
+  background-color: #15223a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: var(--s-4);
+}
+
+.receipt__codebox-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+  padding: 8px 14px;
+  background-color: #1a2947;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.receipt__codebox-label {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.receipt__copy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 4px 12px;
+  font-family: var(--font);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #f3d492;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(243, 212, 146, 0.35);
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.receipt__copy-btn:hover {
+  background-color: rgba(243, 212, 146, 0.14);
+  border-color: #f3d492;
+}
+
+.receipt__copy-btn.is-copied {
+  color: #6ee7b7;
+  border-color: rgba(110, 231, 183, 0.55);
+}
+
+.receipt__pre {
+  margin: 0;
+  padding: 16px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: #e2e8f0;
+  overflow-x: auto;
+  font-variant-numeric: tabular-nums;
+}
+
+.receipt__hash {
+  word-break: break-all;
+  white-space: normal;
+  color: #f3d492;
+}
+
+.receipt__comment {
+  color: #94a3b8;
+}
+
+.receipt__ok {
+  color: #6ee7b7;
+  font-weight: 600;
+}
+
+/* Collapsible verification / source-installer disclosure */
+.receipt__details {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background-color: var(--bg);
+}
+
+.receipt__details summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+  padding: 12px 16px;
+  min-height: 44px;
+  font-size: var(--fs-1);
+  font-weight: 600;
+  color: var(--navy-800);
+}
+
+.receipt__details summary::-webkit-details-marker {
+  display: none;
+}
+
+.receipt__details summary::after {
+  content: "+";
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: var(--fs-3);
+  color: #8f651b;
+}
+
+.receipt__details[open] summary::after {
+  content: "\2212";
+}
+
+.receipt__details-body {
+  padding: 0 16px 16px;
+}
+
+.receipt__details-body .receipt__codebox {
+  margin-bottom: 0;
+}
+
+.receipt__note {
+  margin-top: var(--s-3);
+  font-size: var(--fs-1);
+  line-height: var(--lh-body);
+  color: var(--muted);
+}
+
+/* Netlify Early-Access Form */
+.receipt__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  max-width: 520px;
+}
+
+@media (min-width: 540px) {
+  .receipt__form-row {
+    display: flex;
+    align-items: stretch;
+    gap: var(--s-2);
+  }
+}
+
+.receipt__label {
+  display: block;
+  font-size: var(--fs-1);
+  font-weight: 600;
+  color: var(--navy-800);
+  margin-bottom: var(--s-1);
+}
+
+.receipt__input {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 14px;
+  font-family: var(--font);
+  font-size: var(--fs-2);
+  color: var(--ink);
+  background-color: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  margin-bottom: var(--s-2);
+  transition: border-color 0.15s ease;
+}
+
+@media (min-width: 540px) {
+  .receipt__input {
+    margin-bottom: 0;
+    flex: 1;
+  }
+}
+
+.receipt__input:focus {
+  outline: none;
+  border-color: var(--navy);
+}
+
+.receipt__honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.receipt__form-status {
+  font-size: var(--fs-1);
+  line-height: var(--lh-body);
+  color: var(--muted);
+  min-height: 1.4em;
+}
+
+.receipt__form-status.is-success {
+  color: var(--ok);
+  font-weight: 600;
+}
+
+.receipt__form-status.is-error {
+  color: #b91c1c;
+  font-weight: 500;
+}
+
+.receipt__help-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2) var(--s-5);
+  font-size: var(--fs-2);
+}
+
+
 
