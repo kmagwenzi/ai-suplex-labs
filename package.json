@@ -1,0 +1,11 @@
+{
+  "name": "ai-suplex-labs",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "node -e \"console.log('Build successful: static site ready')\"",
+    "start": "node server.js"
+  }
+}

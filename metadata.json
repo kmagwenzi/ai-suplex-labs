@@ -1,0 +1,8 @@
+{
+  "name": "AI-Suplex Labs",
+  "description": "AI systems that work in the real world. We build AI agents that handle real customers, real money, and real edge cases — then we open the core and sell the harness. Harare, Zimbabwe.",
+  "prompt": "Build a static website for AI-Suplex Labs",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
