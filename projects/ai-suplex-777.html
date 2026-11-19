@@ -6,7 +6,7 @@
     <title>AI-Suplex 777 — Give your AI agents a memory that survives the chat | AI-Suplex Labs</title>
     <meta
       name="description"
-      content="AI-Suplex 777 is a free, portable workspace for AI agents: file-first memory, lessons and workflows in plain Markdown. v2.10.0, MIT licensed, works with the agent you already trust."
+      content="AI-Suplex 777 gives your AI agents a portable memory and a workflow that makes every new session start smarter. Free, local-first, MIT-licensed open source."
     />
     <link rel="canonical" href="https://ai-suplex.co.zw/projects/ai-suplex-777.html" />
 
@@ -15,7 +15,7 @@
     <meta property="og:title" content="AI-Suplex 777 — Give your AI agents a memory that survives the chat | AI-Suplex Labs" />
     <meta
       property="og:description"
-      content="A free, portable workspace for AI agents: file-first memory, lessons and workflows in plain Markdown. v2.10.0, MIT licensed, bring your own agent."
+      content="AI-Suplex 777 gives your AI agents a portable memory and a workflow that makes every new session start smarter. Free, local-first, MIT licensed."
     />
     <meta property="og:url" content="https://ai-suplex.co.zw/projects/ai-suplex-777.html" />
 
@@ -24,18 +24,18 @@
     <meta name="twitter:title" content="AI-Suplex 777 — Give your AI agents a memory that survives the chat | AI-Suplex Labs" />
     <meta
       name="twitter:description"
-      content="A free, portable workspace for AI agents: file-first memory, lessons and workflows in plain Markdown. v2.10.0, MIT licensed, bring your own agent."
+      content="AI-Suplex 777 gives your AI agents a portable memory and a workflow that makes every new session start smarter. Free, local-first, MIT licensed."
     />
 
     <!-- Brand Favicon -->
     <link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg" />
     <link rel="apple-touch-icon" href="/assets/img/logo.svg" />
 
-    <!-- Typography: Inter with font-display: swap for non-blocking render -->
+    <!-- Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -132,7 +132,7 @@
 
     <!-- Main Content Landmark -->
     <main id="main-content">
-      <!-- Hero Section -->
+      <!-- 1 · Hero Section -->
       <section class="hero" aria-labelledby="hero-heading">
         <div class="hero__bg" aria-hidden="true">
           <div class="hero__glow hero__glow--navy"></div>
@@ -143,489 +143,1022 @@
 
         <div class="container hero__container">
           <div class="hero__inner">
-            <div class="hero__badge-wrap">
-              <span class="badge">v2.10.0 &middot; Free &amp; open source</span>
-            </div>
+            <p
+              style="
+                font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+                font-size: var(--fs-1);
+                font-weight: 500;
+                color: #f3d492;
+                margin-bottom: var(--s-3);
+              "
+            >
+              AI-Suplex 777 &middot; Free &amp; Open-Source Foundation &middot; v2.10.0
+            </p>
 
-            <h1 id="hero-heading" class="hero__title">
+            <h1 id="hero-heading" class="hero__title" style="text-wrap: balance;">
               Give your AI agents a memory that survives the chat.
             </h1>
 
-            <p class="hero__lead">
-              AI-Suplex 777 is a portable, file-first workspace for AI agents. Create a workspace, run it
-              with the agent you already trust, capture what happened &mdash; and start the next session with
-              the context, lessons and next actions already in place.
+            <p class="hero__lead" style="margin-bottom: var(--s-4);">
+              777 is a portable, file-first workspace for AI agents built to execute and run the
+              AI-Suplex Workflow. Create a workspace, run it with Codex, Claude Code, or Hermes,
+              capture what happened, and start the next session with the context, lessons, and next
+              actions already in place.
+            </p>
+
+            <!-- Typewriter outcome rotation -->
+            <p
+              aria-hidden="true"
+              style="
+                font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+                font-size: 0.9375rem;
+                font-weight: 500;
+                color: #f3d492;
+                margin-bottom: var(--s-5);
+                min-height: 1.7em;
+              "
+            >
+              <span
+                id="s777-typewriter"
+                data-lines='["Stop repeating yourself.","Start every session with context.","Turn work into reusable lessons.","Use the agent you already trust.","Keep your memory local and portable."]'
+              >Stop repeating yourself.</span><span
+                style="
+                  display: inline-block;
+                  width: 8px;
+                  height: 1.05em;
+                  background-color: #f3d492;
+                  margin-left: 4px;
+                  vertical-align: text-bottom;
+                "
+              ></span>
             </p>
 
             <div class="hero__cta-group">
-              <a
-                href="https://github.com/kmagwenzi/ai-suplex/releases/tag/v2.10.0"
-                class="btn btn--primary"
-                target="_blank"
-                rel="noopener"
-              >
-                Start with 777
-              </a>
-              <a href="#remember" class="btn btn--ghost">See it remember</a>
+              <a href="#get-started" class="btn btn--primary">Start with 777</a>
+              <a href="#remember" class="btn btn--ghost">Watch the 90-second walkthrough</a>
             </div>
 
-            <p style="margin: var(--s-4) 0 0; font-size: var(--fs-1); color: var(--ink); opacity: 0.85;">
-              Open source &middot; Local-first &middot; Bring your own agent &middot; MIT licensed
+            <p
+              style="
+                margin: var(--s-4) 0 0;
+                font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+                font-size: 0.8125rem;
+                color: #cbd5e1;
+              "
+            >
+              Open source &middot; Local-first &middot; Works with your existing agents &middot; MIT licensed
             </p>
-
-            <!-- The loop, in one strip -->
-            <div style="display: flex; flex-wrap: wrap; gap: var(--s-2); margin-top: var(--s-5);" data-reveal>
-              <span class="badge">Create a workspace</span>
-              <span class="badge">Kickstart it</span>
-              <span class="badge">Capture the outcome</span>
-              <span class="badge">Learn</span>
-              <span class="badge">Return smarter</span>
-            </div>
           </div>
         </div>
       </section>
 
-      <!-- The Problem Section -->
+      <!-- One-line positioning strip -->
+      <aside class="proof-strip" aria-label="Core positioning" data-reveal>
+        <div class="container">
+          <p class="proof-strip__text" style="color: var(--navy-800); font-weight: 600;">
+            AI-Suplex 777 gives your AI agents a portable memory and a workflow that makes every new session start smarter.
+          </p>
+        </div>
+      </aside>
+
+      <!-- 2 · The Problem Section -->
       <section class="section" aria-labelledby="problem-heading">
         <div class="container">
           <header class="section-header" data-reveal>
-            <h2 id="problem-heading" class="section-header__title">Your agent forgets. Your work should not.</h2>
+            <h2 id="problem-heading" class="section-header__title" style="text-wrap: balance;">
+              Your agent forgets. Your work should not.
+            </h2>
           </header>
 
-          <div class="card" style="max-width: 860px;" data-reveal>
-            <p class="approach-text" style="color: var(--ink); line-height: 1.75;">
-              Every chat session starts from zero. You re-explain the project, repeat decisions, rediscover
-              blockers, and lose the lessons from completed work. AI-Suplex 777 gives your agents a durable,
-              portable memory &mdash; without locking you into one AI provider.
+          <div class="approach-block" style="margin-bottom: var(--s-5);" data-reveal>
+            <p class="approach-text" style="color: var(--ink);">
+              Every chat session starts from zero. You re-explain the project, repeat decisions,
+              rediscover blockers, and lose the lessons from completed work. AI-Suplex 777 gives
+              your agents a durable, portable memory &mdash; without locking you into one AI provider.
             </p>
           </div>
 
-          <div class="card__grid card__grid--2up" style="margin-top: var(--s-5);" data-reveal-group>
+          <div class="card__grid card__grid--2up" data-reveal-group>
             <article class="card" data-reveal>
               <div class="card__header">
-                <h3 class="card__title" style="font-size: var(--fs-3);">Same context, every session</h3>
+                <h3 class="card__title" style="font-size: var(--fs-3);">01. Repeat the same context every session</h3>
               </div>
-              <div class="card__body">
-                <p>You paste the same brief into the chat again and again, hoping nothing important drops.</p>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>You paste the same project brief and constraints into the chat again and again, hoping nothing important drops between windows.</p>
               </div>
             </article>
+
             <article class="card" data-reveal>
               <div class="card__header">
-                <h3 class="card__title" style="font-size: var(--fs-3);">Lessons disappear with the chat</h3>
+                <h3 class="card__title" style="font-size: var(--fs-3);">02. Decisions and lessons disappear with the chat</h3>
               </div>
-              <div class="card__body">
-                <p>Decisions and hard-won lessons live in a scrollback you will never read again.</p>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>Architectural choices, edge cases, and hard-won lessons stay buried in a chat scrollback you will never read again.</p>
               </div>
             </article>
+
             <article class="card" data-reveal>
               <div class="card__header">
-                <h3 class="card__title" style="font-size: var(--fs-3);">Agent work is hard to continue</h3>
+                <h3 class="card__title" style="font-size: var(--fs-3);">03. Agent work is hard to track, review, and continue</h3>
               </div>
-              <div class="card__body">
-                <p>What was done, what was decided, what is next &mdash; nobody can say, so nobody resumes cleanly.</p>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>What was completed, what was decided, and what comes next is scattered across sessions, so unfinished work restarts instead of resuming.</p>
               </div>
             </article>
+
             <article class="card" data-reveal>
               <div class="card__header">
-                <h3 class="card__title" style="font-size: var(--fs-3);">Memory trapped in one tool</h3>
+                <h3 class="card__title" style="font-size: var(--fs-3);">04. Memory trapped inside one AI tool</h3>
               </div>
-              <div class="card__body">
-                <p>Switch agents and you start from zero, because your memory belongs to the vendor, not to you.</p>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>Switch from one coding agent or model provider to another and you start from zero, because your context belongs to the vendor instead of you.</p>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- What 777 Is Section -->
+      <!-- 3 · What 777 Is Section -->
       <section class="section section--surface" aria-labelledby="what-heading">
         <div class="container">
           <header class="section-header" data-reveal>
-            <h2 id="what-heading" class="section-header__title">A portable workspace for AI agents.</h2>
+            <h2 id="what-heading" class="section-header__title" style="text-wrap: balance;">
+              A portable workspace for AI agents.
+            </h2>
           </header>
 
-          <div class="card" style="max-width: 860px;" data-reveal>
-            <p class="approach-text" style="color: var(--ink); line-height: 1.75;">
-              AI-Suplex 777 is a file-first execution framework. It turns your work into workspaces, captures
-              what happened, extracts lessons, and makes the next session start smarter. It works alongside the
-              agents you already use &mdash; it does not replace them.
+          <div class="approach-block" style="margin-bottom: var(--s-5);" data-reveal>
+            <p class="approach-text" style="color: var(--ink);">
+              AI-Suplex 777 is a file-first execution framework whose core function is to execute and
+              run the <strong>AI-Suplex Workflow</strong>. It turns your work into structured
+              workspaces, captures what happened, extracts lessons, and makes the next session start
+              smarter. It works alongside the agents you already use.
             </p>
           </div>
 
-          <div class="card__grid card__grid--3up" style="margin-top: var(--s-5);" data-reveal-group>
-            <article class="card" data-reveal>
-              <div class="card__header">
-                <div class="card__badge"><span class="badge">01</span></div>
-                <h3 class="card__title" style="font-size: var(--fs-3);">Workspace</h3>
-              </div>
-              <div class="card__body">
-                <p>Defines the mission, the tasks, the context and the outcome &mdash; one lane of work, in files you own.</p>
-              </div>
-            </article>
-            <article class="card" data-reveal>
-              <div class="card__header">
-                <div class="card__badge"><span class="badge">02</span></div>
-                <h3 class="card__title" style="font-size: var(--fs-3);">Memory</h3>
-              </div>
-              <div class="card__body">
-                <p>Captures episodes, lessons, decisions and reusable knowledge in plain Markdown you can read.</p>
-              </div>
-            </article>
-            <article class="card" data-reveal>
-              <div class="card__header">
-                <div class="card__badge"><span class="badge">03</span></div>
-                <h3 class="card__title" style="font-size: var(--fs-3);">Workflow</h3>
-              </div>
-              <div class="card__body">
-                <p>Starts, executes, captures, promotes and maintains the work &mdash; so every session begins with context.</p>
-              </div>
-            </article>
+          <div class="card" style="max-width: 880px; overflow-x: auto;" data-reveal>
+            <table class="ledger" aria-label="The three layers of AI-Suplex 777">
+              <thead>
+                <tr>
+                  <th scope="col" style="width: 28%;">Layer</th>
+                  <th scope="col">What it does</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="measure" style="font-weight: 700; color: var(--navy-800);">Workspace</td>
+                  <td class="how" style="font-size: var(--fs-2); color: var(--ink);">
+                    Defines the mission, daily tasklist, active instance context, and target outcome in plain files you own.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="measure" style="font-weight: 700; color: var(--navy-800);">Memory</td>
+                  <td class="how" style="font-size: var(--fs-2); color: var(--ink);">
+                    Captures episodes, candidate lessons, decisions, and reusable knowledge across a three-layer stack (Episodic &rarr; Semantic &rarr; Procedural).
+                  </td>
+                </tr>
+                <tr>
+                  <td class="measure" style="font-weight: 700; color: var(--navy-800);">Workflow</td>
+                  <td class="how" style="font-size: var(--fs-2); color: var(--ink);">
+                    Starts, executes, captures, promotes, and maintains work so every session follows a repeatable assembly line.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
 
-      <!-- See It Remember Section (the proof) -->
-      <section class="section" id="remember" aria-labelledby="remember-heading">
+      <!-- 4 · How It Works (The AI-Suplex Workflow Pipeline) -->
+      <section class="section" aria-labelledby="how-heading">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <h2 id="how-heading" class="section-header__title" style="text-wrap: balance;">
+              How 777 runs the AI-Suplex Workflow.
+            </h2>
+          </header>
+
+          <div class="approach-block" style="margin-bottom: var(--s-5);" data-reveal>
+            <p
+              style="
+                font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+                font-size: 0.9375rem;
+                font-weight: 600;
+                color: var(--navy-800);
+                margin-bottom: var(--s-3);
+              "
+            >
+              Create a workspace &rarr; Kickstart it &rarr; Capture the outcome &rarr; Learn &rarr; Return smarter
+            </p>
+            <p class="approach-text">
+              In the AI-Suplex Workflow, a weekly plan is broken into focused daily tasklists
+              (15&ndash;20 tasks sized for a single session). 777 drives the complete loop from
+              Phase 0 context priming through artifact capture and human-gated memory promotion.
+            </p>
+          </div>
+
+          <!-- 7-Step Loop Grid -->
+          <div class="card__grid" style="margin-bottom: var(--s-5);" data-reveal-group>
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <p style="font-family: 'IBM Plex Mono', monospace; font-size: 0.8125rem; font-weight: 600; color: #8f651b; margin-bottom: 6px;">01 &middot; Start</p>
+                <h3 class="card__title" style="font-size: var(--fs-3);">Prime the context core</h3>
+              </div>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>Run <code>3lm start --context</code> to load verified lessons, recent episodes, and active tasklists before writing a prompt.</p>
+              </div>
+            </article>
+
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <p style="font-family: 'IBM Plex Mono', monospace; font-size: 0.8125rem; font-weight: 600; color: #8f651b; margin-bottom: 6px;">02 &middot; Execute</p>
+                <h3 class="card__title" style="font-size: var(--fs-3);">Run the session tasklist</h3>
+              </div>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>Execute your daily tasklist with <code>AI-Suplex: &lt;Command&gt;</code> triggers, 14 role skills, or your preferred coding agent.</p>
+              </div>
+            </article>
+
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <p style="font-family: 'IBM Plex Mono', monospace; font-size: 0.8125rem; font-weight: 600; color: #8f651b; margin-bottom: 6px;">03 &middot; Capture</p>
+                <h3 class="card__title" style="font-size: var(--fs-3);">Produce tracked outputs</h3>
+              </div>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>Every session produces visible outputs: work-in-progress Artifacts, Insights, reusable B-Bombs, and a Session End Report.</p>
+              </div>
+            </article>
+
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <p style="font-family: 'IBM Plex Mono', monospace; font-size: 0.8125rem; font-weight: 600; color: #8f651b; margin-bottom: 6px;">04 &middot; Learn</p>
+                <h3 class="card__title" style="font-size: var(--fs-3);">Extract session lessons</h3>
+              </div>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p><code>3lm end</code> and <code>3lm learn</code> write the episodic record and extract candidate lessons into <code>Memory/lessons.md</code>.</p>
+              </div>
+            </article>
+
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <p style="font-family: 'IBM Plex Mono', monospace; font-size: 0.8125rem; font-weight: 600; color: #8f651b; margin-bottom: 6px;">05 &middot; Promote</p>
+                <h3 class="card__title" style="font-size: var(--fs-3);">Approve durable memory</h3>
+              </div>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>You review and approve high-signal lessons via <code>3lm promote</code>, elevating them into semantic and procedural memory.</p>
+              </div>
+            </article>
+
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <p style="font-family: 'IBM Plex Mono', monospace; font-size: 0.8125rem; font-weight: 600; color: #8f651b; margin-bottom: 6px;">06 &middot; Index &amp; Return</p>
+                <h3 class="card__title" style="font-size: var(--fs-3);">Save context across lanes</h3>
+              </div>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>Instance-scoped <code>Save Context</code> and <code>3lm sync</code> commit your thread state (Daily, Project, Random, Realist) so the next session starts smarter.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Two runtimes, one loop -->
+          <div class="card" style="max-width: 880px; overflow-x: auto;" data-reveal>
+            <div class="card__header">
+              <h3 class="card__title" style="font-size: var(--fs-3);">Two runtimes, one shared memory loop</h3>
+            </div>
+            <p style="color: var(--muted); font-size: var(--fs-2); margin-bottom: var(--s-4);">
+              The same AI-Suplex Workflow runs interactively inside your Markdown vault or headlessly through an agent harness &mdash; reading and writing the exact same files.
+            </p>
+            <table class="ledger" aria-label="AI-Suplex 777 workflow runtimes">
+              <thead>
+                <tr>
+                  <th scope="col">Runtime</th>
+                  <th scope="col">What runs the loop</th>
+                  <th scope="col">Best for</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="measure" style="font-weight: 700; color: var(--navy-800);">Vault-native</td>
+                  <td class="how" style="color: var(--ink); font-size: var(--fs-1);">
+                    AI-Suplex Commands + prompt patterns + <code>node Tools/3lm.js</code>
+                  </td>
+                  <td class="how" style="font-size: var(--fs-1);">
+                    Obsidian &amp; local Markdown users; the shipped 777 Edition
+                  </td>
+                </tr>
+                <tr>
+                  <td class="measure" style="font-weight: 700; color: var(--navy-800);">dsh plugin (optional)</td>
+                  <td class="how" style="color: var(--ink); font-size: var(--fs-1);">
+                    <code>dsh-ai-suplex</code> &mdash; nine <code>ai_suplex_*</code> tools with approval-gated promotion
+                  </td>
+                  <td class="how" style="font-size: var(--fs-1);">
+                    Agent-first users driving the same vault headlessly
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="card__footer" style="margin-top: var(--s-4);">
+              <a
+                href="/assets/aistudio/The_AI-Suplex_Workflow_c6b0fc7b.md"
+                target="_blank"
+                rel="noopener"
+                class="card__link"
+              >
+                Read the full AI-Suplex Workflow Pipeline specification (v3.0)
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5 · See It Remember Section (the strongest proof + interactive 90-second walkthrough) -->
+      <section class="section section--surface" id="remember" aria-labelledby="remember-heading">
         <div class="container">
           <header class="section-header" data-reveal>
             <h2 id="remember-heading" class="section-header__title">See it remember.</h2>
           </header>
 
-          <div class="card" style="max-width: 860px;" data-reveal>
-            <p style="margin: 0 0 var(--s-4); font-size: var(--fs-2); color: var(--ink); line-height: 1.7;">
-              This is real output from a live vault &mdash; not a mockup. Every lesson below was learned in an
-              earlier session and returned by one command.
-            </p>
+          <div class="card" style="max-width: 880px;" data-reveal>
+            <div
+              style="
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                gap: var(--s-3);
+                margin-bottom: var(--s-4);
+              "
+            >
+              <p style="margin: 0; font-size: var(--fs-2); color: var(--ink); max-width: 58ch;">
+                This is real output from the <code>3lm</code> memory loop &mdash; not an abstract
+                diagram. Step through the 90-second walkthrough below to see how one session's work
+                becomes the next session's starting context.
+              </p>
 
-            <div style="border-radius: var(--radius); border: 1px solid var(--line); background-color: #15223A; box-shadow: var(--shadow); overflow: hidden;">
-              <div style="display: flex; align-items: center; gap: 8px; padding: 10px 16px; background-color: #1A2947;">
-                <span style="width: 10px; height: 10px; border-radius: 50%; background-color: #EF4444; opacity: 0.8; display: inline-block;"></span>
-                <span style="width: 10px; height: 10px; border-radius: 50%; background-color: #F59E0B; opacity: 0.8; display: inline-block;"></span>
-                <span style="width: 10px; height: 10px; border-radius: 50%; background-color: #10B981; opacity: 0.8; display: inline-block;"></span>
-                <span style="margin-left: 8px; color: #94A3B8; font-family: ui-monospace, monospace; font-size: 12px; font-weight: 600;">my-vault &bull; 3lm CLI</span>
+              <!-- Interactive 90-second walkthrough controls -->
+              <div
+                role="tablist"
+                aria-label="90-second memory loop walkthrough steps"
+                style="
+                  display: inline-flex;
+                  flex-wrap: wrap;
+                  gap: 6px;
+                  background-color: var(--surface);
+                  padding: 4px;
+                  border-radius: 8px;
+                  border: 1px solid var(--line);
+                "
+              >
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected="true"
+                  data-walkthrough-step="0"
+                  class="s777-step-btn"
+                  style="
+                    padding: 6px 12px;
+                    font-size: 0.8125rem;
+                    font-weight: 600;
+                    border-radius: 6px;
+                    border: none;
+                    cursor: pointer;
+                    background-color: var(--navy-800);
+                    color: #ffffff;
+                  "
+                >
+                  1. Start with context
+                </button>
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  data-walkthrough-step="1"
+                  class="s777-step-btn"
+                  style="
+                    padding: 6px 12px;
+                    font-size: 0.8125rem;
+                    font-weight: 600;
+                    border-radius: 6px;
+                    border: none;
+                    cursor: pointer;
+                    background-color: transparent;
+                    color: var(--navy);
+                  "
+                >
+                  2. Capture &amp; learn
+                </button>
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  data-walkthrough-step="2"
+                  class="s777-step-btn"
+                  style="
+                    padding: 6px 12px;
+                    font-size: 0.8125rem;
+                    font-weight: 600;
+                    border-radius: 6px;
+                    border: none;
+                    cursor: pointer;
+                    background-color: transparent;
+                    color: var(--navy);
+                  "
+                >
+                  3. Approve &amp; promote
+                </button>
               </div>
-              <pre style="margin: 0; padding: 18px 20px; color: #E2E8F0; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; line-height: 1.7; overflow-x: auto;"><span style="color: #10B981;">$ 3lm start --context</span>
-<span style="color: #10B981;">&#10003; Context fresh.</span>
+            </div>
 
-<span style="color: #B8862E;">LESSONS</span>
-&middot; The walk is a test class of its own &mdash; a person clicking found
-  two lies that 140 tests could not.
-&middot; A lane with a dispatcher ships.
-&middot; Work with no dispatcher waits for a day that never shortens.
+            <!-- Terminal output window -->
+            <div
+              style="
+                border-radius: var(--radius);
+                border: 1px solid var(--line);
+                background-color: #15223a;
+                box-shadow: var(--shadow);
+                overflow: hidden;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  padding: 10px 16px;
+                  background-color: #1a2947;
+                  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+                "
+              >
+                <span
+                  id="s777-term-label"
+                  style="
+                    color: #cbd5e1;
+                    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+                    font-size: 12px;
+                    font-weight: 600;
+                  "
+                >
+                  Step 1 of 3 &middot; Phase 0 Context Core (3lm start --context)
+                </span>
+                <span
+                  style="
+                    color: #f3d492;
+                    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+                    font-size: 12px;
+                  "
+                >
+                  ai-suplex-vault
+                </span>
+              </div>
 
-<span style="color: #B8862E;">RECENT EPISODES</span>
-&middot; 2026-11-17-week-5-day-1-the-zesa-recovery (score 4/5)
+              <!-- Step 1 (Default — Exact brief output) -->
+              <pre
+                id="s777-term-panel-0"
+                style="
+                  margin: 0;
+                  padding: 18px 20px;
+                  color: #e2e8f0;
+                  font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+                  font-size: 13px;
+                  line-height: 1.7;
+                  overflow-x: auto;
+                "
+              ><span style="color: #f3d492;">$ 3lm start --context</span>
+<span style="color: #10b981;">&#9989; Context fresh.</span>
 
-<span style="color: #B8862E;">ACTIVE TASKLISTS</span>
-&middot; 2026-11-18-cycle-3-week-5-day-2-money-first-tasklist.md</pre>
+<span style="color: #f3d492;">LESSONS</span>
+&middot; Screen a remote role in the order region &rarr; language &rarr; seniority &rarr; stack.
+&middot; A background build lane must declare its hour budget before the first commit.
+&middot; When a spec says an artifact is generated by a tool, verify the tool writes it.
+
+<span style="color: #f3d492;">RECENT EPISODES</span>
+&middot; 2026-10-13-0815-ship-the-install-gate (4/5)
+
+<span style="color: #f3d492;">ACTIVE TASKLISTS</span>
+&middot; 2026-10-16-ship-the-install-gate-tasklist.md</pre>
+
+              <!-- Step 2 (Capture & Learn) -->
+              <pre
+                id="s777-term-panel-1"
+                hidden
+                style="
+                  margin: 0;
+                  padding: 18px 20px;
+                  color: #e2e8f0;
+                  font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+                  font-size: 13px;
+                  line-height: 1.7;
+                  overflow-x: auto;
+                "
+              ><span style="color: #f3d492;">$ 3lm end --session "ship-the-install-gate" --score 4</span>
+<span style="color: #10b981;">&#9989; Episode recorded:</span> Memory/episodes/2026-10-13-0815-ship-the-install-gate.md
+
+<span style="color: #f3d492;">$ 3lm learn</span>
+<span style="color: #10b981;">&#9989; Extracted 2 candidate lessons from session report:</span>
+  [L-104] A background build lane must declare its hour budget before the first commit.
+  [L-105] When a spec says an artifact is generated by a tool, verify the tool writes it.
+Status: Awaiting human review in Memory/lessons.md</pre>
+
+              <!-- Step 3 (Human-Approved Promotion & Save Context) -->
+              <pre
+                id="s777-term-panel-2"
+                hidden
+                style="
+                  margin: 0;
+                  padding: 18px 20px;
+                  color: #e2e8f0;
+                  font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+                  font-size: 13px;
+                  line-height: 1.7;
+                  overflow-x: auto;
+                "
+              ><span style="color: #f3d492;">$ 3lm promote --min 70</span>
+<span style="color: #10b981;">&#9989; Human approval verified.</span>
+Promoted 2 lessons &rarr; Semantic &amp; Procedural memory.
+
+<span style="color: #f3d492;">$ 3lm sync</span>
+<span style="color: #10b981;">&#9989; Context Kick-start synced.</span> Next session will start with updated context core.</pre>
             </div>
 
             <p style="margin: var(--s-4) 0 0; font-size: var(--fs-2); color: var(--ink);">
-              One command. The context, the lessons, the next actions &mdash; already there.
+              Every lesson listed was learned in an earlier session.
               <strong>That is the core value of 777.</strong>
             </p>
           </div>
         </div>
       </section>
 
-      <!-- Core Capabilities Section -->
-      <section class="section section--surface" aria-labelledby="capabilities-heading">
+      <!-- 6 · Core Capabilities (outcomes, not internals) -->
+      <section class="section" aria-labelledby="capabilities-heading">
         <div class="container">
           <header class="section-header" data-reveal>
-            <h2 id="capabilities-heading" class="section-header__title">What you get</h2>
+            <h2 id="capabilities-heading" class="section-header__title">
+              Core capabilities &mdash; outcomes, not internals.
+            </h2>
           </header>
 
           <div class="card__grid card__grid--2up" data-reveal-group>
             <article class="card" data-reveal>
               <div class="card__header">
-                <h3 class="card__title" style="font-size: var(--fs-3);">A portable workspace vault</h3>
+                <h3 class="card__title" style="font-size: var(--fs-3);">Portable workspace vault</h3>
               </div>
-              <div class="card__body">
-                <p>A normal folder of Markdown, tasklists and artifacts. Move it, back it up, sync it, open it in Obsidian.</p>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>A normal folder of Markdown, tasklists, artifacts, and local databases. Move it, back it up, sync it with Git, or open it in Obsidian &mdash; your vault, your files, your control.</p>
               </div>
             </article>
+
             <article class="card" data-reveal>
               <div class="card__header">
                 <h3 class="card__title" style="font-size: var(--fs-3);">Agent-agnostic execution</h3>
               </div>
-              <div class="card__body">
-                <p>Point any file-capable agent at <code>AGENTS.md</code>. 777 provides the workflow, memory and guardrails; the agent does the work.</p>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>Point any file-capable agent at <code>AGENTS.md</code>. 777 provides the workflow, memory loop, and guardrails; the agent you already trust does the work.</p>
               </div>
             </article>
+
             <article class="card" data-reveal>
               <div class="card__header">
                 <h3 class="card__title" style="font-size: var(--fs-3);">Human-approved memory</h3>
               </div>
-              <div class="card__body">
-                <p>777 captures what happened and proposes lessons &mdash; and promotes only what you approve. You stay in control of what becomes memory.</p>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>777 captures what happened and proposes candidate lessons &mdash; and promotes only what you approve. You stay in control of what becomes permanent memory.</p>
               </div>
             </article>
+
             <article class="card" data-reveal>
               <div class="card__header">
                 <h3 class="card__title" style="font-size: var(--fs-3);">Structured task continuity</h3>
               </div>
-              <div class="card__body">
-                <p>Workspaces, tasklists, episodes and next actions &mdash; so unfinished work resumes instead of restarting.</p>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>Workspaces, daily tasklists, episodes, and instance-scoped context files ensure parallel windows never clobber each other and unfinished work resumes cleanly.</p>
               </div>
             </article>
+
             <article class="card" data-reveal>
               <div class="card__header">
                 <h3 class="card__title" style="font-size: var(--fs-3);">Local-first maintenance</h3>
               </div>
-              <div class="card__body">
-                <p>Validate the vault, refresh the index, back up, export. Everything runs on your machine.</p>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>Validate the vault, refresh the index, archive completed sessions, back up, and export. Everything runs locally on your machine with zero cloud lock-in.</p>
               </div>
             </article>
+
             <article class="card" data-reveal>
               <div class="card__header">
                 <h3 class="card__title" style="font-size: var(--fs-3);">Optional knowledge graph</h3>
               </div>
-              <div class="card__body">
-                <p>A lightweight way to explore what relates to what. <strong>Optional</strong> &mdash; the core value is continuity, and the graph is a later unlock.</p>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>Lightweight exploration of what relates to what across your vault. <strong>Explicitly optional</strong> in the client-ready release &mdash; continuity comes first, and the graph is a later unlock.</p>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- Who It Is For + Agents Section -->
-      <section class="section" aria-labelledby="who-heading">
+      <!-- 7 · Who It Is For & 8 · Agent Compatibility -->
+      <section class="section section--surface" aria-labelledby="who-heading">
         <div class="container">
-          <header class="section-header" data-reveal>
-            <h2 id="who-heading" class="section-header__title">Bring your own agent.</h2>
-          </header>
+          <div class="card__grid card__grid--2up" data-reveal-group>
+            <!-- 7 · Who it is for -->
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <h2 id="who-heading" class="card__title" style="font-size: var(--fs-4);">
+                  Who 777 is built for
+                </h2>
+              </div>
+              <div class="card__body" style="margin-bottom: 0;">
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--s-3);">
+                  <li style="padding-bottom: var(--s-3); border-bottom: 1px solid var(--line);">
+                    <strong style="color: var(--navy-800);">Solo AI builders</strong> &mdash; running multiple projects and threads without re-explaining context every morning.
+                  </li>
+                  <li style="padding-bottom: var(--s-3); border-bottom: 1px solid var(--line);">
+                    <strong style="color: var(--navy-800);">Freelancers</strong> &mdash; turning completed client work into repeatable processes, lessons, and reusable B-Bombs.
+                  </li>
+                  <li style="padding-bottom: var(--s-3); border-bottom: 1px solid var(--line);">
+                    <strong style="color: var(--navy-800);">Small agencies</strong> &mdash; standardizing tasklists, session reports, and quality checks across deliveries.
+                  </li>
+                  <li style="padding-bottom: var(--s-3); border-bottom: 1px solid var(--line);">
+                    <strong style="color: var(--navy-800);">Technical founders</strong> &mdash; operating daily with Codex, Claude Code, or Hermes.
+                  </li>
+                  <li>
+                    <strong style="color: var(--navy-800);">AI-native teams</strong> &mdash; sharing durable project context in Git and Markdown without cloud lock-in.
+                  </li>
+                </ul>
+              </div>
+            </article>
 
-          <div class="card" style="max-width: 860px;" data-reveal>
-            <p style="margin: 0 0 var(--s-4); font-size: var(--fs-2); color: var(--ink); line-height: 1.7;">
-              777 does not choose your AI. Point any file-capable agent at the vault and start &mdash; your
-              vault is plain Markdown, so it opens in Obsidian, moves across machines, and outlives any tool.
-              Tested with:
-            </p>
-            <div style="display: flex; flex-wrap: wrap; gap: var(--s-2); margin-bottom: var(--s-4);">
-              <span class="badge">Zed</span>
-              <span class="badge">Claude Code</span>
-              <span class="badge">Codex</span>
-              <span class="badge">Cursor</span>
-              <span class="badge">OpenCode</span>
-              <span class="badge">Hermes</span>
-              <span class="badge">Oh-My-Pi</span>
-            </div>
-            <p style="margin: 0 0 var(--s-2); font-size: var(--fs-2); color: var(--ink);">
-              <strong>Built for:</strong> solo AI builders &middot; freelancers turning work into repeatable
-              processes &middot; small agencies &middot; technical founders &middot; AI-native teams that need
-              shared context without cloud lock-in.
-            </p>
+            <!-- 8 · Agent compatibility -->
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <h2 id="agents-heading" class="card__title" style="font-size: var(--fs-4);">
+                  Bring your own agent.
+                </h2>
+              </div>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p style="margin-bottom: var(--s-4);">
+                  777 never locks you into a single vendor. Point any file-capable agent at
+                  <code>AGENTS.md</code> and run the workflow. Your vault is plain Markdown, so it
+                  opens natively in <strong>Obsidian</strong> and moves freely across machines.
+                </p>
+
+                <div style="padding: var(--s-4); background-color: var(--surface); border: 1px solid var(--line); border-radius: 8px; margin-bottom: var(--s-4);">
+                  <p style="font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); margin-bottom: var(--s-2);">
+                    Verified &amp; tested agents in repository
+                  </p>
+                  <p style="font-family: 'IBM Plex Mono', monospace; font-size: 0.9375rem; font-weight: 600; color: var(--navy-800); line-height: 1.7;">
+                    Zed &middot; Claude Code &middot; Codex &middot; Cursor &middot; OpenCode &middot; Hermes &middot; Oh-My-Pi
+                  </p>
+                </div>
+
+                <p style="font-size: var(--fs-1); color: var(--muted);">
+                  <strong>Knowledge &amp; editing companion:</strong> Obsidian (works directly over the same vault folder for human browsing, Dataview dashboards, and Maps of Content).
+                </p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- What Is Inside Section -->
-      <section class="section section--surface" aria-labelledby="inside-heading">
+      <!-- 9 · What Is Inside Section -->
+      <section class="section" aria-labelledby="inside-heading">
         <div class="container">
           <header class="section-header" data-reveal>
             <h2 id="inside-heading" class="section-header__title">What is inside</h2>
           </header>
 
-          <div class="card" style="max-width: 860px;" data-reveal>
-            <div style="display: flex; flex-wrap: wrap; gap: var(--s-2);">
-              <span class="badge">AGENTS.md</span>
-              <span class="badge">Workspaces</span>
-              <span class="badge">Memory (the 3lm CLI)</span>
-              <span class="badge">Skills</span>
-              <span class="badge">Prompt Patterns</span>
-              <span class="badge">Tools (3lm, vault index, graph, maintenance)</span>
-              <span class="badge">Guides</span>
-              <span class="badge">Templates</span>
+          <div class="card" style="max-width: 880px; overflow-x: auto;" data-reveal>
+            <table class="ledger" aria-label="Contents of an AI-Suplex 777 vault">
+              <thead>
+                <tr>
+                  <th scope="col" style="width: 30%;">Component</th>
+                  <th scope="col">Role in the AI-Suplex Workflow</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="measure" style="font-weight: 700; color: var(--navy-800);"><code>AGENTS.md</code></td>
+                  <td class="how" style="font-size: var(--fs-2); color: var(--ink);">Universal entry contract and active mission context for any AI agent you attach to the vault.</td>
+                </tr>
+                <tr>
+                  <td class="measure" style="font-weight: 700; color: var(--navy-800);">Workspaces</td>
+                  <td class="how" style="font-size: var(--fs-2); color: var(--ink);">Tasklists, active/archived Sessions, and instance-scoped <code>Context Kick-start/</code> lanes.</td>
+                </tr>
+                <tr>
+                  <td class="measure" style="font-weight: 700; color: var(--navy-800);">Memory</td>
+                  <td class="how" style="font-size: var(--fs-2); color: var(--ink);">Three-layer memory store (episodes, lessons, semantic &amp; procedural knowledge) governed by human approval.</td>
+                </tr>
+                <tr>
+                  <td class="measure" style="font-weight: 700; color: var(--navy-800);">Skills</td>
+                  <td class="how" style="font-size: var(--fs-2); color: var(--ink);">14 structured AI role blueprints (Orchestrator, Architect, Builder, Realist, and domain specialists).</td>
+                </tr>
+                <tr>
+                  <td class="measure" style="font-weight: 700; color: var(--navy-800);">Prompt Patterns</td>
+                  <td class="how" style="font-size: var(--fs-2); color: var(--ink);">Repeatable execution macros and one-line <code>AI-Suplex: &lt;Command&gt;</code> triggers for any chat window.</td>
+                </tr>
+                <tr>
+                  <td class="measure" style="font-weight: 700; color: var(--navy-800);">Tools</td>
+                  <td class="how" style="font-size: var(--fs-2); color: var(--ink);">The <code>3lm</code> memory CLI, vault index, optional knowledge graph, sweeper scripts, and maintenance checks.</td>
+                </tr>
+                <tr>
+                  <td class="measure" style="font-weight: 700; color: var(--navy-800);">Guides</td>
+                  <td class="how" style="font-size: var(--fs-2); color: var(--ink);"><code>AI-Suplex Kick-start/</code> onboarding documentation, 3-Layer Memory architecture docs, and workflow manuals.</td>
+                </tr>
+                <tr>
+                  <td class="measure" style="font-weight: 700; color: var(--navy-800);">Templates</td>
+                  <td class="how" style="font-size: var(--fs-2); color: var(--ink);">Standardized Markdown schemas for Session Start/End, Artifacts, B-Bombs, Insights, MOCs, and Trackers.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10 · Proof and Credibility Section -->
+      <section class="section section--surface" aria-labelledby="proof-heading">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <h2 id="proof-heading" class="section-header__title">
+              Built in production, not just demonstrated.
+            </h2>
+          </header>
+
+          <div class="card" style="max-width: 880px; overflow-x: auto;" data-reveal>
+            <table class="ledger" aria-label="AI-Suplex 777 proof ledger">
+              <thead>
+                <tr>
+                  <th scope="col" style="width: 32%;">Proof</th>
+                  <th scope="col">What it demonstrates</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="measure" style="font-weight: 700; color: var(--navy-800);">
+                    <a
+                      href="https://wqr.co.zw"
+                      target="_blank"
+                      rel="noopener"
+                      style="color: #8f651b; text-decoration: underline;"
+                    >wqr.co.zw</a>
+                  </td>
+                  <td class="how" style="font-size: var(--fs-2); color: var(--ink);">
+                    Live WhatsApp commerce agent handling real customer orders, quotes, and Paynow/EcoCash payments &mdash; built and operated on this workflow.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="measure" style="font-weight: 700; color: var(--navy-800);">
+                    <a href="#remember" style="color: #8f651b; text-decoration: underline;">90-second walkthrough</a>
+                  </td>
+                  <td class="how" style="font-size: var(--fs-2); color: var(--ink);">
+                    The <code>3lm</code> memory loop in action &mdash; context core loaded at start, lessons captured at session end, promoted with human approval.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="measure" style="font-weight: 700; color: var(--navy-800);">
+                    <a
+                      href="https://github.com/kmagwenzi/ai-suplex"
+                      target="_blank"
+                      rel="noopener"
+                      style="color: #8f651b; text-decoration: underline;"
+                    >Open-source repository</a>
+                  </td>
+                  <td class="how" style="font-size: var(--fs-2); color: var(--ink);">
+                    The actual framework, <code>3lm</code> CLI tools, skills, and workflow specification at <code>github.com/kmagwenzi/ai-suplex</code> (MIT licensed).
+                  </td>
+                </tr>
+                <tr>
+                  <td class="measure" style="font-weight: 700; color: var(--navy-800);">
+                    Fast installer (~10&ndash;11s)
+                  </td>
+                  <td class="how" style="font-size: var(--fs-2); color: var(--ink);">
+                    Low-friction setup from <code>git clone</code> and <code>bash install.sh</code> to an initialized, ready-to-run vault.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="measure" style="font-weight: 700; color: var(--navy-800);">
+                    Agent compatibility
+                  </td>
+                  <td class="how" style="font-size: var(--fs-2); color: var(--ink);">
+                    Works beyond one vendor &mdash; verified with Zed, Claude Code, Codex, Cursor, OpenCode, Hermes, and Oh-My-Pi.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11 · Get Started (Two Paths) -->
+      <section class="section" id="get-started" aria-labelledby="start-heading">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <h2 id="start-heading" class="section-header__title">Start in under 10 minutes.</h2>
+          </header>
+
+          <div class="card__grid card__grid--2up" data-reveal-group>
+            <!-- Path 1: For developers -->
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <p style="font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: #8f651b; margin-bottom: 6px;">
+                  Path 1 &middot; For developers &amp; terminal users
+                </p>
+                <h3 class="card__title" style="font-size: var(--fs-3);">Clone + run install.sh</h3>
+              </div>
+              <div class="card__body">
+                <p style="margin-bottom: var(--s-3);">
+                  Clone the open-source repository, run the installer, and prime your first session context core:
+                </p>
+                <div
+                  style="
+                    border-radius: var(--radius);
+                    border: 1px solid var(--line);
+                    background-color: #15223a;
+                    overflow: hidden;
+                    margin-bottom: var(--s-3);
+                  "
+                >
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                      padding: 8px 14px;
+                      background-color: #1a2947;
+                      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+                    "
+                  >
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #cbd5e1;">Quickstart commands</span>
+                    <button
+                      type="button"
+                      id="s777-copy-btn"
+                      style="
+                        background: rgba(255, 255, 255, 0.08);
+                        border: 1px solid rgba(255, 255, 255, 0.18);
+                        color: #f3d492;
+                        font-family: 'IBM Plex Mono', monospace;
+                        font-size: 11.5px;
+                        font-weight: 600;
+                        padding: 3px 10px;
+                        border-radius: 4px;
+                        cursor: pointer;
+                      "
+                    >
+                      Copy commands
+                    </button>
+                  </div>
+                  <pre
+                    id="s777-install-code"
+                    style="
+                      margin: 0;
+                      padding: 14px 16px;
+                      color: #e2e8f0;
+                      font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+                      font-size: 12.5px;
+                      line-height: 1.75;
+                      overflow-x: auto;
+                    "
+                  >git clone https://github.com/kmagwenzi/ai-suplex.git
+cd ai-suplex &amp;&amp; bash install.sh
+cd ai-suplex-vault &amp;&amp; node Tools/3lm.js start --context</pre>
+                </div>
+                <p style="font-size: var(--fs-1); color: var(--muted);">
+                  Prefer a release archive? Download
+                  <a
+                    href="https://github.com/kmagwenzi/ai-suplex/releases/tag/v2.10.0"
+                    target="_blank"
+                    rel="noopener"
+                    style="color: #8f651b; text-decoration: underline; font-weight: 600;"
+                  >v2.10.0 on GitHub</a>.
+                </p>
+              </div>
+              <div class="card__footer">
+                <a
+                  href="https://github.com/kmagwenzi/ai-suplex"
+                  target="_blank"
+                  rel="noopener"
+                  class="card__link"
+                >
+                  Open github.com/kmagwenzi/ai-suplex
+                  <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Path 2: For non-technical users -->
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <p style="font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: #8f651b; margin-bottom: 6px;">
+                  Path 2 &middot; For non-technical operators &amp; teams
+                </p>
+                <h3 class="card__title" style="font-size: var(--fs-3);">Request access to the Workflow Console</h3>
+              </div>
+              <div class="card__body">
+                <p style="margin-bottom: var(--s-3);">
+                  Want the benefits of portable agent memory and structured workspaces without
+                  running terminal scripts yourself?
+                </p>
+                <p style="margin-bottom: var(--s-3);">
+                  The <strong>AI-Suplex Workflow Console</strong> provides a guided interface on top
+                  of your local vault &mdash; create workspaces, kickstart daily sessions, review
+                  captured outcomes, and approve lessons with point-and-click clarity.
+                </p>
+                <p style="font-size: var(--fs-1); color: var(--muted);">
+                  We also onboard teams and configure custom agent harnesses tailored to your
+                  business workflows.
+                </p>
+              </div>
+              <div class="card__footer">
+                <a href="/contact.html" class="card__link">
+                  Request Workflow Console access
+                  <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 12 · 777 vs Ultra Section -->
+      <section class="section section--surface" aria-labelledby="vs-heading">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <h2 id="vs-heading" class="section-header__title">
+              777 captures the work. Ultra understands it.
+            </h2>
+          </header>
+
+          <div class="card" style="max-width: 880px; overflow-x: auto;" data-reveal>
+            <p style="margin: 0 0 var(--s-4); font-size: var(--fs-2); color: var(--muted);">
+              AI-Suplex 777 is the free, open-source foundation. AI-Suplex Ultra is the intelligence
+              layer that reasons over the work you have already captured in 777.
+            </p>
+            <table class="ledger" aria-label="Comparison between AI-Suplex 777 and AI-Suplex Ultra">
+              <thead>
+                <tr>
+                  <th scope="col">Capability</th>
+                  <th scope="col">777</th>
+                  <th scope="col">Ultra</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="measure" style="color: var(--ink);">Create and run workspaces</td>
+                  <td class="how" style="font-weight: 600; color: var(--navy-800);">Yes</td>
+                  <td class="how" style="font-weight: 600; color: var(--navy-800);">Yes</td>
+                </tr>
+                <tr>
+                  <td class="measure" style="color: var(--ink);">Capture sessions and lessons</td>
+                  <td class="how" style="font-weight: 600; color: var(--navy-800);">Yes</td>
+                  <td class="how" style="font-weight: 600; color: var(--navy-800);">Yes</td>
+                </tr>
+                <tr>
+                  <td class="measure" style="color: var(--ink);">Maintain a portable vault</td>
+                  <td class="how" style="font-weight: 600; color: var(--navy-800);">Yes</td>
+                  <td class="how" style="font-weight: 600; color: var(--navy-800);">Yes</td>
+                </tr>
+                <tr>
+                  <td class="measure" style="color: var(--ink);">Cross-workspace opportunity mapping</td>
+                  <td class="how">No</td>
+                  <td class="how" style="font-weight: 600; color: var(--navy-800);">Yes</td>
+                </tr>
+                <tr>
+                  <td class="measure" style="color: var(--ink);">Weekly operating review</td>
+                  <td class="how">No</td>
+                  <td class="how" style="font-weight: 600; color: var(--navy-800);">Yes</td>
+                </tr>
+                <tr>
+                  <td class="measure" style="color: var(--ink);">Knowledge Canvas</td>
+                  <td class="how">No</td>
+                  <td class="how" style="font-weight: 600; color: var(--navy-800);">Yes</td>
+                </tr>
+                <tr>
+                  <td class="measure" style="color: var(--ink);">Scheduled mission control</td>
+                  <td class="how">Basic</td>
+                  <td class="how" style="font-weight: 600; color: var(--navy-800);">Full</td>
+                </tr>
+                <tr>
+                  <td class="measure" style="color: var(--ink);">Skill evolution</td>
+                  <td class="how">Manual</td>
+                  <td class="how" style="font-weight: 600; color: var(--navy-800);">Assisted / gated</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="card__footer" style="margin-top: var(--s-4);">
+              <a href="/projects/ai-suplex-ultra.html" class="card__link">
+                Explore AI-Suplex Ultra &mdash; the intelligence layer on top of 777
+                <span aria-hidden="true">&rarr;</span>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Proof Section -->
-      <section class="section" aria-labelledby="proof-heading">
+      <!-- 13 · FAQ Section -->
+      <section class="section" aria-labelledby="faq-heading">
         <div class="container">
           <header class="section-header" data-reveal>
-            <h2 id="proof-heading" class="section-header__title">Built in production, not just demonstrated.</h2>
-          </header>
-
-          <div class="card" style="max-width: 860px;" data-reveal>
-            <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--s-3); padding: 0; margin: 0;">
-              <li style="display: flex; align-items: flex-start; gap: var(--s-3);">
-                <span class="badge badge--ok" style="margin-top: 2px;">Live product</span>
-                <span style="font-size: var(--fs-2); color: var(--ink);">
-                  <a href="https://wqr.co.zw" target="_blank" rel="noopener" style="color: var(--gold); text-decoration: underline;">wqr.co.zw</a>
-                  &mdash; a WhatsApp commerce agent taking real orders and payments, run on this stack.
-                </span>
-              </li>
-              <li style="display: flex; align-items: flex-start; gap: var(--s-3);">
-                <span class="badge badge--ok" style="margin-top: 2px;">Daily use</span>
-                <span style="font-size: var(--fs-2); color: var(--ink);">This site, WQR and the Ultra harness are run from an AI-Suplex vault every day.</span>
-              </li>
-              <li style="display: flex; align-items: flex-start; gap: var(--s-3);">
-                <span class="badge badge--ok" style="margin-top: 2px;">Source</span>
-                <span style="font-size: var(--fs-2); color: var(--ink);">
-                  The actual framework:
-                  <a href="https://github.com/kmagwenzi/ai-suplex" target="_blank" rel="noopener" style="color: var(--gold); text-decoration: underline;">
-                    github.com/kmagwenzi/ai-suplex
-                  </a>
-                </span>
-              </li>
-              <li style="display: flex; align-items: flex-start; gap: var(--s-3);">
-                <span class="badge badge--ok" style="margin-top: 2px;">Install</span>
-                <span style="font-size: var(--fs-2); color: var(--ink);">One command. The v2.10.0 release installed clean, end to end, in under two seconds (measured).</span>
-              </li>
-              <li style="display: flex; align-items: flex-start; gap: var(--s-3);">
-                <span class="badge badge--ok" style="margin-top: 2px;">License</span>
-                <span style="font-size: var(--fs-2); color: var(--ink);">Open source: MIT (code) &middot; CC BY 4.0 (content)</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Get Started Section -->
-      <section class="section section--surface" aria-labelledby="start-heading">
-        <div class="container">
-          <header class="section-header" data-reveal>
-            <h2 id="start-heading" class="section-header__title">Start in under ten minutes.</h2>
-          </header>
-
-          <div class="card__grid card__grid--2up" data-reveal-group>
-            <article class="card" data-reveal>
-              <div class="card__header">
-                <h3 class="card__title" style="font-size: var(--fs-3);">Download the release</h3>
-              </div>
-              <div class="card__body">
-                <p style="margin-bottom: var(--s-3);">
-                  <a
-                    href="https://github.com/kmagwenzi/ai-suplex/releases/download/v2.10.0/ai-suplex-777-v2.10.0.zip"
-                    target="_blank"
-                    rel="noopener"
-                    style="color: var(--gold); text-decoration: underline; font-weight: 600;"
-                  >ai-suplex-777-v2.10.0.zip</a>
-                  (1.2 MB) &mdash; or read the
-                  <a
-                    href="https://github.com/kmagwenzi/ai-suplex/releases/tag/v2.10.0"
-                    target="_blank"
-                    rel="noopener"
-                    style="color: var(--gold); text-decoration: underline;"
-                  >release notes</a>.
-                </p>
-                <div style="border-radius: var(--radius); border: 1px solid var(--line); background-color: #15223A; overflow: hidden;">
-                  <pre style="margin: 0; padding: 14px 16px; color: #E2E8F0; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; line-height: 1.7; overflow-x: auto;"><span style="color: #10B981;">$</span> bash install.sh /path/to/my-vault
-<span style="color: #10B981;">$</span> cd /path/to/my-vault
-<span style="color: #10B981;">$</span> node Tools/3lm.js start --context
-<span style="color: #94A3B8;">&#10003; Context fresh.</span></pre>
-                </div>
-                <p style="margin: var(--s-3) 0 0; font-size: var(--fs-1); color: var(--ink); opacity: 0.8;">
-                  Unzip the release, then run the installer against a clean target folder.
-                </p>
-              </div>
-            </article>
-
-            <article class="card" data-reveal>
-              <div class="card__header">
-                <h3 class="card__title" style="font-size: var(--fs-3);">Clone the repo</h3>
-              </div>
-              <div class="card__body">
-                <div style="border-radius: var(--radius); border: 1px solid var(--line); background-color: #15223A; overflow: hidden; margin-bottom: var(--s-3);">
-                  <pre style="margin: 0; padding: 14px 16px; color: #E2E8F0; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; line-height: 1.7; overflow-x: auto;"><span style="color: #10B981;">$</span> git clone https://github.com/kmagwenzi/ai-suplex.git
-<span style="color: #10B981;">$</span> cd ai-suplex &amp;&amp; bash install.sh /path/to/my-vault</pre>
-                </div>
-                <p style="margin-bottom: var(--s-3);">
-                  Install and usage instructions live in the
-                  <a
-                    href="https://github.com/kmagwenzi/ai-suplex#readme"
-                    target="_blank"
-                    rel="noopener"
-                    style="color: var(--gold); text-decoration: underline;"
-                  >README</a>.
-                </p>
-                <p style="margin: 0; font-size: var(--fs-2); color: var(--ink);">
-                  Prefer point-and-click? Request access to the
-                  <a href="/contact.html" style="color: var(--gold); text-decoration: underline; font-weight: 600;">Workflow Console</a>.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- 777 vs Ultra Section -->
-      <section class="section" aria-labelledby="vs-heading">
-        <div class="container">
-          <header class="section-header" data-reveal>
-            <h2 id="vs-heading" class="section-header__title">777 captures the work. Ultra understands it.</h2>
-          </header>
-
-          <div class="card" style="max-width: 860px; overflow-x: auto;" data-reveal>
-            <table style="width: 100%; border-collapse: collapse; font-size: var(--fs-2); color: var(--ink);">
-              <thead>
-                <tr style="border-bottom: 2px solid var(--line); text-align: left;">
-                  <th style="padding: 10px 12px; font-weight: 700;">Capability</th>
-                  <th style="padding: 10px 12px; font-weight: 700;">777</th>
-                  <th style="padding: 10px 12px; font-weight: 700;">Ultra</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr style="border-bottom: 1px solid var(--line);">
-                  <td style="padding: 10px 12px;">Create and run workspaces</td>
-                  <td style="padding: 10px 12px;">Yes</td>
-                  <td style="padding: 10px 12px;">Yes</td>
-                </tr>
-                <tr style="border-bottom: 1px solid var(--line);">
-                  <td style="padding: 10px 12px;">Capture sessions and lessons</td>
-                  <td style="padding: 10px 12px;">Yes</td>
-                  <td style="padding: 10px 12px;">Yes</td>
-                </tr>
-                <tr style="border-bottom: 1px solid var(--line);">
-                  <td style="padding: 10px 12px;">Maintain a portable vault</td>
-                  <td style="padding: 10px 12px;">Yes</td>
-                  <td style="padding: 10px 12px;">Yes</td>
-                </tr>
-                <tr style="border-bottom: 1px solid var(--line);">
-                  <td style="padding: 10px 12px;">Cross-workspace opportunity mapping</td>
-                  <td style="padding: 10px 12px;">&mdash;</td>
-                  <td style="padding: 10px 12px;">Yes</td>
-                </tr>
-                <tr style="border-bottom: 1px solid var(--line);">
-                  <td style="padding: 10px 12px;">Weekly operating review</td>
-                  <td style="padding: 10px 12px;">&mdash;</td>
-                  <td style="padding: 10px 12px;">Yes</td>
-                </tr>
-                <tr style="border-bottom: 1px solid var(--line);">
-                  <td style="padding: 10px 12px;">Knowledge Canvas</td>
-                  <td style="padding: 10px 12px;">&mdash;</td>
-                  <td style="padding: 10px 12px;">Yes</td>
-                </tr>
-                <tr style="border-bottom: 1px solid var(--line);">
-                  <td style="padding: 10px 12px;">Scheduled mission control</td>
-                  <td style="padding: 10px 12px;">Basic</td>
-                  <td style="padding: 10px 12px;">Full</td>
-                </tr>
-                <tr>
-                  <td style="padding: 10px 12px;">Skill evolution</td>
-                  <td style="padding: 10px 12px;">Manual</td>
-                  <td style="padding: 10px 12px;">Assisted / gated</td>
-                </tr>
-              </tbody>
-            </table>
-            <p style="margin: var(--s-4) 0 0; font-size: var(--fs-2); color: var(--ink);">
-              Start free with 777. When you want the intelligence layer on top, see
-              <a href="/projects/ai-suplex-ultra.html" class="card__link" style="font-weight: 700;">
-                AI-Suplex Ultra
-                <span aria-hidden="true">&rarr;</span>
-              </a>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- FAQ Section -->
-      <section class="section section--surface" aria-labelledby="faq-heading">
-        <div class="container">
-          <header class="section-header" data-reveal>
-            <h2 id="faq-heading" class="section-header__title">Questions, answered</h2>
+            <h2 id="faq-heading" class="section-header__title">Questions, answered.</h2>
           </header>
 
           <div class="card__grid card__grid--2up" data-reveal-group>
@@ -633,74 +1166,105 @@
               <div class="card__header">
                 <h3 class="card__title" style="font-size: var(--fs-3);">Do I need a specific AI agent?</h3>
               </div>
-              <div class="card__body">
-                <p>No. 777 is agent-agnostic &mdash; any agent that can read and write files can run a workspace.</p>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>No. 777 is agent-agnostic &mdash; any agent that can read and write files can execute a workspace via <code>AGENTS.md</code>.</p>
               </div>
             </article>
+
             <article class="card" data-reveal>
               <div class="card__header">
                 <h3 class="card__title" style="font-size: var(--fs-3);">Where does my data live?</h3>
               </div>
-              <div class="card__body">
-                <p>In your vault: plain Markdown and local databases on your machine. Nothing is required in the cloud.</p>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>In your local vault: plain Markdown files and local databases on your machine. Nothing is required in the cloud.</p>
               </div>
             </article>
+
             <article class="card" data-reveal>
               <div class="card__header">
-                <h3 class="card__title" style="font-size: var(--fs-3);">Does it decide things for me?</h3>
+                <h3 class="card__title" style="font-size: var(--fs-3);">Does it make decisions for me?</h3>
               </div>
-              <div class="card__body">
-                <p>No. 777 captures what happened, proposes lessons, and promotes only what you approve.</p>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>No. 777 captures what happened, proposes candidate lessons, and asks for your approval before promoting anything to durable memory.</p>
               </div>
             </article>
+
             <article class="card" data-reveal>
               <div class="card__header">
                 <h3 class="card__title" style="font-size: var(--fs-3);">What about the knowledge graph?</h3>
               </div>
-              <div class="card__body">
-                <p>Optional. The core value is continuity &mdash; workspaces, capture, lessons, maintenance. The graph is a later unlock.</p>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>It is optional. The core value of 777 is workspace continuity, session capture, lessons, and maintenance. The graph is a later unlock when you want it.</p>
               </div>
             </article>
+
             <article class="card" data-reveal>
               <div class="card__header">
-                <h3 class="card__title" style="font-size: var(--fs-3);">How much does it cost?</h3>
+                <h3 class="card__title" style="font-size: var(--fs-3);">How much does 777 cost?</h3>
               </div>
-              <div class="card__body">
-                <p>Free. 777 is MIT-licensed open source &mdash; download it, own it. AI-Suplex Ultra is the paid intelligence layer.</p>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>777 is free and MIT-licensed open source. AI-Suplex Ultra is the paid intelligence layer built on top of it.</p>
               </div>
             </article>
+
             <article class="card" data-reveal>
               <div class="card__header">
-                <h3 class="card__title" style="font-size: var(--fs-3);">Can I move my vault?</h3>
+                <h3 class="card__title" style="font-size: var(--fs-3);">Can I move or back up my vault?</h3>
               </div>
-              <div class="card__body">
-                <p>Yes. It is a folder of files &mdash; copy it, sync it, back it up. It outlives any tool.</p>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>Yes. Because your vault is a normal folder of plain files, you can version it with Git, sync it across devices, open it in Obsidian, and keep it forever.</p>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- Final CTA Band -->
+      <!-- 14 · Final CTA Band -->
       <section class="cta-band" aria-labelledby="cta-heading">
         <div class="container">
-          <div class="cta-band__inner" data-reveal="scale">
-            <h2 id="cta-heading" class="cta-band__title">Stop starting from zero.</h2>
-            <p style="margin: 0 0 var(--s-4); font-size: var(--fs-2); opacity: 0.9;">
-              Give your AI agents a portable memory, a clear workflow, and a system that gets smarter with
-              every session.
-            </p>
-            <div style="display: flex; flex-wrap: wrap; gap: var(--s-3); justify-content: center;">
+          <div
+            class="cta-band__inner"
+            style="flex-direction: column; align-items: flex-start; gap: var(--s-4);"
+            data-reveal="scale"
+          >
+            <div style="max-width: 680px;">
+              <h2 id="cta-heading" class="cta-band__title" style="margin-bottom: var(--s-3);">
+                Stop starting from zero.
+              </h2>
+              <p style="margin: 0; font-size: var(--fs-3); color: #cbd5e1; line-height: 1.65;">
+                Give your AI agents a portable memory, a clear workflow, and a system that gets
+                smarter with every session.
+              </p>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-3);">
               <a
-                href="https://github.com/kmagwenzi/ai-suplex/releases/tag/v2.10.0"
+                href="https://github.com/kmagwenzi/ai-suplex"
                 class="btn btn--primary"
                 target="_blank"
                 rel="noopener"
               >
                 Start with 777
               </a>
-              <a href="/projects/ai-suplex-ultra.html" class="btn btn--ghost">
+              <a
+                href="/projects/ai-suplex-ultra.html"
+                class="btn btn--ghost"
+                style="color: #ffffff; border-color: rgba(255, 255, 255, 0.28);"
+              >
                 Explore AI-Suplex Ultra
+              </a>
+              <a
+                href="#remember"
+                style="
+                  font-family: 'IBM Plex Mono', monospace;
+                  font-size: 0.8125rem;
+                  color: #f3d492;
+                  text-decoration: underline;
+                  text-underline-offset: 3px;
+                  padding: 8px 4px;
+                "
+              >
+                Watch the walkthrough &uarr;
               </a>
             </div>
           </div>
@@ -762,5 +1326,101 @@
 
     <!-- Progressive Enhancement JavaScript (Root Absolute) -->
     <script src="/assets/js/main.js" defer></script>
+    <script>
+      (function () {
+        'use strict';
+
+        // 1. Outcome typewriter rotation in Hero
+        var typeEl = document.getElementById('s777-typewriter');
+        var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (typeEl && !reducedMotion) {
+          var lines = [];
+          try {
+            lines = JSON.parse(typeEl.getAttribute('data-lines') || '[]');
+          } catch (e) {
+            lines = [];
+          }
+          if (lines.length > 1) {
+            var lineIdx = 0;
+            function typeLine(text, onDone) {
+              typeEl.textContent = '';
+              var charIdx = 0;
+              (function nextChar() {
+                if (charIdx < text.length) {
+                  charIdx += 1;
+                  typeEl.textContent = text.slice(0, charIdx);
+                  setTimeout(nextChar, 28);
+                } else {
+                  setTimeout(onDone, 2300);
+                }
+              })();
+            }
+            function eraseLine(onDone) {
+              var current = typeEl.textContent;
+              (function removeChar() {
+                if (current.length > 0) {
+                  current = current.slice(0, -1);
+                  typeEl.textContent = current;
+                  setTimeout(removeChar, 12);
+                } else {
+                  onDone();
+                }
+              })();
+            }
+            (function loopTypewriter() {
+              var currentText = lines[lineIdx % lines.length];
+              typeLine(currentText, function () {
+                eraseLine(function () {
+                  lineIdx += 1;
+                  loopTypewriter();
+                });
+              });
+            })();
+          }
+        }
+
+        // 2. Interactive 90-second memory loop walkthrough tabs
+        var stepBtns = document.querySelectorAll('.s777-step-btn');
+        var termLabel = document.getElementById('s777-term-label');
+        var stepTitles = [
+          'Step 1 of 3 \u00b7 Phase 0 Context Core (3lm start --context)',
+          'Step 2 of 3 \u00b7 Session End & Lesson Extraction (3lm end \u2192 3lm learn)',
+          'Step 3 of 3 \u00b7 Human-Approved Promotion & Sync (3lm promote \u2192 3lm sync)'
+        ];
+
+        stepBtns.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var targetStep = Number(btn.getAttribute('data-walkthrough-step'));
+            stepBtns.forEach(function (b, idx) {
+              var isSelected = idx === targetStep;
+              b.setAttribute('aria-selected', String(isSelected));
+              b.style.backgroundColor = isSelected ? 'var(--navy-800)' : 'transparent';
+              b.style.color = isSelected ? '#ffffff' : 'var(--navy)';
+              var panel = document.getElementById('s777-term-panel-' + idx);
+              if (panel) {
+                panel.hidden = !isSelected;
+              }
+            });
+            if (termLabel && stepTitles[targetStep]) {
+              termLabel.textContent = stepTitles[targetStep];
+            }
+          });
+        });
+
+        // 3. Copy quickstart commands button
+        var copyBtn = document.getElementById('s777-copy-btn');
+        var installCode = document.getElementById('s777-install-code');
+        if (copyBtn && installCode && navigator.clipboard) {
+          copyBtn.addEventListener('click', function () {
+            navigator.clipboard.writeText(installCode.textContent.trim()).then(function () {
+              copyBtn.textContent = 'Copied \u2713';
+              setTimeout(function () {
+                copyBtn.textContent = 'Copy commands';
+              }, 2000);
+            });
+          });
+        }
+      })();
+    </script>
   </body>
 </html>
