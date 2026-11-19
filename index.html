@@ -31,11 +31,11 @@
     <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg" />
     <link rel="apple-touch-icon" href="assets/img/logo.svg" />
 
-    <!-- Typography: Inter with font-display: swap for non-blocking render -->
+    <!-- Typography: Inter + IBM Plex Mono with font-display: swap -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -50,7 +50,7 @@
     <header class="header">
       <div class="container">
         <nav class="nav" aria-label="Main Navigation">
-          <a href="/" class="nav__brand">
+          <a href="/" class="nav__brand" aria-current="page">
             <img src="assets/img/logo.svg" alt="" class="nav__logo" width="28" height="28" aria-hidden="true" />
             <span>AI-Suplex Labs</span>
           </a>
@@ -124,7 +124,7 @@
             </ul>
 
             <div class="nav__actions">
-              <a href="/contact.html" class="btn btn--primary">Get started</a>
+              <a href="/projects/ai-suplex-777.html" class="btn btn--primary">Start with 777</a>
             </div>
           </div>
         </nav>
@@ -135,9 +135,9 @@
 
     <!-- Main Content Landmark -->
     <main id="main-content">
-      <!-- Hero Section -->
+      <!-- 1 · Hero Section -->
       <section class="hero" aria-labelledby="hero-heading">
-        <!-- Abstract Animated Background (Google Antigravity style) -->
+        <!-- Abstract Animated Background -->
         <div class="hero__bg" aria-hidden="true">
           <div class="hero__glow hero__glow--navy"></div>
           <div class="hero__glow hero__glow--gold"></div>
@@ -150,7 +150,7 @@
             <div class="hero__badge-wrap">
               <span class="badge badge--terminal">
                 <span class="badge__dot" aria-hidden="true"></span>
-                Harare, Zimbabwe &middot; Open Core
+                Harare, Zimbabwe &middot; Open Core &amp; Production AI
               </span>
             </div>
 
@@ -159,122 +159,197 @@
             </h1>
 
             <p class="hero__lead">
-              We build AI agents that handle real customers, real money, and real edge cases. Then
-              we open the core and sell the harness.
+              We build AI agents that handle real customers, real money, and real edge cases &mdash;
+              and the portable memory stack that makes every session start smarter than the last.
+              Then we open the core and sell the harness.
             </p>
 
             <div class="hero__cta-group">
-              <a href="/contact.html" class="btn btn--primary">Get started</a>
-              <a href="/services.html" class="btn btn--ghost">Explore services</a>
+              <a href="/projects/ai-suplex-777.html" class="btn btn--primary">Start free with 777</a>
+              <a href="#what-we-build-heading" class="btn btn--ghost">Explore the product suite</a>
+              <a href="/services.html" class="btn btn--ghost">Commission custom AI</a>
             </div>
+
+            <p
+              style="
+                margin: var(--s-4) 0 0;
+                font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+                font-size: 0.8125rem;
+                color: #cbd5e1;
+              "
+            >
+              Local-first agent memory &middot; Human-approved promotion &middot; Live WhatsApp commerce &middot; MIT open core
+            </p>
           </div>
         </div>
       </section>
 
-      <!-- Proof Strip -->
+      <!-- 2 · Proof Strip -->
       <aside class="proof-strip" aria-label="Company proof points" data-reveal>
         <div class="container">
           <p class="proof-strip__text">
-            Paynow payment loop built · 6 open-source repositories · AI-Suplex 7-7-7 selected for Beta
-            Space 2026 · Made in Harare 🇿🇼
+            Paynow payment loop live on wqr.co.zw &middot; AI-Suplex 777 v2.10.0 open-source release &middot; Workflow Console (140 tests &middot; 7/7 routes 200) &middot; Selected for Beta Space 2026 &middot; Made in Harare 🇿🇼
           </p>
         </div>
       </aside>
 
-      <!-- What We Build Section -->
+      <!-- 3 · What We Build (The 4-Product Suite) -->
       <section class="section" aria-labelledby="what-we-build-heading">
         <div class="container">
-          <header class="section-header" data-reveal>
+          <header class="section-header" style="max-width: 780px;" data-reveal>
             <h2 id="what-we-build-heading" class="section-header__title">What we build</h2>
+            <p class="approach-text" style="margin-top: var(--s-3); font-size: var(--fs-2);">
+              Every product we ship comes from real operational pressure: a live WhatsApp commerce
+              agent for African SMEs, and the three-part AI-Suplex workspace system we built to
+              run, remember, and reason over complex agent work.
+            </p>
           </header>
 
           <div class="card__grid card__grid--2up" data-reveal-group>
-            <!-- WQR Card -->
+            <!-- 1. AI-Suplex 777 Card -->
             <article class="card" data-reveal>
               <div class="card__header">
-                <div class="card__badge">
-                  <span class="badge badge--ok">Commerce Agent</span>
-                </div>
-                <h3 class="card__title">WQR: WhatsApp Quick Responder</h3>
-              </div>
-              <div class="card__body">
-                <p>
-                  An AI commerce agent that lets Zimbabwean SMEs sell inside WhatsApp: orders, quotes,
-                  Paynow payment links and PDF invoices, 24/7, in English and Shona.
-                </p>
-              </div>
-              <div class="card__footer">
-                <a href="/projects/wqr.html" class="card__link">
-                  View project specifications
-                  <span aria-hidden="true">&rarr;</span>
-                </a>
-              </div>
-            </article>
-
-            <!-- AI-Suplex 777 Card -->
-            <article class="card" data-reveal>
-              <div class="card__header">
-                <div class="card__badge">
-                  <span class="badge">Open Core</span>
+                <div class="card__badge" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+                  <span class="badge">Free Foundation</span>
+                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: var(--muted);">
+                    v2.10.0 &middot; MIT &middot; Local-first
+                  </span>
                 </div>
                 <h3 class="card__title">AI-Suplex 777</h3>
               </div>
               <div class="card__body">
+                <p style="font-weight: 600; color: var(--navy-800); margin-bottom: var(--s-2);">
+                  Give your AI agents a memory that survives the chat.
+                </p>
                 <p>
-                  A self-improving execution OS. A three-layer agent memory stack plus a memory CLI,
-                  so every session starts smarter than the last. Free and open source.
+                  A portable, file-first workspace built to execute and run the AI-Suplex Workflow.
+                  Point Codex, Claude Code, Cursor, Zed, or Hermes at <code>AGENTS.md</code>, capture
+                  what happened with the <code>3lm</code> memory CLI, approve the lessons worth
+                  keeping, and start the next session with your context already loaded.
                 </p>
               </div>
-              <div class="card__footer">
+              <div class="card__footer" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s-2);">
                 <a href="/projects/ai-suplex-777.html" class="card__link">
-                  View project specifications
+                  Explore AI-Suplex 777
                   <span aria-hidden="true">&rarr;</span>
+                </a>
+                <a
+                  href="/projects/ai-suplex-777-download.html"
+                  style="font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; font-weight: 600; color: var(--navy-800); text-decoration: underline;"
+                >
+                  Download v2.10.0 (1.2 MB)
                 </a>
               </div>
             </article>
 
-            <!-- AI-Suplex Workflow Console Card -->
+            <!-- 2. AI-Suplex Workflow Console Card -->
             <article class="card" data-reveal>
               <div class="card__header">
-                <div class="card__badge">
+                <div class="card__badge" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
                   <span class="badge">Control Surface</span>
+                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: var(--muted);">
+                    Free &middot; Localhost &middot; Offline
+                  </span>
                 </div>
                 <h3 class="card__title">AI-Suplex Workflow Console</h3>
               </div>
               <div class="card__body">
+                <p style="font-weight: 600; color: var(--navy-800); margin-bottom: var(--s-2);">
+                  Your AI-Suplex vault, with buttons.
+                </p>
                 <p>
-                  Your AI-Suplex vault, with buttons. Create workspaces from a form, review today's
-                  active work, run the 23 AI-Suplex commands, and approve what becomes memory &mdash;
-                  locally and offline, without living in the terminal.
+                  The point-and-click GUI for running and executing the AI-Suplex Workflow over your
+                  local 777 vault. Create workspaces from a structured form, inspect today's active
+                  tasklists and sessions, run all 23 AI-Suplex commands, and approve what becomes
+                  durable memory &mdash; without living in the terminal.
                 </p>
               </div>
-              <div class="card__footer">
+              <div class="card__footer" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s-2);">
                 <a href="/projects/workflow-console.html" class="card__link">
                   See how the console works
                   <span aria-hidden="true">&rarr;</span>
                 </a>
+                <a
+                  href="/projects/workflow-console.html#request-access"
+                  style="font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; font-weight: 600; color: var(--navy-800); text-decoration: underline;"
+                >
+                  Request access
+                </a>
               </div>
             </article>
 
-            <!-- AI-Suplex Ultra Card -->
+            <!-- 3. AI-Suplex Ultra Card -->
             <article class="card" data-reveal>
               <div class="card__header">
-                <div class="card__badge">
+                <div class="card__badge" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
                   <span class="badge">Intelligence Layer</span>
+                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: var(--muted);">
+                    Evidence-linked &middot; Built on 777
+                  </span>
                 </div>
                 <h3 class="card__title">AI-Suplex Ultra</h3>
               </div>
               <div class="card__body">
+                <p style="font-weight: 600; color: var(--navy-800); margin-bottom: var(--s-2);">
+                  777 captures the work. Ultra turns it into your next opportunity.
+                </p>
                 <p>
-                  777 captures the work. Ultra turns it into your next opportunity: it reads what
-                  you have already captured, surfaces the opportunities, risks, and priorities that
-                  matter most, and shows the evidence behind every insight. Ultra recommends; you approve.
+                  Ultra reads the workspaces, tasks, lessons, and outreach you have already captured
+                  and surfaces the opportunities, overdue follow-ups, risks, and priorities that
+                  matter most &mdash; showing the exact vault evidence behind every insight. Ultra
+                  recommends; you approve.
                 </p>
               </div>
-              <div class="card__footer">
+              <div class="card__footer" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s-2);">
                 <a href="/projects/ai-suplex-ultra.html" class="card__link">
                   Read the project briefing
                   <span aria-hidden="true">&rarr;</span>
+                </a>
+                <a
+                  href="https://ai-suplex-ultra-showcase.vercel.app"
+                  target="_blank"
+                  rel="noopener"
+                  style="font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; font-weight: 600; color: var(--navy-800); text-decoration: underline;"
+                >
+                  View live demo &nearr;
+                </a>
+              </div>
+            </article>
+
+            <!-- 4. WQR Card -->
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <div class="card__badge" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+                  <span class="badge badge--ok">Commerce Agent</span>
+                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: var(--muted);">
+                    Live in Production &middot; 24/7
+                  </span>
+                </div>
+                <h3 class="card__title">WQR: WhatsApp Quick Responder</h3>
+              </div>
+              <div class="card__body">
+                <p style="font-weight: 600; color: var(--navy-800); margin-bottom: var(--s-2);">
+                  The AI employee your business can actually afford.
+                </p>
+                <p>
+                  An AI commerce agent that lets Zimbabwean SMEs sell inside WhatsApp: natural-language
+                  orders, live-inventory quotes, Paynow/EcoCash payment links, and automatic PDF
+                  invoices &mdash; 24/7, in English and Shona. Built and operated on the AI-Suplex
+                  workflow.
+                </p>
+              </div>
+              <div class="card__footer" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s-2);">
+                <a href="/projects/wqr.html" class="card__link">
+                  View project specifications
+                  <span aria-hidden="true">&rarr;</span>
+                </a>
+                <a
+                  href="https://wqr.co.zw"
+                  target="_blank"
+                  rel="noopener"
+                  style="font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; font-weight: 600; color: var(--navy-800); text-decoration: underline;"
+                >
+                  Visit wqr.co.zw &nearr;
                 </a>
               </div>
             </article>
@@ -282,27 +357,331 @@
         </div>
       </section>
 
-      <!-- Our Approach Section -->
-      <section class="section section--surface" aria-labelledby="our-approach-heading">
+      <!-- 4 · How the AI-Suplex System Fits Together -->
+      <section class="section section--surface" aria-labelledby="how-it-fits-heading">
+        <div class="container">
+          <header class="section-header" style="max-width: 780px;" data-reveal>
+            <h2 id="how-it-fits-heading" class="section-header__title">
+              One local vault. Every layer under your control.
+            </h2>
+            <p class="approach-text" style="margin-top: var(--s-3); font-size: var(--fs-2);">
+              Whether you work in the terminal, inside Obsidian, or through a browser window, every
+              tool in the AI-Suplex range operates on the same plain-file vault on your machine &mdash;
+              and nothing becomes permanent memory without your approval.
+            </p>
+          </header>
+
+          <div class="card" style="max-width: 960px; overflow-x: auto;" data-reveal>
+            <table class="ledger" aria-label="How the AI-Suplex layers work together">
+              <thead>
+                <tr>
+                  <th scope="col" style="width: 24%;">Layer</th>
+                  <th scope="col" style="width: 44%;">Role in the workflow</th>
+                  <th scope="col" style="width: 32%;">Human gate &amp; ownership</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="measure" style="font-weight: 700; color: var(--navy-800);">
+                    01 &middot; <a href="/projects/ai-suplex-777.html" style="color: #8f651b; text-decoration: underline;">AI-Suplex 777</a>
+                  </td>
+                  <td class="how" style="font-size: var(--fs-2); color: var(--ink);">
+                    Records workspaces, daily tasklists, session outcomes, and candidate lessons via the <code>3lm</code> memory loop.
+                  </td>
+                  <td class="how" style="font-size: var(--fs-1); color: var(--navy-800); font-weight: 600;">
+                    Plain Markdown files on your disk &middot; MIT open source
+                  </td>
+                </tr>
+                <tr>
+                  <td class="measure" style="font-weight: 700; color: var(--navy-800);">
+                    02 &middot; Your AI Agents
+                  </td>
+                  <td class="how" style="font-size: var(--fs-2); color: var(--ink);">
+                    Codex, Claude Code, Cursor, Zed, OpenCode, Hermes, or Oh-My-Pi attach via <code>AGENTS.md</code> and execute the tasklist.
+                  </td>
+                  <td class="how" style="font-size: var(--fs-1); color: var(--navy-800); font-weight: 600;">
+                    Zero vendor lock-in &middot; Switch agents anytime
+                  </td>
+                </tr>
+                <tr>
+                  <td class="measure" style="font-weight: 700; color: var(--navy-800);">
+                    03 &middot; <a href="/projects/workflow-console.html" style="color: #8f651b; text-decoration: underline;">Workflow Console</a>
+                  </td>
+                  <td class="how" style="font-size: var(--fs-2); color: var(--ink);">
+                    Point-and-click localhost interface for creating workspaces, checking today's state, and running the 23 workflow commands.
+                  </td>
+                  <td class="how" style="font-size: var(--fs-1); color: var(--navy-800); font-weight: 600;">
+                    Declared file writes only &middot; Works offline
+                  </td>
+                </tr>
+                <tr>
+                  <td class="measure" style="font-weight: 700; color: var(--navy-800);">
+                    04 &middot; <a href="/projects/ai-suplex-ultra.html" style="color: #8f651b; text-decoration: underline;">AI-Suplex Ultra</a>
+                  </td>
+                  <td class="how" style="font-size: var(--fs-2); color: var(--ink);">
+                    Reasons across your captured vault to map portfolio opportunities, overdue follow-ups, risks, and weekly operating priorities.
+                  </td>
+                  <td class="how" style="font-size: var(--fs-1); color: var(--navy-800); font-weight: 600;">
+                    Every insight links to evidence &middot; You approve
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p
+              style="
+                margin: var(--s-4) 0 0;
+                padding-top: var(--s-3);
+                border-top: 1px solid var(--line);
+                font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+                font-size: 0.875rem;
+                font-weight: 600;
+                color: var(--navy-800);
+              "
+            >
+              It proposes. You click. The vault remembers. You approve what becomes memory.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5 · Production Proof & Measured Ledger -->
+      <section class="section" aria-labelledby="proof-ledger-heading">
+        <div class="container">
+          <header class="section-header" style="max-width: 780px;" data-reveal>
+            <h2 id="proof-ledger-heading" class="section-header__title">
+              Built in production, measured in artifacts.
+            </h2>
+            <p class="approach-text" style="margin-top: var(--s-3); font-size: var(--fs-2);">
+              We do not publish vanity metrics. Every number on this site traces to a live production
+              loop, a clean-room install receipt, or a passing test suite.
+            </p>
+          </header>
+
+          <div class="card" style="max-width: 960px; overflow-x: auto;" data-reveal>
+            <table class="ledger" aria-label="AI-Suplex Labs production proof ledger">
+              <thead>
+                <tr>
+                  <th scope="col">Result</th>
+                  <th scope="col">Measure</th>
+                  <th scope="col">How it is verified</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="num" style="font-family: 'IBM Plex Mono', monospace;">v2.10.0</td>
+                  <td class="measure" style="font-weight: 600;">
+                    <a href="/projects/ai-suplex-777-download.html" style="color: #8f651b; text-decoration: underline;">AI-Suplex 777 release ZIP (1.2 MB)</a>
+                  </td>
+                  <td class="how">
+                    Clean-room install (~10&ndash;11s) &middot; <code>3lm start --context</code> in 1.6s (exit 0) &middot; SHA-256 published
+                  </td>
+                </tr>
+                <tr>
+                  <td class="num" style="font-family: 'IBM Plex Mono', monospace;">140 tests</td>
+                  <td class="measure" style="font-weight: 600;">
+                    <a href="/projects/workflow-console.html" style="color: #8f651b; text-decoration: underline;">Workflow Console (7/7 routes 200)</a>
+                  </td>
+                  <td class="how">
+                    Shipped 18 Nov 2026 &middot; 23 commands via <code>suplex://commands</code> (MCP contract 1.3.0) &middot; P009 live workspace capture
+                  </td>
+                </tr>
+                <tr>
+                  <td class="num" style="font-family: 'IBM Plex Mono', monospace;">7 agents</td>
+                  <td class="measure" style="font-weight: 600;">
+                    Verified bring-your-own-agent compatibility
+                  </td>
+                  <td class="how">
+                    Tested in repository with Zed, Claude Code, Codex, Cursor, OpenCode, Hermes, and Oh-My-Pi + Obsidian
+                  </td>
+                </tr>
+                <tr>
+                  <td class="num" style="font-family: 'IBM Plex Mono', monospace;">24/7 live</td>
+                  <td class="measure" style="font-weight: 600;">
+                    <a href="https://wqr.co.zw" target="_blank" rel="noopener" style="color: #8f651b; text-decoration: underline;">WQR WhatsApp commerce loop</a>
+                  </td>
+                  <td class="how">
+                    Natural-language order &rarr; live inventory quote &rarr; Paynow/EcoCash link &rarr; PDF invoice in English &amp; Shona
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="ledger-note" style="margin-bottom: 0;">
+              Measured 18 November 2026 across <code>github.com/kmagwenzi/ai-suplex</code> (v2.10.0), <code>ai-suplex-ui</code>, and live production endpoints.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6 · Choose Your Starting Point (Routing Lattice) -->
+      <section class="section section--surface" aria-labelledby="start-here-heading">
+        <div class="container">
+          <header class="section-header" style="max-width: 780px;" data-reveal>
+            <h2 id="start-here-heading" class="section-header__title">Where to start</h2>
+            <p class="approach-text" style="margin-top: var(--s-3); font-size: var(--fs-2);">
+              Pick the entry point that matches how you work today.
+            </p>
+          </header>
+
+          <div class="card__grid" data-reveal-group>
+            <!-- Path 1: Builders & Developers -->
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <p style="font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: #8f651b; margin-bottom: 6px;">
+                  01 &middot; For AI Builders &amp; Developers
+                </p>
+                <h3 class="card__title" style="font-size: var(--fs-3);">Install the free 777 vault</h3>
+              </div>
+              <div class="card__body">
+                <p>
+                  Download the verified <code>v2.10.0</code> release or clone the repo, run
+                  <code>bash install.sh</code>, and prime your first session with
+                  <code>3lm start --context</code> in under 10 minutes.
+                </p>
+              </div>
+              <div class="card__footer">
+                <a href="/projects/ai-suplex-777-download.html" class="card__link">
+                  Get AI-Suplex 777 (v2.10.0)
+                  <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Path 2: Operators, Founders & Teams -->
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <p style="font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: #8f651b; margin-bottom: 6px;">
+                  02 &middot; For Operators &amp; Product Teams
+                </p>
+                <h3 class="card__title" style="font-size: var(--fs-3);">Run the console or explore Ultra</h3>
+              </div>
+              <div class="card__body">
+                <p>
+                  Prefer buttons over CLI commands? See how the local <strong>Workflow Console</strong>
+                  operates your vault, or explore the <strong>AI-Suplex Ultra</strong> live demo to
+                  turn captured work into your next opportunity.
+                </p>
+              </div>
+              <div class="card__footer" style="display: flex; flex-wrap: wrap; gap: var(--s-3);">
+                <a href="/projects/workflow-console.html" class="card__link">
+                  Workflow Console <span aria-hidden="true">&rarr;</span>
+                </a>
+                <a href="/projects/ai-suplex-ultra.html" class="card__link">
+                  Ultra Briefing <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Path 3: SMEs & Enterprise Commissions -->
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <p style="font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: #8f651b; margin-bottom: 6px;">
+                  03 &middot; For Businesses &amp; Custom Systems
+                </p>
+                <h3 class="card__title" style="font-size: var(--fs-3);">Automate sales or commission a build</h3>
+              </div>
+              <div class="card__body">
+                <p>
+                  Connect <strong>WQR</strong> to your WhatsApp Business number for 24/7 orders and
+                  Paynow invoicing, or work directly with our engineering team in Harare on custom
+                  AI agents, RAG pipelines, and n8n workflows.
+                </p>
+              </div>
+              <div class="card__footer" style="display: flex; flex-wrap: wrap; gap: var(--s-3);">
+                <a href="/projects/wqr.html" class="card__link">
+                  WQR Commerce <span aria-hidden="true">&rarr;</span>
+                </a>
+                <a href="/services.html" class="card__link">
+                  Our Services <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7 · Our Approach Section -->
+      <section class="section" aria-labelledby="our-approach-heading">
         <div class="container">
           <header class="section-header" data-reveal>
             <h2 id="our-approach-heading" class="section-header__title">Our approach</h2>
           </header>
 
-          <div class="approach-block" data-reveal>
-            <p class="approach-quote">"Open the chassis. Sell the harness."</p>
+          <div class="approach-block" style="margin-bottom: var(--s-5);" data-reveal>
+            <p class="approach-quote">&ldquo;Open the chassis. Sell the harness.&rdquo;</p>
             <p class="approach-text">
-              The framework is free because it is a commodity. We charge for the two things that are not: the vault that compounds, and the harness on top of it.</p>
+              The framework is free because it is a commodity. We charge for the two things that are
+              not: the vault that compounds across real work, and the intelligence and operational
+              harness built on top of it.
+            </p>
+          </div>
+
+          <div class="card__grid" data-reveal-group>
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <h3 class="card__title" style="font-size: var(--fs-3);">Your vault, your files, your control</h3>
+              </div>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>
+                  Memory lives in plain Markdown files and local SQLite indexes on your machine.
+                  Version it with Git, open it in Obsidian, back it up, and keep it forever with
+                  zero cloud lock-in.
+                </p>
+              </div>
+            </article>
+
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <h3 class="card__title" style="font-size: var(--fs-3);">Bring your own agent</h3>
+              </div>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>
+                  Models and coding agents change fast; your operational memory should not reset
+                  when you switch. Point any file-capable agent at <code>AGENTS.md</code> and keep
+                  the same workflow.
+                </p>
+              </div>
+            </article>
+
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <h3 class="card__title" style="font-size: var(--fs-3);">The human gate is non-negotiable</h3>
+              </div>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>
+                  Whether 777 extracts a candidate lesson, the Workflow Console prepares a workspace,
+                  or Ultra surfaces a revenue follow-up, the system proposes and shows its evidence &mdash;
+                  you decide what gets promoted.
+                </p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- CTA Band -->
+      <!-- 8 · CTA Band -->
       <section class="cta-band" aria-labelledby="cta-heading">
         <div class="container">
           <div class="cta-band__inner" data-reveal="scale">
-            <h2 id="cta-heading" class="cta-band__title">Building with AI? Talk to us.</h2>
-            <a href="/contact.html" class="btn btn--primary">Get started</a>
+            <div style="max-width: 640px;">
+              <h2 id="cta-heading" class="cta-band__title" style="margin-bottom: var(--s-2);">
+                Building with AI? Start with the free vault or talk to us.
+              </h2>
+              <p style="margin: 0; font-size: var(--fs-2); color: #cbd5e1;">
+                Install AI-Suplex 777 in under 10 minutes, request Workflow Console access, or talk
+                to our Harare lab about a production AI build.
+              </p>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: var(--s-3);">
+              <a href="/projects/ai-suplex-777.html" class="btn btn--primary">Start with 777</a>
+              <a
+                href="/contact.html"
+                class="btn btn--ghost"
+                style="color: #ffffff; border-color: rgba(255, 255, 255, 0.28);"
+              >
+                Talk to us
+              </a>
+            </div>
           </div>
         </div>
       </section>
