@@ -309,9 +309,9 @@
               "
             >
               <p style="margin: 0; font-size: var(--fs-2); color: var(--ink); max-width: 62ch;">
-                Real capture from the running console (<code>777/lean-webui</code> on
-                <code>localhost:3000/workspaces</code>) &mdash; showing the P009 moment where a live
-                workspace is created from the form and immediately reflected on the board.
+                Real captures of the running console (<code>777/lean-webui</code>, served locally).
+                The workspace on the board was created live through the console's own
+                workspace-create pipeline and immediately reflected on it &mdash; the P009 proof, re-run.
               </p>
 
               <!-- Viewport switcher: Desktop vs Narrow/Mobile proof -->
@@ -380,10 +380,10 @@
                 "
               >
                 <img
-                  src="/assets/img/workflow-console-p009.svg"
-                  alt="AI-Suplex 777 Workflow Console running at localhost:3000/workspaces showing a newly created Quick Task workspace named quick-wins (ref 3), writing Context Kick-start/Active/random-tasks-3-quick-wins.md and Tasklists/2026-11-18-random-tasks-3-quick-wins-tasklist.md"
-                  width="1200"
-                  height="760"
+                  src="/assets/img/console/workspaces-1440.png"
+                  alt="The Workflow Console Workspaces board running locally: Define Workspace and Kickstart Workspace actions above the Daily Work, Project, Quick Task and Review lanes, with a workspace named beta-launch-notes open in the Project lane"
+                  width="1440"
+                  height="1000"
                   style="width: 100%; height: auto; display: block;"
                 />
               </div>
@@ -396,12 +396,10 @@
                   line-height: 1.65;
                 "
               >
-                <strong style="color: var(--navy-800);">Workspace created from the form: Quick Task &middot; quick-wins &middot; ref 3.</strong>
+                <strong style="color: var(--navy-800);">Workspace created through the console: beta-launch-notes &middot; Project lane &middot; ref 1.</strong>
                 Submitted through <code>/api/workspaces/create</code> &rarr;
-                <code>suplex_workspace_create</code> writes
-                <code>Context Kick-start/Active/random-tasks-3-quick-wins.md</code> and
-                <code>Tasklists/2026-11-18-random-tasks-3-quick-wins-tasklist.md</code>, then refreshes
-                the board over <code>suplex://threads</code>.
+                <code>suplex_workspace_create</code> &mdash; the vault, not the console, wrote the
+                context instance and the tasklist, then the board refreshed over <code>suplex://threads</code>.
               </figcaption>
             </figure>
 
@@ -419,10 +417,10 @@
                 "
               >
                 <img
-                  src="/assets/img/workflow-console-p009-mobile.svg"
-                  alt="Narrow 390px viewport capture of AI-Suplex 777 Workflow Console showing New workspace created: Quick Task, quick-wins, ref 3"
+                  src="/assets/img/console/workspaces-390.png"
+                  alt="Narrow 390px viewport of the Workflow Console Workspaces board with the beta-launch-notes workspace open in the Project lane"
                   width="390"
-                  height="740"
+                  height="844"
                   loading="lazy"
                   style="width: 100%; height: auto; display: block;"
                 />
@@ -437,8 +435,8 @@
                   text-align: center;
                 "
               >
-                <strong style="color: var(--navy-800);">Narrow viewport (390px) &middot; Quick Task &middot; quick-wins &middot; ref 3.</strong>
-                The New workspace panel leads the board so creating always precedes reading.
+                <strong style="color: var(--navy-800);">Narrow viewport (390px) &middot; the same board.</strong>
+                Creating a workspace always precedes reading it.
               </figcaption>
             </figure>
           </div>
