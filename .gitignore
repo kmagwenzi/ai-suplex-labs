@@ -6,3 +6,9 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# AI Studio scaffolding — this repo is a plain static site (Netlify publishes the root)
+package.json
+metadata.json
+server.js
+public/
