@@ -20,27 +20,42 @@
      1. Mobile Navigation Toggle (Progressive Enhancement)
      -------------------------------------------------------------------------- */
   if (toggleBtn && menuWrapper) {
-    toggleBtn.addEventListener('click', function (event) {
-      const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-      const newState = !isExpanded;
-
-      toggleBtn.setAttribute('aria-expanded', String(newState));
-      menuWrapper.classList.toggle('is-open', newState);
-
-      // Keep checkbox in sync for accessibility and visual states
+    const setMenuOpen = function (isOpen) {
+      toggleBtn.setAttribute('aria-expanded', String(isOpen));
+      menuWrapper.classList.toggle('is-open', isOpen);
       if (checkbox) {
-        checkbox.checked = newState;
+        checkbox.checked = isOpen;
+      }
+    };
+
+    toggleBtn.addEventListener('click', function (event) {
+      // Prevent <label for="nav-checkbox"> from firing a second synthetic click
+      // on the checkbox input (which would invert checkbox.checked and trigger
+      // the document outside-click listener).
+      event.preventDefault();
+      event.stopPropagation();
+      const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+      setMenuOpen(!isExpanded);
+    });
+
+    if (checkbox) {
+      checkbox.addEventListener('change', function () {
+        setMenuOpen(checkbox.checked);
+      });
+    }
+
+    // Close mobile nav when clicking an in-page or navigation link inside the drawer
+    menuWrapper.addEventListener('click', function (event) {
+      const link = event.target.closest('a');
+      if (link && menuWrapper.classList.contains('is-open')) {
+        setMenuOpen(false);
       }
     });
 
     // Close mobile nav when pressing Escape
     document.addEventListener('keydown', function (event) {
       if (event.key === 'Escape' && menuWrapper.classList.contains('is-open')) {
-        toggleBtn.setAttribute('aria-expanded', 'false');
-        menuWrapper.classList.remove('is-open');
-        if (checkbox) {
-          checkbox.checked = false;
-        }
+        setMenuOpen(false);
         toggleBtn.focus();
       }
     });
@@ -50,16 +65,37 @@
       if (
         menuWrapper.classList.contains('is-open') &&
         !menuWrapper.contains(event.target) &&
-        !toggleBtn.contains(event.target)
+        !toggleBtn.contains(event.target) &&
+        event.target !== checkbox
       ) {
-        toggleBtn.setAttribute('aria-expanded', 'false');
-        menuWrapper.classList.remove('is-open');
-        if (checkbox) {
-          checkbox.checked = false;
-        }
+        setMenuOpen(false);
       }
     });
   }
+
+  // Projects Dropdown Toggle for click/touch interaction
+  const dropdownToggles = document.querySelectorAll('.nav__dropdown-toggle');
+  dropdownToggles.forEach(function (dropdownBtn) {
+    const parentDropdown = dropdownBtn.closest('.nav__dropdown');
+    if (!parentDropdown) return;
+
+    dropdownBtn.addEventListener('click', function (event) {
+      event.stopPropagation();
+      const isExpanded = dropdownBtn.getAttribute('aria-expanded') === 'true';
+      dropdownBtn.setAttribute('aria-expanded', String(!isExpanded));
+      parentDropdown.classList.toggle('is-open', !isExpanded);
+    });
+  });
+
+  document.addEventListener('click', function (event) {
+    dropdownToggles.forEach(function (dropdownBtn) {
+      const parentDropdown = dropdownBtn.closest('.nav__dropdown');
+      if (parentDropdown && !parentDropdown.contains(event.target)) {
+        dropdownBtn.setAttribute('aria-expanded', 'false');
+        parentDropdown.classList.remove('is-open');
+      }
+    });
+  });
 
   /* --------------------------------------------------------------------------
      2. Sticky Header Elevation Shadow & Scroll Progress Bar

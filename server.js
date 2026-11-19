@@ -14,10 +14,6 @@ app.use(express.static(__dirname, { extensions: ['html'] }));
 app.use(express.static(path.join(__dirname, 'public'), { extensions: ['html'] }));
 
 // Legacy route redirects for removed pages
-app.get(['/projects/ai-suplex-777-download', '/projects/ai-suplex-777-download.html'], (_req, res) => {
-  res.redirect(301, '/projects/ai-suplex-777.html');
-});
-
 app.get(['/projects/workflow-console', '/projects/workflow-console.html'], (_req, res) => {
   res.redirect(301, '/contact.html');
 });

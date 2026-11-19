@@ -348,15 +348,17 @@ button, input, select, textarea {
   color: var(--navy);
 }
 
-/* Hover & Focus dropdown triggers for desktop */
+/* Hover, Focus & Click dropdown triggers for desktop */
 @media (min-width: 900px) {
   .nav__dropdown:hover .nav__dropdown-menu,
-  .nav__dropdown:focus-within .nav__dropdown-menu {
+  .nav__dropdown:focus-within .nav__dropdown-menu,
+  .nav__dropdown.is-open .nav__dropdown-menu {
     display: block;
   }
 
   .nav__dropdown:hover .nav__dropdown-icon,
-  .nav__dropdown:focus-within .nav__dropdown-icon {
+  .nav__dropdown:focus-within .nav__dropdown-icon,
+  .nav__dropdown.is-open .nav__dropdown-icon {
     transform: rotate(180deg);
   }
 }
@@ -400,15 +402,18 @@ button, input, select, textarea {
     overflow-y: auto;
   }
 
-  .nav__checkbox:checked + .nav__toggle .nav__toggle-icon {
+  .nav__checkbox:checked + .nav__toggle .nav__toggle-icon,
+  .nav__toggle[aria-expanded="true"] .nav__toggle-icon {
     background-color: transparent;
   }
 
-  .nav__checkbox:checked + .nav__toggle .nav__toggle-icon::before {
+  .nav__checkbox:checked + .nav__toggle .nav__toggle-icon::before,
+  .nav__toggle[aria-expanded="true"] .nav__toggle-icon::before {
     transform: translateY(6px) rotate(45deg);
   }
 
-  .nav__checkbox:checked + .nav__toggle .nav__toggle-icon::after {
+  .nav__checkbox:checked + .nav__toggle .nav__toggle-icon::after,
+  .nav__toggle[aria-expanded="true"] .nav__toggle-icon::after {
     transform: translateY(-6px) rotate(-45deg);
   }
 
