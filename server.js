@@ -13,11 +13,6 @@ const PORT = Number(process.env.PORT) || 3000;
 app.use(express.static(__dirname, { extensions: ['html'] }));
 app.use(express.static(path.join(__dirname, 'public'), { extensions: ['html'] }));
 
-// Legacy route redirects for removed pages
-app.get(['/projects/workflow-console', '/projects/workflow-console.html'], (_req, res) => {
-  res.redirect(301, '/contact.html');
-});
-
 // Fallback to 404.html
 app.use((req, res) => {
   const notFoundPath = path.join(__dirname, '404.html');
