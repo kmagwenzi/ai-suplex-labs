@@ -41,6 +41,15 @@
 
     <!-- Local Stylesheet (Root Absolute) -->
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <style>
+      /* Page-scoped: the vault tree stacks its annotations below the path on narrow screens */
+      @media (max-width: 640px) {
+        pre.vault-tree {
+          font-size: 11px !important;
+        }
+        pre.vault-tree .tree-note { display: none; }
+      }
+    </style>
   </head>
   <body>
     <!-- Skip Link for Accessibility -->
@@ -232,14 +241,31 @@
             </a>
           </div>
 
-          <p style="font-size: var(--fs-1); color: var(--ink); line-height: 1.65; margin-bottom: var(--s-3);">
-            <strong>Includes:</strong> portable 777 vault template (<code>AGENTS.md</code>,
-            <code>README.md</code>, <code>WELCOME.md</code>) &middot; <code>3lm</code> memory CLI +
-            workflow tools (<code>asmc</code>, <code>vault-index</code>, <code>initialise-vault</code>,
-            <code>sweeper</code>, <code>ritual</code>) &middot; 14 skills, templates &amp; prompt
-            patterns &middot; installers (<code>install.sh</code> for Linux/macOS/WSL &amp;
-            <code>install.ps1</code> for Windows PowerShell) &middot; <code>KNOWN-ISSUES.md</code>.
-          </p>
+          <div style="font-size: var(--fs-1); color: var(--ink); line-height: 1.65; margin-bottom: var(--s-3);">
+            <p style="margin: 0 0 6px;"><strong>Includes:</strong> the AI-Suplex 777 Workspace Vault</p>
+            <ul style="margin: 0 0 10px; padding-left: 20px;">
+              <li>AI Workspace Management</li>
+              <li>Drives the <a href="https://github.com/kmagwenzi/ai-suplex/blob/main/AI-Suplex%20Kick-start/The%20AI-Suplex%20Workflow%20Pipeline.md" target="_blank" rel="noopener" style="color: var(--gold); text-decoration: underline;">AI-Suplex Workflow</a></li>
+              <li>CLI Tools</li>
+              <li>AI Skills</li>
+              <li>Predefined Prompts</li>
+              <li>Vault Maintenance Scripts</li>
+            </ul>
+            <pre class="vault-tree" style="margin: 0; padding: 12px 14px; border-radius: 8px; background-color: #15223a; color: #e2e8f0; font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; line-height: 1.6; overflow-x: auto;">AI-Suplex-777/
+├── AGENTS.md<span class="tree-note">              ← how any agent operates this vault</span>
+├── Skills/<span class="tree-note">                ← 14 AI skills</span>
+├── Prompt Patterns/<span class="tree-note">       ← patterns + AI-Suplex Commands/ (one-line triggers)</span>
+├── Scripts/<span class="tree-note">               ← Commander macros</span>
+├── Templates/<span class="tree-note">             ← session templates</span>
+├── Tools/<span class="tree-note">                 ← 3lm · asmc · vault-index · approvals · rituals</span>
+├── Memory/<span class="tree-note">                ← episodic · semantic · procedural · lessons</span>
+├── Guides/<span class="tree-note">                ← workflow guides</span>
+├── AI-Suplex Kick-start/<span class="tree-note">  ← methodology · worker roles · architecture · the two personas</span>
+├── Assets/<span class="tree-note">                ← logo + screenshots</span>
+├── Tests/<span class="tree-note">                 ← smoke test</span>
+└── install.sh · install.ps1
+    · package.json</pre>
+          </div>
 
           <div
             style="
