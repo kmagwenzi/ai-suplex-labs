@@ -57,14 +57,16 @@ body.studio {
   position: absolute;
   inset: 0 0 0 auto;
   z-index: 1;
-  width: 36%;
-  max-width: 560px;
+  width: 44%;
+  max-width: 680px;
   background-image: url("/assets/img/studio/studio-hero-visual.webp");
   background-size: cover;
-  background-position: right center;
+  background-position: 40% center;
   background-repeat: no-repeat;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 55%);
-          mask-image: linear-gradient(90deg, transparent 0%, #000 55%);
+  /* Short mask: the compass sits at the left of the visible window, so a long
+     fade erases it. 25% blends the edge without eating the composition. */
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 25%);
+          mask-image: linear-gradient(90deg, transparent 0%, #000 25%);
   pointer-events: none;
 }
 
