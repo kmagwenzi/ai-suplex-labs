@@ -71,7 +71,7 @@ body.studio {
 }
 
 /* Hide the still-life before the text column can reach the opaque part of it */
-@media (max-width: 1039px) {
+@media (max-width: 1199px) {
   .st-hero__visual {
     display: none;
   }
