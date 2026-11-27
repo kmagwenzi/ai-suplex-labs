@@ -23,19 +23,18 @@ body.studio {
   overflow: hidden;
   padding-top: var(--s-7);
   padding-bottom: var(--s-7);
-  /* Navy arrives as a VEIL over a pure gold field — never as a gold->navy blend,
-     which interpolates through #77694b (olive mud) in sRGB. */
-  background-image:
-    linear-gradient(180deg, transparent 84%, rgba(26, 41, 71, 0.94) 100%),
-    linear-gradient(
-      180deg,
-      var(--st-paper) 0%,
-      var(--st-gold-1) 42%,
-      var(--st-gold-2) 74%,
-      var(--st-gold-3) 100%
-    );
+  /* The gold field IS the integration — the still-life fades into it.
+     The navy veil was tried and removed: it read as a bar, not a floor.
+     (Never blend gold->navy directly either: sRGB passes through #77694b.) */
+  background: linear-gradient(
+    180deg,
+    var(--st-paper) 0%,
+    var(--st-gold-1) 42%,
+    var(--st-gold-2) 74%,
+    var(--st-gold-3) 100%
+  );
   color: var(--st-navy);
-  border-bottom: 2px solid var(--st-navy);
+  border-bottom: 1px solid rgba(184, 134, 46, 0.35);
 }
 
 @media (min-width: 900px) {
@@ -60,12 +59,10 @@ body.studio {
   z-index: 1;
   width: 36%;
   max-width: 560px;
-  background-image:
-    linear-gradient(180deg, transparent 84%, rgba(26, 41, 71, 0.94) 100%),
-    url("/assets/img/studio/studio-hero-visual.webp");
-  background-size: cover, cover;
-  background-position: right center, right center;
-  background-repeat: no-repeat, no-repeat;
+  background-image: url("/assets/img/studio/studio-hero-visual.webp");
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 55%);
           mask-image: linear-gradient(90deg, transparent 0%, #000 55%);
   pointer-events: none;
