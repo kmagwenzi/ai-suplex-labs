@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studio — AI-Suplex Labs</title>
+    <meta
+      name="description"
+      content="AI-Suplex Studio designs, deploys, and maintains custom governed AI agent systems built on the AI-Suplex memory and execution framework. Engagements start from $150."
+    />
+    <link rel="canonical" href="https://ai-suplex.co.zw/studio.html" />
+
+    <!-- Open Graph / Social Cards -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Studio — AI-Suplex Labs" />
+    <meta
+      property="og:description"
+      content="AI-Suplex Studio designs, deploys, and maintains custom governed AI agent systems built on the AI-Suplex memory and execution framework."
+    />
+    <meta property="og:url" content="https://ai-suplex.co.zw/studio.html" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Studio — AI-Suplex Labs" />
+    <meta
+      name="twitter:description"
+      content="AI-Suplex Studio designs, deploys, and maintains custom governed AI agent systems built on the AI-Suplex memory and execution framework."
+    />
+
+    <!-- Brand Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg" />
+    <link rel="apple-touch-icon" href="/assets/img/logo.svg" />
+
+    <!-- Typography: Inter with font-display: swap -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Shared Design System + Page-Scoped Studio Styles -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/studio.css" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "AI-Suplex Studio — Custom Edition",
+        "description": "Custom governed AI agent systems built on the AI-Suplex memory and execution framework — scoped around one workflow, with durable memory, integrations, and human approval gates.",
+        "url": "https://ai-suplex.co.zw/studio.html",
+        "provider": {
+          "@type": "Organization",
+          "name": "AI-Suplex Labs",
+          "url": "https://ai-suplex.co.zw",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "697 Gletwyn Park, Chisipite",
+            "addressLocality": "Harare",
+            "addressCountry": "ZW"
+          }
+        },
+        "areaServed": [
+          { "@type": "Country", "name": "Zimbabwe" },
+          { "@type": "Place", "name": "Africa" }
+        ]
+      }
+    </script>
+  </head>
+  <body class="studio">
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Shared Header -->
+    <header class="header">
+      <div class="container">
+        <nav class="nav" aria-label="Main Navigation">
+          <a href="/" class="nav__brand">
+            <img src="/assets/img/logo.svg" alt="" class="nav__logo" width="28" height="28" aria-hidden="true" />
+            <span>AI-Suplex Labs</span>
+          </a>
+
+          <!-- Accessible checkbox toggle for no-JS environments -->
+          <input
+            type="checkbox"
+            id="nav-checkbox"
+            class="nav__checkbox"
+            aria-hidden="true"
+          />
+          <label
+            for="nav-checkbox"
+            class="nav__toggle"
+            aria-label="Toggle navigation menu"
+            aria-controls="primary-nav-menu"
+            aria-expanded="false"
+          >
+            <span class="nav__toggle-icon" aria-hidden="true"></span>
+          </label>
+
+          <div class="nav__menu-wrapper" id="primary-nav-menu">
+            <ul class="nav__links">
+              <li>
+                <a href="/about.html" class="nav__link">About</a>
+              </li>
+              <li>
+                <a href="/studio.html" class="nav__link" aria-current="page">Studio</a>
+              </li>
+              <li class="nav__dropdown">
+                <button
+                  type="button"
+                  class="nav__link nav__dropdown-toggle"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                >
+                  Projects
+                  <svg
+                    class="nav__dropdown-icon"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M2.5 4.5L6 8L9.5 4.5"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <ul class="nav__dropdown-menu" aria-label="Projects submenu">
+                  <li class="nav__dropdown-item">
+                    <a href="/projects/wqr.html">WQR</a>
+                  </li>
+                  <li class="nav__dropdown-item">
+                    <a href="/projects/ai-suplex-777.html">AI-Suplex 777</a>
+                  </li>
+                  <li class="nav__dropdown-item">
+                    <a href="/projects/workflow-console.html">AI-Suplex Workflow Console</a>
+                  </li>
+                  <li class="nav__dropdown-item">
+                    <a href="/projects/ai-suplex-ultra.html">AI-Suplex Ultra</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="/contact.html" class="nav__link">Contact</a>
+              </li>
+            </ul>
+
+            <div class="nav__actions">
+              <a href="/contact.html" class="btn btn--primary">Get started</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- Scroll Progress Bar -->
+      <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+    </header>
+
+    <!-- Main Content Landmark -->
+    <main id="main-content">
+      <!-- 1 · Hero (Gold Workbench field, navy voice) -->
+      <section class="st-hero" aria-labelledby="hero-heading">
+        <div class="container">
+          <div class="st-hero__inner">
+            <p class="st-hero__kicker">AI-Suplex Studio &middot; Custom Edition</p>
+            <h1 id="hero-heading" class="st-hero__title">
+              Turn repeatable work into governed AI agents.
+            </h1>
+            <p class="st-hero__lead">
+              AI-Suplex Studio designs, deploys and maintains custom agent systems built on the
+              AI-Suplex memory and execution framework &mdash; one workflow, with durable memory,
+              integrations, and a human approval at every gate.
+            </p>
+            <div class="st-hero__ctas">
+              <a
+                href="mailto:info@ai-suplex.co.zw?subject=Studio%20discovery%20call"
+                class="btn st-btn-navy"
+              >
+                Book a Studio discovery call
+              </a>
+              <a href="/projects/ai-suplex-777.html" class="btn st-btn-outline">
+                Read the open source
+              </a>
+            </div>
+            <p class="st-hero__trust">
+              Built in Harare &middot; One workflow per engagement &middot; Every engagement starts from code we ship publicly.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2 · Who It Is For -->
+      <section class="section" aria-labelledby="who-heading">
+        <div class="container">
+          <header class="st-section-head" data-reveal>
+            <h2 id="who-heading" class="section-header__title">Who this is for</h2>
+            <p class="st-section-lead">
+              We are a fit when there is a workflow you already run, people who approve it, and a
+              number that would improve if it ran itself.
+            </p>
+          </header>
+
+          <div class="st-grid-2" data-reveal-group>
+            <article class="card st-card-compact" data-reveal>
+              <div class="card__header">
+                <h3 class="card__title" style="font-size: var(--fs-3);">Ad and marketing agencies</h3>
+              </div>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>
+                  Client research, content operations, campaign reporting, lead qualification,
+                  creative briefs, and account management.
+                </p>
+              </div>
+            </article>
+
+            <article class="card st-card-compact" data-reveal>
+              <div class="card__header">
+                <h3 class="card__title" style="font-size: var(--fs-3);">AI-native SMEs</h3>
+              </div>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>
+                  Support, sales follow-up, operations, internal knowledge, reporting, and workflow
+                  automation.
+                </p>
+              </div>
+            </article>
+
+            <article class="card st-card-compact" data-reveal>
+              <div class="card__header">
+                <h3 class="card__title" style="font-size: var(--fs-3);">Professional teams</h3>
+              </div>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>
+                  Research, analysis, documentation, proposals, and recurring reporting.
+                </p>
+              </div>
+            </article>
+
+            <article class="card st-card-compact" data-reveal>
+              <div class="card__header">
+                <h3 class="card__title" style="font-size: var(--fs-3);">Founders and operators</h3>
+              </div>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>
+                  The one or two workflows that still depend on manual coordination.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <p class="st-note" data-reveal>
+            Best fit: teams with repeatable workflows, clear approval points, and processes you
+            want AI to operate within &mdash; not around.
+          </p>
+        </div>
+      </section>
+
+      <!-- 3 · What a Custom Edition Includes -->
+      <section class="section section--surface" aria-labelledby="includes-heading">
+        <div class="container">
+          <header class="st-section-head" data-reveal>
+            <h2 id="includes-heading" class="section-header__title">
+              What a Custom Edition includes
+            </h2>
+            <p class="st-section-lead">
+              A Custom Edition is a system. Not a list of capabilities, not hours for hire.
+            </p>
+          </header>
+
+          <ol class="st-inclusions" data-reveal>
+            <li class="st-inclusions__item">
+              <span class="st-inclusions__num">01</span>
+              <div>
+                <strong class="st-inclusions__title">Workflow discovery and opportunity mapping</strong>
+                <p class="st-inclusions__desc">
+                  The workflow, its inputs, its decisions, and its success metric.
+                </p>
+              </div>
+            </li>
+
+            <li class="st-inclusions__item">
+              <span class="st-inclusions__num">02</span>
+              <div>
+                <strong class="st-inclusions__title">Custom agent design</strong>
+                <p class="st-inclusions__desc">
+                  Role, tools, data access, escalation rules, and approval gates.
+                </p>
+              </div>
+            </li>
+
+            <li class="st-inclusions__item">
+              <span class="st-inclusions__num">03</span>
+              <div>
+                <strong class="st-inclusions__title">Memory and knowledge-base setup</strong>
+                <p class="st-inclusions__desc">
+                  AI-Suplex memory and retrieval over your approved material.
+                </p>
+              </div>
+            </li>
+
+            <li class="st-inclusions__item">
+              <span class="st-inclusions__num">04</span>
+              <div>
+                <strong class="st-inclusions__title">Domain sub-agent deployment</strong>
+                <p class="st-inclusions__desc">
+                  The Workflow Console, Agents Terminal, or a managed deployment.
+                </p>
+              </div>
+            </li>
+
+            <li class="st-inclusions__item">
+              <span class="st-inclusions__num">05</span>
+              <div>
+                <strong class="st-inclusions__title">Integrations</strong>
+                <p class="st-inclusions__desc">
+                  Wired into your existing tools and data sources.
+                </p>
+              </div>
+            </li>
+
+            <li class="st-inclusions__item">
+              <span class="st-inclusions__num">06</span>
+              <div>
+                <strong class="st-inclusions__title">Human-in-the-loop controls</strong>
+                <p class="st-inclusions__desc">
+                  Permissions, approval gates, and an audit trail.
+                </p>
+              </div>
+            </li>
+
+            <li class="st-inclusions__item">
+              <span class="st-inclusions__num">07</span>
+              <div>
+                <strong class="st-inclusions__title">Team onboarding and operating docs</strong>
+                <p class="st-inclusions__desc">
+                  Your team trained, and your operations written down.
+                </p>
+              </div>
+            </li>
+
+            <li class="st-inclusions__item">
+              <span class="st-inclusions__num">08</span>
+              <div>
+                <strong class="st-inclusions__title">Ongoing optimisation retainer</strong>
+                <p class="st-inclusions__desc">
+                  The loop keeps compounding after launch.
+                </p>
+              </div>
+            </li>
+          </ol>
+
+          <p class="st-inclusions__closing" data-reveal>
+            Custom Editions start from $150 &mdash; priced by scope after discovery.
+          </p>
+        </div>
+      </section>
+
+      <!-- 4 · The Studio Loop -->
+      <section class="section" aria-labelledby="loop-heading">
+        <div class="container">
+          <header class="st-section-head" data-reveal>
+            <h2 id="loop-heading" class="section-header__title">The Studio Loop</h2>
+            <p class="st-section-lead">
+              Six stages. The sixth is the one a project cannot copy.
+            </p>
+          </header>
+
+          <ol class="st-loop" data-reveal>
+            <li class="st-loop__step">
+              <span class="st-loop__num" aria-hidden="true">1</span>
+              <h3 class="st-loop__name">Map</h3>
+              <p class="st-loop__copy">
+                The workflow, inputs, decisions, systems and success metric &mdash; written down
+                before anything is built.
+              </p>
+            </li>
+
+            <li class="st-loop__step">
+              <span class="st-loop__num" aria-hidden="true">2</span>
+              <h3 class="st-loop__name">Design</h3>
+              <p class="st-loop__copy">
+                The agent, its tools, its memory, its permissions and its human checkpoints.
+              </p>
+            </li>
+
+            <li class="st-loop__step">
+              <span class="st-loop__num" aria-hidden="true">3</span>
+              <h3 class="st-loop__name">Build</h3>
+              <p class="st-loop__copy">
+                AI-Suplex configured, and the required integrations wired.
+              </p>
+            </li>
+
+            <li class="st-loop__step">
+              <span class="st-loop__num" aria-hidden="true">4</span>
+              <h3 class="st-loop__name">Pilot</h3>
+              <p class="st-loop__copy">
+                A controlled run on real cases, with feedback and a defined success metric.
+              </p>
+            </li>
+
+            <li class="st-loop__step">
+              <span class="st-loop__num" aria-hidden="true">5</span>
+              <h3 class="st-loop__name">Launch</h3>
+              <p class="st-loop__copy">
+                The team trained, operations documented, monitoring set.
+              </p>
+            </li>
+
+            <li class="st-loop__step">
+              <span class="st-loop__num" aria-hidden="true">6</span>
+              <h3 class="st-loop__name">Compound</h3>
+              <p class="st-loop__copy">
+                Lessons captured, retrieval improved &mdash; then the next workflow.
+              </p>
+            </li>
+          </ol>
+
+          <p class="st-loop__differentiator" data-reveal>
+            <strong>Compound is why this is not a one-off project.</strong> A one-off automation can
+            be copied; a system that captures its own lessons and improves its retrieval cannot.
+          </p>
+        </div>
+      </section>
+
+      <!-- 5 · Example Deployments (3 Cards Only) -->
+      <section class="section section--surface" aria-labelledby="deployments-heading">
+        <div class="container">
+          <header class="st-section-head" data-reveal>
+            <h2 id="deployments-heading" class="section-header__title">Example deployments</h2>
+            <p class="st-section-lead">
+              Three shapes that repeat. Every engagement is scoped to one workflow.
+            </p>
+          </header>
+
+          <div class="st-grid-3" data-reveal-group>
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <p class="st-kicker">Agencies</p>
+                <h3 class="card__title">Client Operations Agent</h3>
+              </div>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>
+                  Intake briefs, research, status updates, asset tracking, and client reporting.
+                </p>
+              </div>
+            </article>
+
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <p class="st-kicker">SMEs</p>
+                <h3 class="card__title">Sales Follow-Up Agent</h3>
+              </div>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>
+                  Qualifies leads, follows up, books meetings, and routes hot leads.
+                </p>
+              </div>
+            </article>
+
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <p class="st-kicker">Teams</p>
+                <h3 class="card__title">Internal Knowledge Agent</h3>
+              </div>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>
+                  Answers staff questions from approved documents, policies and past work, with a
+                  source for every answer.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6 · Where Studio Sits (777 vs Studio) -->
+      <section class="section" aria-labelledby="comparison-heading">
+        <div class="container">
+          <header class="st-section-head" data-reveal>
+            <h2 id="comparison-heading" class="section-header__title">Where Studio sits</h2>
+            <p class="st-section-lead">
+              The stack has editions. Studio is where the custom one gets built.
+            </p>
+          </header>
+
+          <div class="card st-table-card" data-reveal>
+            <table class="ledger" aria-label="Comparison between AI-Suplex 777 and AI-Suplex Studio">
+              <thead>
+                <tr>
+                  <th scope="col">Capability</th>
+                  <th scope="col">AI-Suplex 777</th>
+                  <th scope="col">AI-Suplex Studio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="measure">Individual execution loop</td>
+                  <td class="how">Included</td>
+                  <td class="how" style="font-weight: 600; color: var(--st-navy);">Included</td>
+                </tr>
+                <tr>
+                  <td class="measure">Personal memory setup</td>
+                  <td class="how">Self-serve</td>
+                  <td class="how" style="font-weight: 600; color: var(--st-navy);">Configured for the team</td>
+                </tr>
+                <tr>
+                  <td class="measure">Workflow design</td>
+                  <td class="how">Self-serve</td>
+                  <td class="how" style="font-weight: 600; color: var(--st-navy);">Done with your team</td>
+                </tr>
+                <tr>
+                  <td class="measure">Custom integrations</td>
+                  <td class="how">Developer-led</td>
+                  <td class="how" style="font-weight: 600; color: var(--st-navy);">Implemented by Studio</td>
+                </tr>
+                <tr>
+                  <td class="measure">Multi-agent orchestration</td>
+                  <td class="how">Basic / developer-led</td>
+                  <td class="how" style="font-weight: 600; color: var(--st-navy);">Designed and managed</td>
+                </tr>
+                <tr>
+                  <td class="measure">Governance and approvals</td>
+                  <td class="how">Basic</td>
+                  <td class="how" style="font-weight: 600; color: var(--st-navy);">Tailored controls</td>
+                </tr>
+                <tr>
+                  <td class="measure">Onboarding and support</td>
+                  <td class="how">Community and docs</td>
+                  <td class="how" style="font-weight: 600; color: var(--st-navy);">Dedicated onboarding + retainer</td>
+                </tr>
+                <tr>
+                  <td class="measure">Deployment</td>
+                  <td class="how">Self-hosted</td>
+                  <td class="how" style="font-weight: 600; color: var(--st-navy);">Managed or guided</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="st-note" data-reveal>
+            777 is free and open. Studio is the commercial edition &mdash; governance, access
+            control, audit and managed deployment.
+          </p>
+          <p class="st-family-line" data-reveal>
+            The AI-Suplex family: 777 Edition (free) &middot; Ultra Edition &middot; Custom Edition.
+          </p>
+        </div>
+      </section>
+
+      <!-- 7 · How an Engagement Works -->
+      <section class="section section--surface" aria-labelledby="engagements-heading">
+        <div class="container">
+          <header class="st-section-head" data-reveal>
+            <h2 id="engagements-heading" class="section-header__title">How an engagement works</h2>
+            <p class="st-section-lead">
+              Three paths. All of them start the same way &mdash; with a workflow, not a proposal.
+            </p>
+          </header>
+
+          <div class="st-grid-3" data-reveal-group>
+            <article class="card st-engage-card--featured" data-reveal>
+              <div class="card__header">
+                <p class="st-engage__tag">Start here</p>
+                <h3 class="card__title">Discovery Sprint</h3>
+              </div>
+              <div class="card__body">
+                <p>
+                  A workflow audit, an opportunity map, an architecture recommendation and a
+                  fixed-scope proposal.
+                </p>
+                <p class="st-engage__result">
+                  The result: a prioritised implementation plan.
+                </p>
+              </div>
+              <div class="card__footer">
+                <a
+                  href="mailto:info@ai-suplex.co.zw?subject=Studio%20discovery%20call"
+                  class="btn st-btn-navy"
+                  style="width: 100%;"
+                >
+                  Book a Studio discovery call
+                </a>
+              </div>
+            </article>
+
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <p class="st-kicker">Step 2</p>
+                <h3 class="card__title">Pilot Deployment</h3>
+              </div>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>
+                  One workflow, one agent, memory, integrations, a defined pilot period and
+                  success metrics.
+                </p>
+                <p class="st-engage__result">
+                  The result: a working system on a bounded workflow.
+                </p>
+              </div>
+            </article>
+
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <p class="st-kicker">Step 3</p>
+                <h3 class="card__title">Studio Partner</h3>
+              </div>
+              <div class="card__body" style="margin-bottom: 0;">
+                <p>
+                  Ongoing agent management, new workflows, optimisation, support and reporting.
+                </p>
+                <p class="st-engage__result">
+                  The result: compounding operational improvement.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8 · Proof, Not Promises (Soft #f3e7cb Wash) -->
+      <section class="section st-proof-band" aria-labelledby="proof-heading">
+        <div class="container">
+          <header class="st-section-head" data-reveal>
+            <h2 id="proof-heading" class="section-header__title">Proof, not promises</h2>
+            <p class="st-section-lead">
+              We ship first, then we scope. The proof is not a case study &mdash; it is code and
+              working product you can read and run before you pay us anything.
+            </p>
+          </header>
+
+          <div class="st-grid-2" data-reveal-group>
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <h3 class="card__title" style="font-size: var(--fs-3);">The open stack</h3>
+              </div>
+              <div class="card__body">
+                <p>
+                  <strong>AI-Suplex 777</strong> is free and open source on GitHub; it is the
+                  memory-and-execution loop every engagement is built on. Read it before you
+                  commission.
+                </p>
+              </div>
+              <div class="card__footer">
+                <a href="/projects/ai-suplex-777.html" class="card__link">
+                  Inspect AI-Suplex 777 <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="card" data-reveal>
+              <div class="card__header">
+                <h3 class="card__title" style="font-size: var(--fs-3);">The shipped surfaces</h3>
+              </div>
+              <div class="card__body">
+                <p>
+                  <strong>Workflow Console v0.1.1</strong> (Windows &middot; macOS &middot; Linux,
+                  checksum-verified) and <strong>Ultra</strong> (six-surface MVP: Opportunity Mapper
+                  &middot; Knowledge Graph &middot; Deep Ultra Mode &middot; Skills Evolution
+                  &middot; Insight Resonance &middot; AS Mission Control).
+                </p>
+              </div>
+              <div class="card__footer" style="display: flex; flex-wrap: wrap; gap: var(--s-3);">
+                <a href="/projects/workflow-console.html" class="card__link">
+                  Workflow Console <span aria-hidden="true">&rarr;</span>
+                </a>
+                <a href="/projects/ai-suplex-ultra.html" class="card__link">
+                  AI-Suplex Ultra <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Architecture Flow Diagram (Pure HTML + CSS, no SVG <text>) -->
+          <div class="st-arch" data-reveal>
+            <p class="st-arch__label">Architecture, not magic</p>
+            <ol class="st-arch__flow" aria-label="Custom Edition execution architecture">
+              <li class="st-arch__node">
+                <span class="st-arch__node-title">Client workflow</span>
+                <span class="st-arch__node-desc">Inputs, brief, and defined success metric</span>
+              </li>
+              <li class="st-arch__arrow" aria-hidden="true">
+                <span class="st-arch__arrow-h">&rarr;</span>
+                <span class="st-arch__arrow-v">&darr;</span>
+              </li>
+              <li class="st-arch__node">
+                <span class="st-arch__node-title">Agent</span>
+                <span class="st-arch__node-desc">Scoped role and escalation rules</span>
+              </li>
+              <li class="st-arch__arrow" aria-hidden="true">
+                <span class="st-arch__arrow-h">&rarr;</span>
+                <span class="st-arch__arrow-v">&darr;</span>
+              </li>
+              <li class="st-arch__node">
+                <span class="st-arch__node-title">Memory</span>
+                <span class="st-arch__node-desc">Retrieval over approved material</span>
+              </li>
+              <li class="st-arch__arrow" aria-hidden="true">
+                <span class="st-arch__arrow-h">&rarr;</span>
+                <span class="st-arch__arrow-v">&darr;</span>
+              </li>
+              <li class="st-arch__node">
+                <span class="st-arch__node-title">Tools</span>
+                <span class="st-arch__node-desc">Wired integrations and data sources</span>
+              </li>
+              <li class="st-arch__arrow" aria-hidden="true">
+                <span class="st-arch__arrow-h">&rarr;</span>
+                <span class="st-arch__arrow-v">&darr;</span>
+              </li>
+              <li class="st-arch__node">
+                <span class="st-arch__node-title">Human approval gates</span>
+                <span class="st-arch__node-desc">Sign-off before consequential actions</span>
+              </li>
+            </ol>
+          </div>
+
+          <div class="card" data-reveal>
+            <div class="card__header">
+              <h3 class="card__title" style="font-size: var(--fs-3);">
+                The Discovery Sprint is the proof vehicle
+              </h3>
+            </div>
+            <div class="card__body" style="margin-bottom: var(--s-4);">
+              <p>
+                The Discovery Sprint produces a working pilot on your workflow, on real cases, with
+                a written success metric &mdash; before you commit to more. The pilot is the proof.
+              </p>
+            </div>
+            <ul class="st-gov-list" aria-label="Governance commitments per engagement">
+              <li>Data boundaries defined per engagement</li>
+              <li>Access controls per role</li>
+              <li>Human approval on irreversible actions</li>
+              <li>Audit trail on every action</li>
+              <li>Retention set in writing</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9 · Pricing Signal -->
+      <section class="section" aria-labelledby="pricing-heading">
+        <div class="container">
+          <div class="st-floor-box" data-reveal>
+            <header class="st-section-head" style="margin-bottom: var(--s-3);">
+              <h2 id="pricing-heading" class="section-header__title">What it costs</h2>
+              <p class="st-section-lead">
+                Every engagement starts the same way &mdash; with a workflow and a metric.
+                Implementation pricing scales with scope: integrations, data, approvals and support.
+              </p>
+            </header>
+
+            <p class="st-floor-rule">Engagements start from $150.</p>
+
+            <p style="font-size: var(--fs-2); color: var(--ink); line-height: var(--lh-body); margin-bottom: var(--s-3);">
+              $150 is the entry, not the ceiling. After the Discovery Sprint you get a fixed-scope,
+              priced proposal &mdash; so the number grows only with the scope you actually need.
+            </p>
+            <p style="font-size: var(--fs-2); color: var(--muted); line-height: var(--lh-body); margin: 0;">
+              We scope every engagement around one measurable workflow, with a clear pilot period
+              and written success criteria. If we cannot name the workflow and the metric, we do not
+              take the engagement.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10 · FAQ (7 Native <details>, Zero JS) -->
+      <section class="section section--surface" aria-labelledby="faq-heading">
+        <div class="container">
+          <header class="st-section-head" data-reveal>
+            <h2 id="faq-heading" class="section-header__title">Questions, answered</h2>
+          </header>
+
+          <div class="st-faq" data-reveal>
+            <details class="st-faq__item">
+              <summary class="st-faq__summary">
+                <span>Do we need technical staff?</span>
+                <svg class="st-faq__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </summary>
+              <div class="st-faq__answer">
+                <p>No for a managed engagement. Technical teams can self-host or co-manage.</p>
+              </div>
+            </details>
+
+            <details class="st-faq__item">
+              <summary class="st-faq__summary">
+                <span>Will it work with our existing tools?</span>
+                <svg class="st-faq__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </summary>
+              <div class="st-faq__answer">
+                <p>
+                  Usually. We assess integrations during the Discovery Sprint and say so plainly
+                  if one is out of reach.
+                </p>
+              </div>
+            </details>
+
+            <details class="st-faq__item">
+              <summary class="st-faq__summary">
+                <span>Where does our data live?</span>
+                <svg class="st-faq__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </summary>
+              <div class="st-faq__answer">
+                <p>
+                  Local or cloud, decided per engagement &mdash; with retention and access
+                  boundaries set in writing.
+                </p>
+              </div>
+            </details>
+
+            <details class="st-faq__item">
+              <summary class="st-faq__summary">
+                <span>Can humans approve actions?</span>
+                <svg class="st-faq__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </summary>
+              <div class="st-faq__answer">
+                <p>
+                  Yes. Approvals, escalation and auditability are design requirements, not add-ons.
+                </p>
+              </div>
+            </details>
+
+            <details class="st-faq__item">
+              <summary class="st-faq__summary">
+                <span>What happens after launch?</span>
+                <svg class="st-faq__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </summary>
+              <div class="st-faq__answer">
+                <p>A defined optimisation and support retainer, or a clean handover.</p>
+              </div>
+            </details>
+
+            <details class="st-faq__item">
+              <summary class="st-faq__summary">
+                <span>Can we start with one workflow?</span>
+                <svg class="st-faq__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </summary>
+              <div class="st-faq__answer">
+                <p>That is the recommended way to start.</p>
+              </div>
+            </details>
+
+            <details class="st-faq__item">
+              <summary class="st-faq__summary">
+                <span>Do you build custom AI models?</span>
+                <svg class="st-faq__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </summary>
+              <div class="st-faq__answer">
+                <p>Rarely. We configure and orchestrate models, tools, memory and workflows.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11 · Closing CTA Band -->
+      <section class="cta-band" aria-labelledby="cta-heading">
+        <div class="container">
+          <div class="cta-band__inner" data-reveal="scale">
+            <div style="max-width: 640px;">
+              <h2 id="cta-heading" class="cta-band__title" style="margin-bottom: var(--s-2);">
+                Start with one workflow.
+              </h2>
+              <p style="margin: 0; font-size: var(--fs-2); color: #cbd5e1; line-height: 1.65;">
+                Book a Studio discovery call and we'll map the highest-value AI agent opportunity
+                for your team &mdash; then scope one workflow, one agent, one success metric.
+              </p>
+            </div>
+            <a
+              href="mailto:info@ai-suplex.co.zw?subject=Studio%20discovery%20call"
+              class="btn btn--primary"
+            >
+              Book a Studio discovery call
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Shared Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid" data-reveal-group>
+          <!-- Column 1: Brand & Tagline -->
+          <div data-reveal>
+            <div class="footer__brand">
+              <img src="/assets/img/logo.svg" alt="" class="footer__logo" width="24" height="24" aria-hidden="true" />
+              <span>AI-Suplex Labs</span>
+            </div>
+            <p class="footer__tagline">AI systems that work in the real world.</p>
+          </div>
+
+          <!-- Column 2: Products -->
+          <div data-reveal>
+            <div class="footer__heading">Products</div>
+            <ul class="footer__list">
+              <li><a href="/projects/wqr.html">WQR</a></li>
+              <li><a href="/projects/ai-suplex-777.html">AI-Suplex 777</a></li>
+              <li><a href="/projects/workflow-console.html">AI-Suplex Workflow Console</a></li>
+              <li><a href="/projects/ai-suplex-ultra.html">AI-Suplex Ultra</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Legal -->
+          <div data-reveal>
+            <div class="footer__heading">Legal</div>
+            <ul class="footer__list">
+              <li><a href="/privacy.html">Privacy</a></li>
+              <li><a href="/terms.html">Terms</a></li>
+              <li><a href="/refund.html">Refund</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Contact -->
+          <div data-reveal>
+            <div class="footer__heading">Contact</div>
+            <address class="footer__address">
+              <ul class="footer__list">
+                <li><a href="mailto:info@ai-suplex.co.zw">info@ai-suplex.co.zw</a></li>
+                <li><a href="tel:+263782217266">+263 78 221 7266</a></li>
+                <li>Harare, Zimbabwe</li>
+              </ul>
+            </address>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p class="footer__copyright">&copy; 2026 AI-Suplex Labs. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Progressive Enhancement JavaScript -->
+    <script src="/assets/js/main.js" defer></script>
+  </body>
+</html>

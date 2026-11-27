@@ -7,5 +7,10 @@
 # content rather than redirecting. These rules force a 301 to the canonical primary
 # domain so there is exactly one host serving the site.
 
+# Page redirects (Services replaced by AI-Suplex Studio)
+/services        /studio.html   301!
+/services.html   /studio.html   301!
+/services/*      /studio.html   301!
+
 https://ai-suplexlabs.co.zw/*      https://ai-suplex.co.zw/:splat   301!
 https://www.ai-suplexlabs.co.zw/*  https://ai-suplex.co.zw/:splat   301!

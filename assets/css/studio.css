@@ -1,0 +1,629 @@
+/* ==========================================================================
+   AI-Suplex Studio — "Gold Workbench" Page Stylesheet
+   Scoped to body.studio and .st-* selectors. Loaded after /assets/css/style.css.
+   ========================================================================== */
+
+body.studio {
+  --st-paper: #fffdf6;
+  --st-gold-1: #f3e7cb;
+  --st-gold-2: #e8d5a8;
+  --st-gold-3: #d4a94f;
+  --st-navy: #1a2947;
+  --st-navy-800: #15223a;
+  --st-gold-deep: #b8862e;
+  --st-action: #8f651b;
+  overflow-x: clip;
+}
+
+/* --------------------------------------------------------------------------
+   1. Hero — Full-Bleed White-to-Gold Field with Navy Voice
+   -------------------------------------------------------------------------- */
+.st-hero {
+  position: relative;
+  padding-top: var(--s-7);
+  padding-bottom: var(--s-7);
+  background: linear-gradient(
+    180deg,
+    var(--st-paper) 0%,
+    var(--st-gold-1) 42%,
+    var(--st-gold-2) 74%,
+    var(--st-gold-3) 100%
+  );
+  color: var(--st-navy);
+  border-bottom: 1px solid rgba(184, 134, 46, 0.35);
+}
+
+@media (min-width: 900px) {
+  .st-hero {
+    padding-top: var(--s-8);
+    padding-bottom: var(--s-7);
+  }
+}
+
+.st-hero__inner {
+  max-width: 820px;
+}
+
+.st-hero__kicker {
+  font-size: var(--fs-1);
+  font-weight: 600;
+  color: var(--st-navy);
+  letter-spacing: 0.01em;
+  margin-bottom: var(--s-3);
+}
+
+.st-hero__title {
+  font-size: var(--fs-6);
+  line-height: 1.12;
+  font-weight: 700;
+  color: var(--st-navy);
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+  margin-bottom: var(--s-4);
+}
+
+@media (min-width: 640px) {
+  .st-hero__title {
+    font-size: var(--fs-7);
+  }
+}
+
+.st-hero__lead {
+  font-size: var(--fs-3);
+  line-height: var(--lh-body);
+  color: var(--st-navy);
+  max-width: 65ch;
+  margin-bottom: var(--s-5);
+}
+
+@media (min-width: 640px) {
+  .st-hero__lead {
+    font-size: var(--fs-4);
+  }
+}
+
+.st-hero__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  margin-bottom: var(--s-4);
+}
+
+.st-btn-navy {
+  background-color: var(--st-navy);
+  color: #ffffff;
+  border: 1px solid var(--st-navy);
+}
+
+.st-btn-navy:hover {
+  background-color: var(--st-navy-800);
+  border-color: var(--st-navy-800);
+  color: #ffffff;
+}
+
+.st-btn-outline {
+  background-color: rgba(255, 253, 246, 0.55);
+  color: var(--st-navy);
+  border: 1px solid rgba(26, 41, 71, 0.32);
+}
+
+.st-btn-outline:hover {
+  background-color: rgba(255, 253, 246, 0.9);
+  border-color: var(--st-navy);
+  color: var(--st-navy);
+}
+
+.st-hero__trust {
+  font-size: var(--fs-1);
+  font-weight: 500;
+  color: var(--st-navy);
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   Section Intro & Helpers
+   -------------------------------------------------------------------------- */
+.st-section-head {
+  max-width: 68ch;
+  margin-bottom: var(--s-5);
+}
+
+.st-section-lead {
+  margin-top: var(--s-3);
+  font-size: var(--fs-3);
+  line-height: var(--lh-body);
+  color: var(--muted);
+  max-width: 65ch;
+}
+
+.st-note {
+  margin-top: var(--s-4);
+  font-size: var(--fs-1);
+  line-height: var(--lh-body);
+  color: var(--muted);
+  max-width: 65ch;
+}
+
+.st-kicker {
+  font-size: var(--fs-1);
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: var(--s-2);
+}
+
+/* --------------------------------------------------------------------------
+   2. Who It Is For (4 Cards)
+   -------------------------------------------------------------------------- */
+.st-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-4);
+}
+
+@media (min-width: 768px) {
+  .st-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--s-5);
+  }
+}
+
+.st-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-4);
+}
+
+@media (min-width: 900px) {
+  .st-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--s-5);
+  }
+}
+
+.st-card-compact {
+  padding: var(--s-4) var(--s-5);
+}
+
+/* --------------------------------------------------------------------------
+   3. What a Custom Edition Includes (2-Column Gold-Ruled List)
+   -------------------------------------------------------------------------- */
+.st-inclusions {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-4);
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .st-inclusions {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--s-6);
+    row-gap: var(--s-4);
+  }
+}
+
+.st-inclusions__item {
+  border-top: 1px solid var(--st-gold-deep);
+  padding-top: var(--s-3);
+  display: flex;
+  gap: var(--s-3);
+  align-items: flex-start;
+}
+
+.st-inclusions__num {
+  font-size: var(--fs-1);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--st-navy);
+  min-width: 1.75rem;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.st-inclusions__title {
+  display: block;
+  font-size: var(--fs-2);
+  font-weight: 700;
+  color: var(--st-navy);
+  margin-bottom: 4px;
+}
+
+.st-inclusions__desc {
+  font-size: var(--fs-1);
+  line-height: var(--lh-body);
+  color: var(--muted);
+  margin: 0;
+}
+
+.st-inclusions__closing {
+  margin-top: var(--s-5);
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--line);
+  font-size: var(--fs-2);
+  font-weight: 600;
+  color: var(--st-navy);
+}
+
+/* --------------------------------------------------------------------------
+   4. The Studio Loop (Horizontal Rail >=768px, Vertical Timeline <768px)
+   -------------------------------------------------------------------------- */
+.st-loop {
+  list-style: none;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-4);
+  margin: 0;
+  padding: 0 0 0 28px;
+}
+
+/* Vertical timeline gold connector (<768px) */
+.st-loop::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  bottom: 16px;
+  left: 11px;
+  width: 1px;
+  background-color: var(--st-gold-deep);
+}
+
+.st-loop__step {
+  position: relative;
+  background-color: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--s-4);
+  box-shadow: var(--shadow);
+}
+
+.st-loop__num {
+  position: absolute;
+  left: -29px;
+  top: 14px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--st-paper);
+  border: 1px solid var(--st-gold-deep);
+  color: var(--st-navy);
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.st-loop__name {
+  font-size: var(--fs-3);
+  font-weight: 700;
+  color: var(--st-navy);
+  margin-bottom: var(--s-1);
+}
+
+.st-loop__copy {
+  font-size: var(--fs-1);
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .st-loop {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--s-4);
+    padding: 40px 0 0 0;
+  }
+
+  .st-loop::before {
+    top: 16px;
+    bottom: auto;
+    left: 24px;
+    right: 24px;
+    width: auto;
+    height: 1px;
+  }
+
+  .st-loop__step {
+    padding-top: var(--s-4);
+  }
+
+  .st-loop__num {
+    left: var(--s-4);
+    top: -36px;
+    width: 28px;
+    height: 28px;
+    font-size: 0.8125rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .st-loop {
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--s-3);
+    padding-top: 44px;
+  }
+
+  .st-loop__step {
+    padding: var(--s-3);
+  }
+
+  .st-loop__num {
+    left: var(--s-3);
+    top: -40px;
+  }
+}
+
+.st-loop__differentiator {
+  margin-top: var(--s-5);
+  padding: var(--s-4);
+  background-color: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  max-width: 72ch;
+  font-size: var(--fs-2);
+  color: var(--ink);
+  line-height: var(--lh-body);
+}
+
+/* --------------------------------------------------------------------------
+   6. Comparison Table Wrapper
+   -------------------------------------------------------------------------- */
+.st-table-card {
+  max-width: 920px;
+  overflow-x: auto;
+}
+
+.st-family-line {
+  margin-top: var(--s-3);
+  font-size: var(--fs-1);
+  font-weight: 500;
+  color: var(--muted);
+}
+
+/* --------------------------------------------------------------------------
+   7. Engagement Ladder Cards
+   -------------------------------------------------------------------------- */
+.st-engage-card--featured {
+  border-color: var(--st-gold-deep);
+  background-color: var(--st-paper);
+}
+
+.st-engage__tag {
+  font-size: var(--fs-1);
+  font-weight: 700;
+  color: var(--st-navy);
+  margin-bottom: var(--s-2);
+}
+
+.st-engage__result {
+  font-size: var(--fs-1);
+  font-weight: 600;
+  color: var(--st-navy);
+  margin-top: var(--s-3);
+}
+
+/* --------------------------------------------------------------------------
+   8. Proof Section — Soft #f3e7cb Wash (ONLY wash outside Hero)
+   -------------------------------------------------------------------------- */
+.st-proof-band {
+  background-color: var(--st-gold-1);
+  border-top: 1px solid rgba(184, 134, 46, 0.28);
+  border-bottom: 1px solid rgba(184, 134, 46, 0.28);
+  color: var(--st-navy);
+}
+
+.st-proof-band .section-header__title,
+.st-proof-band .st-section-lead {
+  color: var(--st-navy);
+}
+
+/* Pure CSS/HTML Architecture Flow (No SVG <text>) */
+.st-arch {
+  margin: var(--s-5) 0;
+  padding: var(--s-4);
+  background-color: var(--bg);
+  border: 1px solid rgba(26, 41, 71, 0.14);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.st-arch__label {
+  font-size: var(--fs-1);
+  font-weight: 700;
+  color: var(--st-navy);
+  margin-bottom: var(--s-3);
+}
+
+.st-arch__flow {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .st-arch__flow {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 0;
+  }
+}
+
+.st-arch__node {
+  flex: 1;
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: var(--s-3);
+  position: relative;
+}
+
+.st-arch__node-title {
+  display: block;
+  font-size: var(--fs-1);
+  font-weight: 700;
+  color: var(--st-navy);
+  margin-bottom: 2px;
+}
+
+.st-arch__node-desc {
+  display: block;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.st-arch__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--st-navy);
+  font-weight: 700;
+  font-size: var(--fs-2);
+  padding: 2px 0;
+}
+
+@media (min-width: 768px) {
+  .st-arch__arrow {
+    padding: 0 var(--s-2);
+  }
+}
+
+.st-arch__arrow-v {
+  display: inline;
+}
+
+.st-arch__arrow-h {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .st-arch__arrow-v {
+    display: none;
+  }
+
+  .st-arch__arrow-h {
+    display: inline;
+  }
+}
+
+.st-gov-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-2);
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 640px) {
+  .st-gov-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--s-2) var(--s-5);
+  }
+}
+
+.st-gov-list li {
+  position: relative;
+  padding-left: var(--s-3);
+  font-size: var(--fs-1);
+  color: var(--st-navy);
+  line-height: var(--lh-body);
+}
+
+.st-gov-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.68em;
+  width: 7px;
+  height: 1px;
+  background-color: var(--st-navy);
+}
+
+/* --------------------------------------------------------------------------
+   9. Pricing Floor Signal
+   -------------------------------------------------------------------------- */
+.st-floor-box {
+  max-width: 72ch;
+}
+
+.st-floor-rule {
+  margin: var(--s-4) 0;
+  padding: var(--s-4) 0;
+  border-top: 1px solid var(--st-gold-deep);
+  border-bottom: 1px solid var(--st-gold-deep);
+  font-size: var(--fs-5);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--st-navy);
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 640px) {
+  .st-floor-rule {
+    font-size: var(--fs-6);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   10. FAQ (<details>/<summary> — Zero JS)
+   -------------------------------------------------------------------------- */
+.st-faq {
+  max-width: 780px;
+  border-top: 1px solid var(--line);
+}
+
+.st-faq__item {
+  border-bottom: 1px solid var(--line);
+}
+
+.st-faq__summary {
+  list-style: none;
+  cursor: pointer;
+  padding: var(--s-4) 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+  font-size: var(--fs-3);
+  font-weight: 600;
+  color: var(--st-navy);
+  min-height: 44px;
+}
+
+.st-faq__summary::-webkit-details-marker {
+  display: none;
+}
+
+.st-faq__icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--st-navy);
+  transition: transform 0.2s ease;
+}
+
+.st-faq__item[open] .st-faq__icon {
+  transform: rotate(180deg);
+}
+
+.st-faq__answer {
+  padding-bottom: var(--s-4);
+  font-size: var(--fs-2);
+  line-height: var(--lh-body);
+  color: var(--muted);
+  max-width: 65ch;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .st-faq__icon {
+    transition: none;
+  }
+}
