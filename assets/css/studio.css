@@ -58,20 +58,21 @@ body.studio {
   position: absolute;
   inset: 0 0 0 auto;
   z-index: 1;
-  width: 40%;
-  max-width: 600px;
+  width: 36%;
+  max-width: 560px;
   background-image:
     linear-gradient(180deg, transparent 84%, rgba(26, 41, 71, 0.94) 100%),
     url("/assets/img/studio/studio-hero-visual.webp");
   background-size: cover, cover;
   background-position: right center, right center;
   background-repeat: no-repeat, no-repeat;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 45%);
-          mask-image: linear-gradient(90deg, transparent 0%, #000 45%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 55%);
+          mask-image: linear-gradient(90deg, transparent 0%, #000 55%);
   pointer-events: none;
 }
 
-@media (max-width: 899px) {
+/* Hide the still-life before the text column can reach the opaque part of it */
+@media (max-width: 1039px) {
   .st-hero__visual {
     display: none;
   }
